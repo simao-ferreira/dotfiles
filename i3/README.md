@@ -20,3 +20,16 @@ After installing edit the .i3/config file, comment the line about dmenu and add:
 Then latter it's possible to configure the look of it.
 
 For a text editor with window, install gedit.
+
+Install chromium, neofetch and gotop.
+
+Sound not working from headphones.
+
+Time not working, set:
+`timedatectl set-local-rtc 1`
+`timedatectl set-ntp true`
+
+Install feh, for opening images. 
+For changing the wallpaper:
+`exec_always --no-startup-id feh --bg-scale ~/.wallpapers/forest-nightscape.jpg`
+But this will not work, one of the config instructions is to reset Nitrogen, the wallpaper loader by default, that does not recognise .jpg files. By commenting this line, the previous instruction will work.
