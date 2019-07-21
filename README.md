@@ -17,3 +17,5 @@ Still, I have no clue to how improve, manage and be efficient with this tool.
 # Purpose
 This will report my findings and my pains, but hopefully also some configurations and growth.
 
+# Gnome
+Add gtk.css to /.config/gtk-3.0 the gtk.css file
