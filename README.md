@@ -17,5 +17,12 @@ Still, I have no clue to how improve, manage and be efficient with this tool.
 # Purpose
 This will report my findings and my pains, but hopefully also some configurations and growth.
 
-# Gnome
-Add gtk.css to /.config/gtk-3.0 the gtk.css file
+## i3 Manjaro
+Running on triple boot may cause troubles on the grub, run `sudo grub-update` to make sure the grub recognizes all files
+
+When first intalling i3 brings Palemoon as browser, no Firefox.
+
+### Installing
+Manjaro install is done by typing `sudo pacman -S [package]`
+
+Also, open the software manager/ installer and in preferences activate AUR, this will enable community packages.
