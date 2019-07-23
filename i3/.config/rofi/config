@@ -1,0 +1,10 @@
+! ------------------------------------------------------------------------------
+! Rofi configs
+! ------------------------------------------------------------------------------
+
+rofi.color-enabled: true
+rofi.color-window: #222D31, #222D31, #222D31
+rofi.color-normal: #222D31, #d8d8d8, #222D31, #222D31, #1ABB9B
+rofi.color-active: #222D31, #12826c, #222D31, #222D31, #93e5cc
+rofi.color-urgent: #222D31, #ebcb8b, #222D31, #222D31, #ebcb8b
+rofi.modi: run,drun,window
