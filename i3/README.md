@@ -25,7 +25,7 @@ Rofi can be configured in several different ways.
 By adding `~/.config/rofi/config.` you can specify the look and feel of rofi window.
 
 
-For a text editor with window, install gedit.
+For a text editor with window, install gedit. The spellcheck is not working. Something about the languages installed.
 
 Install chromium, neofetch and gotop.
 
@@ -73,5 +73,23 @@ Make sure to use only one method of auto starting applications. pulseaudio inclu
 These will conflict with the config file line, commenting it should be enough.
 
 The network manager already is installed, to configure the VPN download the server file and add it to the configuration.
+By default Nord recommends UPD connection, less stable but more adequate to over the web communications.
+Firefox however does not block webRTC js requests what makes it insecure to user streams on video, it is possible to change this over configs, however some usage can be affected. Chromium does block this by default, and also has a specific add-on for this.
 
-Intellij is available through the visual wrapper in pacman. 
+Intellij is available through the visual wrapper in pacman. It is also possible to install more recent implementations of java, openjdk11 is the more common. Is also available through the same way.
+
+Dunst a notification-demon user by i3 can be configured at `~/.config/dunst/dunstrc`.
+
+Mi3 has a bar that can be manipulated with help of i3status.
+Configuration resides in `.config/i3status/config`
+
+Mi3 has a locking mechanism configured via i3lock. It usually blocks when using netflix or spotify.
+To solve this install caffeine-ng package, Add to config `exec -no-startup-id caffeine` this adds an icon to the bar and allows to switch it on when needed.
+
+The default login manager is LightDM, with the configuration for the greeter (login screen manager) set at `/etc/lightdm/slick-greeter.conf`
+It's possible to check for other installed greeters at `/usr/share/xgreeters` all `.desktop` files are the greeters installed.
+
+To configure the login background `lightdm-settings` should be enough.
+
+
+Gedit spell checker not working.
