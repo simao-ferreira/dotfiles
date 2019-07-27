@@ -1,25 +1,25 @@
 # i3
 
 ## Settings
-To instal packages in Mi3 use `sudo pacman -s <package-name>` or through pamac name as `Add/Remove software`.
+To install packages in Mi3 use `sudo pacman -s <package-name>` or through pamac name as `Add/Remove software`.
 To update to last versions use `sudo pacman -U`
 Is also possible to add user managed packages to pamac, to do this go to pamac top corner and under settings add `AUR`.
  
-Mi3 also brings a command line menu to manage settings, run it by pressing `$mod+Ctrl+b` or `bmenu` in the cmd line.
-This will bring a text ui with options, like install a new kernel. Or two, just in case it's needed for recovery options.
-This is important because Manjaro is a rolling distro based on Arch, and while is running behind the latest it can on ocasion break. If it happens select a different kernel when booting.
+Mi3 also brings a command line menu to manage settings, run it by pressing `$mod+Ctrl+b` or `bmenu` in the terminal.
+This will bring a text UI with options, like install a new kernel. Or two, just in case it's needed for recovery options.
+This is important because Manjaro is a rolling distro based on Arch, and while is running behind the latest it can on occasion break. If it happens select a different kernel when booting.
 
-bmenu is also able to manage drivers, if gaming is an option and graphic is Nvidia it's necessary to install bumblebee drivers. This should be installed by default if the inicial OS installation was done correctly.
-Check which graphics correct, if Nvidia optimus then use non-free graphics.
+bmenu is also able to manage drivers, if gaming is an option and graphic is NVIDIA it's necessary to install bumblebee drivers. This should be installed by default if the initial OS installation was done correctly.
+Check which graphics correct, if NVIDIA optimus then use non-free graphics.
 
 Also gaps is enabled by default.
 
 ## Browser
 Mi3 comes with palemoon as default browser. 
-Install firefox. `sudo pacman -S firefox` or through software manager
+Install Firefox. `sudo pacman -S firefox` or through software manager
 Same for Chromium.
 
-Firefox has some issues with webRTC calls and is not relliable in VPN mode.
+Firefox has some issues with webRTC calls and is not reliable in VPN mode.
 (add link)
 
 ## File Manager
@@ -49,49 +49,50 @@ By adding `~/.config/rofi/config.` you can specify the look and feel of rofi win
 There are as usual several options already installed. `vim` and `nano` are already in Mi3.
 
 For a windowed text editor gnome-editor `gedit` is a reliable option. 
-Out of the box spellcheck is not working. Some conflict with the languages installed.
-[todo]
-
+Out of the box spellcheck is not working. Some missing languages or conflict  with the languages installed.
+Gedit uses `enchant` which act as a fronted for several spell checkers, some of those being `Hunspell`, `MySpell`, `Ispell` and `Aspell`.
+In `pamac` it's possible to install more packages, for example, `aspell-en` and `aspell-de`, this will add English and German spell checkers.
+ 
 ## Time settings
-Dual boot always has some troubles with the time settings, by deafult WinOS and linux have different settings reagarding time, on WinOS the time by default is Local Time, this can be changed, on the BIOS/UEFI or even in the WinOS registry.
-However in easier to make linux use Local time instead of Universal Time.
+Dual boot always has some troubles with the time settings, by default WinOS and Linux have different settings regarding time, on WinOS the time by default is Local Time, this can be changed, on the BIOS/UEFI or even in the WinOS registry.
+However in easier to make Linux use Local time instead of Universal Time.
 
 For this:
 `timedatectl set-local-rtc 1`
 
-And to make linux syncronized:
+And to make Linux synchronized:
 `timedatectl set-ntp true`
 
 ## Terminal
 On setup there are UTerm, UXterm and URxvt.
 URxvt is highly configurable. Highly.
 
-## Appearence
-When using clean Mi3 the visual setup is rather minimal, backgroung and bars are very basic.
+## Appearance
+When using clean Mi3 the visual setup is rather minimal, background and bars are very basic.
 There are various options to manage and improve the setup.
 
-There is an installation of Viewnior a image viwer and Nitrogen to setup a wallpaper, Nitrogen has some flaws, like not being able to recognize some filetypes.
+There is an installation of Viewnior a image viewer and Nitrogen to setup a wallpaper, Nitrogen has some flaws, like not being able to recognize some file types.
 
-To replace Viewnior and help with the wallaper setup install feh, through pamac or `sudo pacman -S feh`
+To replace Viewnior and help with the wallpaper setup install feh, through pamac or `sudo pacman -S feh`
  
 For changing the wallpaper add to `/.i3/config`:
 `exec_always --no-startup-id feh --bg-scale ~/.wallpapers/forest-nightscape.jpg`
-But this might not work immediatly, when pressing `mod4+Shift+r` if the new wallpaper appears but not when restarting, usually there is a line under `i3/config` starting Nitrogen, the wallpaper loader by default, that does not recognise .jpg files. By commenting this line, the previous instruction will work when rebooting.
+But this might not work immediately, when pressing `mod4+Shift+r` if the new wallpaper appears but not when restarting, usually there is a line under `i3/config` starting Nitrogen, the wallpaper loader by default, that does not recognise .jpg files. By commenting this line, the previous instruction will work when rebooting.
 
-More configurartions can be made, either bu modifying the config or usinf `lxappearence`, also called `Customize look and feel`, installed by default, with it is possible to load icon packs, mouse cursors, amongst other configurations. Also changing fonts and font size.
+More configurations can be made, either bu modifying the config or using `lxappearence`, also called `Customize look and feel`, installed by default, with it is possible to load icon packs, mouse cursors, amongst other configurations. Also changing fonts and font size.
 
 However fonts are loaded in different config files.
 By default when changing the config file, the font input changes bar fonts, but not apps and terminal. For terminal URxvt comes as default, and with it the defaults can be changed at `.Xresources` however this terminal is more complex than usual to configure.
 
 When setting new settings with lxappearence also can happen that some resources are unrecognizable for URxvt.
-For more info go to `https://wiki.archlinux.org/index.php/Rxvt-unicode`, there it's possible to understand more about configurarions like fonts on URxvt.
+For more info go to `https://wiki.archlinux.org/index.php/Rxvt-unicode`, there it's possible to understand more about configurations like fonts on URxvt.
 
 To increase the font size got to `/usr/share/fonts/misc/fonts.alias` and take a look at settings.
 Edit the .Xresources accordingly, 10x20 is a good setting for an HiDPi setup.
 
 
-Night light does not come with Mi3 as with other distros, one options is to install redshift. It needs geo-location to work, it's possible to setup a static value or location. A more compreensive option is to install and use `geoclue2` for configure with redshift. 
-The geoclue configuration can be edited at `/etc/geoclue/geoclue.conf` just add at EOF:
+Night light does not come with Mi3 as with other distro's, one options is to install Redshift. It needs Geo location to work, it's possible to setup a static value or location. A more comprehensive option is to install and use `geoclue2` for configure with Redshift. 
+The geoclue configuration can be edited at `/etc/geoclue/geoclue.conf` , just add:
 
 `[redshift]
 
@@ -101,7 +102,7 @@ system=false
 
 users=`
 
-After that is necessary to start both applications at lauch, for that edit the `/.i3/config` settings for both redshift and geoclue.
+After that is necessary to start both applications at launch, for that edit the `/.i3/config` settings for both Redshift and geoclue.
 
 `exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent`
 `exec --no-startup-id redshift-gtk`
@@ -112,7 +113,7 @@ The standard status bar is i3bar, it can be manipulated with help of i3status.
 Configuration resides in `.config/i3status/config`
 There are other options to use, like `polybar`. [todo]
 
-Instead of a screen saver Mi3 has a locking mechanism configured via i3lock. It usually blocks when using netflix or spotify. To solve this, is possible to install `caffeine-ng` package, after add to `/.i3/config` the following line
+Instead of a screen saver Mi3 has a locking mechanism configured via i3lock. It usually blocks when using Netflix or Spotify. To solve this, is possible to install `caffeine-ng` package, after add to `/.i3/config` the following line
 `exec -no-startup-id caffeine`. This also adds an icon to the bar and allows to switch it on/off when needed. the default is off.
 
 The login manager is LightDM, the configuration for the greeter (login screen manager) is set at `/etc/lightdm/slick-greeter.conf`
@@ -120,14 +121,14 @@ It's possible to check for other installed greeters at `/usr/share/xgreeters` al
 To configure the login background `lightdm-settings` should be enough.
 
 ## Sound
-Out of the box Mi3 comes with AlsaMixer, but sound will not working from headphones, some comments online refer to Alsa not being able to play from Firefox and other programs. Within Mi3 there is also a script to install PulseAudio with it. Pulse Audio will run on top of AlsaMixer to provide extra capabilities.
+Out of the box Mi3 comes with AlsaMixer, but sound will not working from headphones, some comments online refer to Alsa not being able to play from Firefox and other programs. Within Mi3 there is also a script to install Pulse Audio with it. Pulse Audio will run on top of AlsaMixer to provide extra capabilities.
 
 Too install it run the scrip `instal_pulse`, with that the `/.i3/config` file will change and auto-magically apply all configurations necessary.
 
 To manage external input `mod+ctrl+m` brings the Pulse Audio manager and from there is easy to select the input. For example USB headphones.
 
-After first reboot PulseAudio may not work. Using `pulseaudio --check` and `pulseaudio -D` makes it work, but once reboot again, it will not run by default again. Afte some research seams pulseaudio is being started before the `/.i3/config` is run.
-As so make sure to use only one method of auto starting applications. pulseaudio includes these files:
+After first reboot Pulse Audio may not work. Using `pulseaudio --check` and `pulseaudio -D` makes it work, but once reboot again, it will not run by default again. After some research seams pulse audio is being started before the `/.i3/config` is run.
+As so make sure to use only one method of auto starting applications. pulse audio includes these files:
 `/etc/X11/xinit/xinitrc.d/pulseaudio`
 `/etc/xdg/autostart/pulseaudio.desktop`
 `/etc/xdg/autostart/pulseaudio-kde.desktop`
@@ -141,7 +142,7 @@ For more settings `tizonia --help keyboard`
 Documentation at `http://docs.tizonia.org/usage/keyboard.html`
 
 ## Monitoring
-Intalled and working is already a module of conky, can be configured. [todo]
+Installed and working is already a module of conky, can be configured. [todo]
 
 Other important options are neofetch to get system info and `htop` or `gotop`.
 `gotop` is a more "eye-candy" version.
@@ -149,15 +150,11 @@ Other important options are neofetch to get system info and `htop` or `gotop`.
 ## Network Manager
 The network manager already is installed, to configure the VPN download the OpenVpn server configuration file and add a new VPN using the Network Manager configuration.
 
-By default Nord recommends UPD connection, less stable but more adequate to over the web communications.
-Firefox however does not block webRTC js requests, that makes it insecure to use video streams and other uses as well.
-It is possible to change this over firefox configuration, however some use can be affected. 
+By default Nord recommends UDP connection, less stable but more adequate to over the web communications.
+Firefox however does not block webRTC java script requests, that makes it insecure to use video streams and other uses as well.
+It is possible to change this over Firefox configuration, however some use can be affected. 
 
 Chromium does block this by default, and also has a specific add-on for this.
 
 ## Programming
 Intellij is available through pamac. It is also possible to install more recent implementations of java, openjdk11 is the more common. Is also available through the same way.
-
-## TODO
-Gedit spell checker not working.
-
