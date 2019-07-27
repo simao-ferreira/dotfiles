@@ -52,7 +52,7 @@ For a windowed text editor gnome-editor `gedit` is a reliable option.
 Out of the box spellcheck is not working. Some missing languages or conflict  with the languages installed.
 Gedit uses `enchant` which act as a fronted for several spell checkers, some of those being `Hunspell`, `MySpell`, `Ispell` and `Aspell`.
 In `pamac` it's possible to install more packages, for example, `aspell-en` and `aspell-de`, this will add English and German spell checkers.
- 
+
 ## Time settings
 Dual boot always has some troubles with the time settings, by default WinOS and Linux have different settings regarding time, on WinOS the time by default is Local Time, this can be changed, on the BIOS/UEFI or even in the WinOS registry.
 However in easier to make Linux use Local time instead of Universal Time.
@@ -142,7 +142,9 @@ For more settings `tizonia --help keyboard`
 Documentation at `http://docs.tizonia.org/usage/keyboard.html`
 
 ## Monitoring
-Installed and working is already a module of conky, can be configured. [todo]
+Installed and working is already a module of conky, can be configured. 
+Opposite to normal behaviour, conky on Mi3, is configured `/usr/share/conky/` and then auto started on`/i3/config`, the script used to run it is found on `/usr/bin/`.
+On Mi3 there are two conky setups, one for cheat sheets and another to settings. By modifying the `/usr/bin/` file relative to the launcher is possible to ignore one, or both.
 
 Other important options are neofetch to get system info and `htop` or `gotop`.
 `gotop` is a more "eye-candy" version.
