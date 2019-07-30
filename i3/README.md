@@ -14,6 +14,8 @@ Check which graphics correct, if NVIDIA optimus then use non-free graphics.
 
 Also gaps is enabled by default.
 
+Mi3  has a very complete user guide and a brilliant file included, accessible through `mod+Shift=h`, with the complete keyboard shortcuts.
+
 ## Browser
 Mi3 comes with palemoon as default browser. 
 Install Firefox. `sudo pacman -S firefox` or through software manager
@@ -35,7 +37,7 @@ Install rofi, a "better dmenu" through pamac or `sudo pacman -S rofi`.
 
 After installing edit the .i3/config file, comment the line about dmenu and add:
 `bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3`
-This will replace the usual call to dmenu. dmenu still works if another keybinding is provided. That is a important setting case something breaks on installation. [todo]
+This will replace the usual call to dmenu. dmenu still works if another keybinding is provided. That is a important setting case something breaks on installation.
 To move between types like windows, ssh or drun press `shift` while on rofi.
 
 Also it is possible to configure a faster keybinding like the one used on WindowsOS. For moving between open windows: 
@@ -44,6 +46,8 @@ Also it is possible to configure a faster keybinding like the one used on Window
 Rofi can be configured in several different ways.
 `rofi -help` will give you the current configuration and location.
 By adding `~/.config/rofi/config.` you can specify the look and feel of rofi window.
+
+Mi3 also has a small menu gnome style, `mod+z ` opens a small menu on top. Good emergency option.
 
 ## Text Editor
 There are as usual several options already installed. `vim` and `nano` are already in Mi3.
@@ -107,7 +111,8 @@ After that is necessary to start both applications at launch, for that edit the 
 `exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent`
 `exec --no-startup-id redshift-gtk`
 
-The  default notification manager is `dunst` on i3 can be configured at `~/.config/dunst/dunstrc`. [todo]
+The  default notification manager is `dunst` on i3 can be configured at `~/.config/dunst/dunstrc`.
+Dunst can be configured to have different colors, size and font, amongst other things.
 
 The standard status bar is i3bar, it can be manipulated with help of i3status.
 Configuration resides in `.config/i3status/config`
@@ -137,10 +142,12 @@ These will conflict with the `/.i3/config` file line, commenting it there resolv
 One good option for streaming players is Tizonia, very heavy but very capable, it includes spotify, plex and google play.
 Configuration file can be found at `.config/tizonia`. 
 To start spotify ` tizonia --spotify-playlist "#MOON" -s` the -s flag starts the playlist in random.
+Or `tizonia  --spotify-recommendations-by-artist-id "2wouN3QXejYa5tKetYdcVX" -s`, the artist id can be obtained through spotify web.
 To move to the next track press `n`. `+` and `-` for volume.
 For more settings `tizonia --help keyboard`
 Documentation at `http://docs.tizonia.org/usage/keyboard.html`
 
+For "eye-candy" is also possible to install cava, it runs on the command line and uses alsa or pulse to get the played music.
 ## Monitoring
 Installed and working is already a module of conky, can be configured. 
 Opposite to normal behaviour, conky on Mi3, is configured `/usr/share/conky/` and then auto started on`/i3/config`, the script used to run it is found on `/usr/bin/`.
@@ -160,3 +167,30 @@ Chromium does block this by default, and also has a specific add-on for this.
 
 ## Programming
 Intellij is available through pamac. It is also possible to install more recent implementations of java, openjdk11 is the more common. Is also available through the same way.
+
+## TODO
+Installed list for manjaro 17. This is for 18.
+i3-gaps 4.13
+customized, preconfigured i3status-manjaro 2.11
+dmenu-manjaro 4.16-12 patched with recency-awareness and mouse-support
+additional categorized menu morc_menu
+alsa pre-installed with install_pulse script for easy upgrade to pulseaudio
+lightdm
+pamac package manager
+lxappearance and nitrogen for customization
+lxinput for mouse and keyboard configuration
+bmenu, ranger, moc and a variety of more CLI-utilities
+compton, dunst, i3-scrot, i3-exit and conky*
+pcmanfm file-browser
+palemoon internet browser
+gimp, viewnior, epdfview, manjaro-printer
+vlc, xfburn
+hexchat, transmission-gtk
+manjaro-chroot, gparted, isousb
+base-devel group and yaourt for AUR access are pre-installed
+
+## OTHER TODO
+polybar
+oblogout
+octopi (vs pamac)
+qt5ct & kvantum
