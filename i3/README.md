@@ -47,7 +47,7 @@ Rofi can be configured in several different ways.
 `rofi -help` will give you the current configuration and location.
 By adding `~/.config/rofi/config.` you can specify the look and feel of rofi window.
 
-Mi3 also has a small menu gnome style, `mod+z ` opens a small menu on top. Good emergency option.
+Mi3 also has a small menu gnome style, `mod+z` opens a small menu on top. Good emergency option.
 
 ## Text Editor
 There are as usual several options already installed. `vim` and `nano` are already in Mi3.
@@ -94,16 +94,14 @@ For more info go to `https://wiki.archlinux.org/index.php/Rxvt-unicode`, there i
 To increase the font size got to `/usr/share/fonts/misc/fonts.alias` and take a look at settings.
 Edit the .Xresources accordingly, 10x20 is a good setting for an HiDPi setup.
 
+Apps like gedit have a specific configuration found under `preferences`.
 
 Night light does not come with Mi3 as with other distro's, one options is to install Redshift. It needs Geo location to work, it's possible to setup a static value or location. A more comprehensive option is to install and use `geoclue2` for configure with Redshift. 
 The geoclue configuration can be edited at `/etc/geoclue/geoclue.conf` , just add:
 
 `[redshift]
-
 allowed=true
-
 system=false
-
 users=`
 
 After that is necessary to start both applications at launch, for that edit the `/.i3/config` settings for both Redshift and geoclue.
@@ -128,7 +126,7 @@ To configure the login background `lightdm-settings` should be enough.
 ## Sound
 Out of the box Mi3 comes with AlsaMixer, but sound will not working from headphones, some comments online refer to Alsa not being able to play from Firefox and other programs. Within Mi3 there is also a script to install Pulse Audio with it. Pulse Audio will run on top of AlsaMixer to provide extra capabilities.
 
-Too install it run the scrip `instal_pulse`, with that the `/.i3/config` file will change and auto-magically apply all configurations necessary.
+Too install it run the scrip `install_pulse`, with that the `/.i3/config` file will change and auto-magically apply all configurations necessary.
 
 To manage external input `mod+ctrl+m` brings the Pulse Audio manager and from there is easy to select the input. For example USB headphones.
 
@@ -150,7 +148,7 @@ Documentation at `http://docs.tizonia.org/usage/keyboard.html`
 For "eye-candy" is also possible to install cava, it runs on the command line and uses alsa or pulse to get the played music.
 ## Monitoring
 Installed and working is already a module of conky, can be configured. 
-Opposite to normal behaviour, conky on Mi3, is configured `/usr/share/conky/` and then auto started on`/i3/config`, the script used to run it is found on `/usr/bin/`.
+Opposite to normal behaviour, conky on Mi3, is configured `/usr/share/conky/` and then auto started on`/.i3/config`, the script used to run it is found on `/usr/bin/`.
 On Mi3 there are two conky setups, one for cheat sheets and another to settings. By modifying the `/usr/bin/` file relative to the launcher is possible to ignore one, or both.
 
 Other important options are neofetch to get system info and `htop` or `gotop`.
