@@ -99,10 +99,10 @@ Apps like gedit have a specific configuration found under `preferences`.
 Night light does not come with Mi3 as with other distro's, one options is to install Redshift. It needs Geo location to work, it's possible to setup a static value or location. A more comprehensive option is to install and use `geoclue2` for configure with Redshift. 
 The geoclue configuration can be edited at `/etc/geoclue/geoclue.conf` , just add:
 
-`[redshift]
-allowed=true
-system=false
-users=`
+`[redshift]`
+`allowed=true`
+`system=false`
+`users=`
 
 After that is necessary to start both applications at launch, for that edit the `/.i3/config` settings for both Redshift and geoclue.
 
@@ -122,6 +122,18 @@ Instead of a screen saver Mi3 has a locking mechanism configured via i3lock. It 
 The login manager is LightDM, the configuration for the greeter (login screen manager) is set at `/etc/lightdm/slick-greeter.conf`
 It's possible to check for other installed greeters at `/usr/share/xgreeters` all `.desktop` files are the greeters installed.
 To configure the login background `lightdm-settings` should be enough.
+
+One interesting option to manage color schemes is `pywal`. It can be installed via `sudo pacman -S python-pywall` or `sudo pacman -S python-pip`+`sudo pip3 install pywal`+`pip3 install --user pywal`.
+To run it `wal -i </path/to/img.jpg>`.
+It will generate a new color scheme [TO WHERE?][todo].
+However given the split system used on Mi3, this will be applied to URxvt but not on i3bar, gedit, or rofi. Also may not be present after reboot.
+It's necessary to run `wal -R` on each startup of the system. In i3 you can add the command in the `.i3/config` with `exec --no-startup-id wal -R`.
+
+To update the URxvt color scheme with pywal is necessary to add to `~/.bashrc`
+`# pywal`
+`setsid wal -i <wallpaper-name>`
+This will however change the default wallpaper to the one set above. This might not be ideal.
+
 
 ## Sound
 Out of the box Mi3 comes with AlsaMixer, but sound will not working from headphones, some comments online refer to Alsa not being able to play from Firefox and other programs. Within Mi3 there is also a script to install Pulse Audio with it. Pulse Audio will run on top of AlsaMixer to provide extra capabilities.
@@ -166,7 +178,23 @@ Chromium does block this by default, and also has a specific add-on for this.
 ## Programming
 Intellij is available through pamac. It is also possible to install more recent implementations of java, openjdk11 is the more common. Is also available through the same way.
 
+## Gaming
+Steam is available through `pamac`.
+Steam Play, available through `proton` uses an internal version of `wine` with some special tweaks provided by valve.
+Enable `steam-beta` and `Steam Play` on steam settings.
+
+For GOG games, download the `.sh` file and run it `sh <game-name.sh>`
+
+Bumblebee drivers should kick in when necessary, if not, it's possible to run `primusrun <game-name>`, however this will use different config settings [in /usr/shared][todo]
+
 ## TODO
+games: how to run them with primusrun and manage config.
+pywal
+spotifyd, etc
+Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"
+Pacman Rosetta
+
+
 Installed list for manjaro 17. This is for 18.
 i3-gaps 4.13
 customized, preconfigured i3status-manjaro 2.11
