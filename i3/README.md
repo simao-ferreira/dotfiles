@@ -213,6 +213,8 @@ For GOG games, download the `.sh` file and run it `sh <game-name.sh>`
 Bumblebee drivers should kick in when necessary, if not, it's possible to run `primusrun <game-name>`, however this will use different config settings [in /usr/shared][todo]
 
 ## TODO
+general color paleltte
+grub quiet directly to linux
 games: how to run them with primusrun and manage config.
 pywal
 spotifyd, etc
@@ -220,6 +222,7 @@ Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adw
 Pacman Rosetta
 gnome like win press
 macos like keyboard press
+trim for ssd
 
 i3-gaps 4.13
 customized, preconfigured i3status-manjaro 2.11
