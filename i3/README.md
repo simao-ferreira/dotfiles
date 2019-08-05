@@ -75,6 +75,7 @@ URxvt is highly configurable. Highly.
 When using clean Mi3 the visual setup is rather minimal, background and bars are very basic.
 There are various options to manage and improve the setup.
 
+### Wallpaper
 There is an installation of Viewnior a image viewer and Nitrogen to setup a wallpaper, Nitrogen has some flaws, like not being able to recognize some file types.
 
 To replace Viewnior and help with the wallpaper setup install feh, through pamac or `sudo pacman -S feh`
@@ -83,6 +84,22 @@ For changing the wallpaper add to `/.i3/config`:
 `exec_always --no-startup-id feh --bg-scale ~/.wallpapers/forest-nightscape.jpg`
 But this might not work immediately, when pressing `mod4+Shift+r` if the new wallpaper appears but not when restarting, usually there is a line under `i3/config` starting Nitrogen, the wallpaper loader by default, that does not recognise .jpg files. By commenting this line, the previous instruction will work when rebooting.
 
+### Compton
+It's also possible to add transparency and shadow to windows through `compton`, on `.config/compton.conf` add:
+`opacity-rule = [`
+
+`  "75:class_g = 'URxvt' && focused",`
+
+`  "60:class_g = 'URxvt' && !focused"`
+
+`];`
+
+But this will not be set by default, it's necessary to add `compton -b` to launch it.
+Add `exec_always --no-startup-id feh --bg-scale ~/.wallpapers/sunset.jpg; sleep 1; compton -b` to `.i3/conf`
+
+Also can happen that this settings interfere with chromium. To solve this change `backend = "xrender` to `"backend = "glx"`.
+
+### Icon packs, cursors and fonts
 More configurations can be made, either bu modifying the config or using `lxappearence`, also called `Customize look and feel`, installed by default, with it is possible to load icon packs, mouse cursors, amongst other configurations. Also changing fonts and font size.
 
 However fonts are loaded in different config files.
@@ -96,6 +113,7 @@ Edit the .Xresources accordingly, 10x20 is a good setting for an HiDPi setup.
 
 Apps like gedit have a specific configuration found under `preferences`.
 
+### Redshift
 Night light does not come with Mi3 as with other distro's, one options is to install Redshift. It needs Geo location to work, it's possible to setup a static value or location. A more comprehensive option is to install and use `geoclue2` for configure with Redshift. 
 The geoclue configuration can be edited at `/etc/geoclue/geoclue.conf` , just add:
 
@@ -109,20 +127,25 @@ After that is necessary to start both applications at launch, for that edit the 
 `exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent`
 `exec --no-startup-id redshift-gtk`
 
+### Dunst
 The  default notification manager is `dunst` on i3 can be configured at `~/.config/dunst/dunstrc`.
 Dunst can be configured to have different colors, size and font, amongst other things.
 
+### Menu bar
 The standard status bar is i3bar, it can be manipulated with help of i3status.
 Configuration resides in `.config/i3status/config`
 There are other options to use, like `polybar`. [todo]
 
+### Caffeine
 Instead of a screen saver Mi3 has a locking mechanism configured via i3lock. It usually blocks when using Netflix or Spotify. To solve this, is possible to install `caffeine-ng` package, after add to `/.i3/config` the following line
 `exec -no-startup-id caffeine`. This also adds an icon to the bar and allows to switch it on/off when needed. the default is off.
 
+### Login manager
 The login manager is LightDM, the configuration for the greeter (login screen manager) is set at `/etc/lightdm/slick-greeter.conf`
 It's possible to check for other installed greeters at `/usr/share/xgreeters` all `.desktop` files are the greeters installed.
 To configure the login background `lightdm-settings` should be enough.
 
+### Pywal
 One interesting option to manage color schemes is `pywal`. It can be installed via `sudo pacman -S python-pywall` or `sudo pacman -S python-pip`+`sudo pip3 install pywal`+`pip3 install --user pywal`.
 To run it `wal -i </path/to/img.jpg>`.
 It will generate a new color scheme [TO WHERE?][todo].
@@ -149,6 +172,7 @@ As so make sure to use only one method of auto starting applications. pulse audi
 `/etc/xdg/autostart/pulseaudio-kde.desktop`
 These will conflict with the `/.i3/config` file line, commenting it there resolves the issue.
 
+### Sound player
 One good option for streaming players is Tizonia, very heavy but very capable, it includes spotify, plex and google play.
 Configuration file can be found at `.config/tizonia`. 
 To start spotify ` tizonia --spotify-playlist "#MOON" -s` the -s flag starts the playlist in random.
@@ -158,6 +182,7 @@ For more settings `tizonia --help keyboard`
 Documentation at `http://docs.tizonia.org/usage/keyboard.html`
 
 For "eye-candy" is also possible to install cava, it runs on the command line and uses alsa or pulse to get the played music.
+
 ## Monitoring
 Installed and working is already a module of conky, can be configured. 
 Opposite to normal behaviour, conky on Mi3, is configured `/usr/share/conky/` and then auto started on`/.i3/config`, the script used to run it is found on `/usr/bin/`.
@@ -193,9 +218,9 @@ pywal
 spotifyd, etc
 Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"
 Pacman Rosetta
+gnome like win press
+macos like keyboard press
 
-
-Installed list for manjaro 17. This is for 18.
 i3-gaps 4.13
 customized, preconfigured i3status-manjaro 2.11
 dmenu-manjaro 4.16-12 patched with recency-awareness and mouse-support
