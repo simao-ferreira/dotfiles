@@ -71,6 +71,20 @@ And to make Linux synchronized:
 On setup there are UTerm, UXterm and URxvt.
 URxvt is highly configurable. Highly.
 
+By default Mi3 has `bash` shell, it's configurations can be found at `.bashrc`.
+
+A more complete and versatile option is `zsh`, found through `sudo pacman -S zsh`.
+Add also `sudo pacman -S zsh-completions`.
+
+Running `zsh` will run zsh, if it's first time it should open `zsh-newuser-install`. Note: Make sure your terminal's size is at least 72×15 otherwise `zsh-newuser-install` will not run.
+From this it's possible to configure history and completion.
+
+The new configuration file is set as `.zshrc`.
+
+Optionally to install `oh-my-zsh` configuration setuo run:
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+Adding to to `oh-my-zsh` there are several interesting plugins like git and `agnoster` theme. For themes it's necessary to install `powerline fonts`. This is possible through `AUR` installing `nerd-fonts-complete`. Change the `ZSH_THEME="agnoster"` or other to get "eye-candy" visuals.
+
 ## Appearance
 When using clean Mi3 the visual setup is rather minimal, background and bars are very basic.
 There are various options to manage and improve the setup.
@@ -157,6 +171,11 @@ To update the URxvt color scheme with pywal is necessary to add to `~/.bashrc`
 `setsid wal -i <wallpaper-name>`
 This will however change the default wallpaper to the one set above. This might not be ideal.
 
+Pywal sets it's configurations to `.cache/wal`, to enable it by default a line must be added to `.i3/config` from there will set colors at launch. It is possible to define a template and make it run the same configurations always.
+However this will set them at start, this means more time spent running before desktop is ready.
+Also, it will not change the color palette of `.Xresources`, so neither rofi or i3bar will change. Rofi can be configured differently for this.
+But to do this in i3bar it's necessary another application.
+`Xresources` will not be used by i3bar as well. i3bar as to be always configured apart.
 
 ## Sound
 Out of the box Mi3 comes with AlsaMixer, but sound will not working from headphones, some comments online refer to Alsa not being able to play from Firefox and other programs. Within Mi3 there is also a script to install Pulse Audio with it. Pulse Audio will run on top of AlsaMixer to provide extra capabilities.
@@ -180,6 +199,8 @@ Or `tizonia  --spotify-recommendations-by-artist-id "2wouN3QXejYa5tKetYdcVX" -s`
 To move to the next track press `n`. `+` and `-` for volume.
 For more settings `tizonia --help keyboard`
 Documentation at `http://docs.tizonia.org/usage/keyboard.html`
+
+There is also possible to use `spicetify-cli`, but this will run on top of the normal spotify app, just changes the app appearance.
 
 For "eye-candy" is also possible to install cava, it runs on the command line and uses alsa or pulse to get the played music.
 
@@ -212,6 +233,10 @@ For GOG games, download the `.sh` file and run it `sh <game-name.sh>`
 
 Bumblebee drivers should kick in when necessary, if not, it's possible to run `primusrun <game-name>`, however this will use different config settings [in /usr/shared][todo]
 
+## Others
+Packages to remove:
+`palemoon`, `hexchat`.
+
 ## TODO
 general color paleltte
 grub quiet directly to linux
@@ -221,9 +246,14 @@ spotifyd, etc
 Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"
 Pacman Rosetta
 gnome like win press
-macos like keyboard press
+macos like keyboard press- https://support.apple.com/en-us/HT201586
 trim for ssd
-
+spicetify-cli
+feh-blur
+polybar
+oblogout
+octopi (vs pamac)
+qt5ct & kvantum
 i3-gaps 4.13
 customized, preconfigured i3status-manjaro 2.11
 dmenu-manjaro 4.16-12 patched with recency-awareness and mouse-support
@@ -241,10 +271,5 @@ gimp, viewnior, epdfview, manjaro-printer
 vlc, xfburn
 hexchat, transmission-gtk
 manjaro-chroot, gparted, isousb
-base-devel group and yaourt for AUR access are pre-installed
+base-devel
 
-## OTHER TODO
-polybar
-oblogout
-octopi (vs pamac)
-qt5ct & kvantum
