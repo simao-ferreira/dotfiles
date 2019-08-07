@@ -157,8 +157,11 @@ Instead of a screen saver Mi3 has a locking mechanism configured via i3lock. It 
 ### Login manager
 The login manager is LightDM, the configuration for the greeter (login screen manager) is set at `/etc/lightdm/slick-greeter.conf`
 It's possible to check for other installed greeters at `/usr/share/xgreeters` all `.desktop` files are the greeters installed.
-To configure the login background `lightdm-settings` should be enough.
+To configure the login background `sudo lightdm-settings` and there you can change backgrounds.
 
+It's advisable to move the backgrounds to `/usr/share/backgrounds` or `/usr/share/pixmaps` depending on the greeter installed.
+To be available to `lightDM` images and pictures can't be located under `/home`. `dm-tool switch-to-greeter` permits to check the greeter changes from within the session.
+  
 ### Pywal
 One interesting option to manage color schemes is `pywal`. It can be installed via `sudo pacman -S python-pywall` or `sudo pacman -S python-pip`+`sudo pip3 install pywal`+`pip3 install --user pywal`.
 To run it `wal -i </path/to/img.jpg>`.
@@ -241,7 +244,7 @@ Packages to remove:
 general color paleltte
 grub quiet directly to linux
 games: how to run them with primusrun and manage config.
-pywal
+*pywal
 spotifyd, etc
 Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"
 Pacman Rosetta
@@ -259,14 +262,12 @@ customized, preconfigured i3status-manjaro 2.11
 dmenu-manjaro 4.16-12 patched with recency-awareness and mouse-support
 additional categorized menu morc_menu
 alsa pre-installed with install_pulse script for easy upgrade to pulseaudio
-lightdm
 pamac package manager
 lxappearance and nitrogen for customization
 lxinput for mouse and keyboard configuration
 bmenu, ranger, moc and a variety of more CLI-utilities
 compton, dunst, i3-scrot, i3-exit and conky*
 pcmanfm file-browser
-palemoon internet browser
 gimp, viewnior, epdfview, manjaro-printer
 vlc, xfburn
 hexchat, transmission-gtk

@@ -270,7 +270,7 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-scale ~/.wallpapers/sunset.jpg; sleep 1; compton -b
+exec_always --no-startup-id feh --bg-scale ~/.wallpapers/green-leafs.jpg; sleep 1; compton -b
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -318,17 +318,26 @@ bar {
 #   font xft:URWGothic-Book 11
 	strip_workspace_numbers yes
 
-    colors {
-        background #222D31
-        statusline #F9FAF9
-        separator  #454947
+# background dark-green			#08200c
+# background green			#257134
+# letters light-gray-green		#ced6d0 
+# active vivid-green			#369f09
+# active palid-green			#6b8d54
+# urgent				#46cf0c
+# yellow-ish gren			#9aca79
+# whit-ish green			#ecf5e6
 
-#                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
+    colors {
+        background #08200c
+        statusline #ecf5e6
+        separator  #369f09
+
+#                          border  backgr. text
+        focused_workspace  #ecf5e6 #369f09 #08200c
+        active_workspace   #9aca79 #257134 #9aca79
+        inactive_workspace #9aca79 #08200c #ecf5e6
+        binding_mode       #369f09 #257134 #6b8d54
+        urgent_workspace   #369f09 #9aca79 #E5201D
     }
 }
 
@@ -337,20 +346,20 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+  client.focused          #08200c #08200c #9aca79 #9aca79
+  client.focused_inactive #257134 #257134 #369f09 #08200c
+  client.unfocused        #257134 #257134 #369f09 #08200c
+  client.urgent           #CB4B16 #9aca79 #369f09 #369f09
   client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
-  client.background       #2B2C2B
+  client.background       #08200c
 
 #############################
 ### settings for i3-gaps: ###
 #############################
 
 # Set inner/outer gaps
-gaps inner 14
+gaps inner 25
 gaps outer -2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
