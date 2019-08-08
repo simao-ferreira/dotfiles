@@ -8,7 +8,8 @@ export ZSH="/home/macbook/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME="gnzh"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -98,12 +99,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# User-tag redefinition
-prompt_context() {
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)TPi3"
-  fi
-}
+# AGNOSTER USER
+#prompt_context() {
+#  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+#    prompt_segment black default "%(!.%{%F{yellow}%}.)TPi3"
+#  fi
+#}
 
 # pywal
-setsid wal -i ~/.wallpapers/green-leafs.jpg 
+# setsid wal -i ~/.wallpapers/green-leafs.jpg 
+
+# GNZH
+local user_host="TPi3"
+PROMPT="╭─${user_host} ${current_dir} \$(ruby_prompt_info) ${git_branch}
+╰─ ›$PR_PROMPT "
+RPROMPT="${return_code}"
+

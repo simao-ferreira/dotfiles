@@ -1,0 +1,16 @@
+! ------------------------------------------------------------------------------
+! Rofi configs
+! ------------------------------------------------------------------------------
+
+! background dark-green			#08200c
+! letters light-gray-green		#ced6d0 
+! active vivid-green			#369f09
+! active palid-green			#6b8d54
+! urgent				#46cf0c
+
+rofi.color-enabled: true
+rofi.color-window: #08200c, #08200c, #08200c
+rofi.color-normal: #08200c, #ced6d0, #08200c, #08200c, #369f09
+rofi.color-active: #08200c, #369f09, #08200c, #08200c, #6b8d54
+rofi.color-urgent: #08200c, #46cf0c, #08200c, #08200c, #46cf0c
+rofi.modi: run,drun,window
