@@ -16,6 +16,8 @@ Also gaps is enabled by default.
 
 Mi3  has a very complete user guide and a brilliant file included, accessible through `mod+Shift=h`, with the complete keyboard shortcuts.
 
+* [Appearance](APPEARANCE.md)
+
 ## Browser
 Mi3 comes with palemoon as default browser. 
 Install Firefox. `sudo pacman -S firefox` or through software manager
@@ -84,10 +86,6 @@ The new configuration file is set as `.zshrc`.
 Optionally to install `oh-my-zsh` configuration setuo run:
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 Adding to to `oh-my-zsh` there are several interesting plugins like git and `agnoster` theme. For themes it's necessary to install `powerline fonts`. This is possible through `AUR` installing `nerd-fonts-complete`. Change the `ZSH_THEME="agnoster"` or other to get "eye-candy" visuals.
-
-## Appearance
-When using clean Mi3 the visual setup is rather minimal, background and bars are very basic.
-There are various options to manage and improve the setup.
 
 ### Wallpaper
 There is an installation of Viewnior a image viewer and Nitrogen to setup a wallpaper, Nitrogen has some flaws, like not being able to recognize some file types.
