@@ -4,6 +4,7 @@ When using clean Mi3 the visual setup is rather minimal, background and bars are
 ### Wallpaper
 There is an installation of Viewnior a image viewer and Nitrogen to setup a wallpaper.
 [Viewnior](https://siyanpanayotov.com/project/viewnior) is a simple minimalist image viewer that provides a clean interface with extra space. 
+
 [Nitrogen](https://wiki.archlinux.org/index.php/nitrogen) is light and simple desktop background browser and setter for X Window.
 
 Nitrogen has some flaws, like not being able to recognize some file types.
@@ -66,10 +67,12 @@ The `geoclue2` configuration can be edited at `/etc/geoclue/geoclue.conf`, addin
 It is also necessary to start both applications at launch, for that edit the `/.i3/config` settings for both Redshift and geoclue:
 
 `exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent`
+
 `exec --no-startup-id redshift-gtk`
 
 ### Dunst
 The  default notification manager is `dunst` on i3 can be configured at `~/.config/dunst/dunstrc`.
+
 [Dunst](https://dunst-project.org/) can be configured to have different colors, size and font, among other things.
 
 ### Caffeine
