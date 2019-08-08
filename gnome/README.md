@@ -2,8 +2,6 @@
 
 Configs for the gnome environment
 
-# Gnome
-
 ##Gnome tab bar
 When using a hidpi config, or anyother, the ususal gnome bar is to big for my taste.
 

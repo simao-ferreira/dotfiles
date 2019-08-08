@@ -1,28 +1,13 @@
 # __UNIX__
 All purpose unix repository
 
-# Summary
-I have a new PC.
-So while considering my new setup, I realised how much I had grown tired of ubuntu shenanigans and constant uncertanty. 
-When researching for alternatives I felt impressed by two things:
-* Manjaro
-* i3
+## Summary
+After a decade in-and-out of linux, having trouble with Ubuntu and Mint, I decided to move definitively to linux.
 
-I have already tryed a bit of both, felt some issues regarding both, and on top i realised my workflow will need to be adpated. 
+Having endured some issues on Ubuntu, my most usual setups are based in mate, cinnamon or gnome.
+This time around the flavor is Arch based Manjaro. During testing, I stumbled upon i3, and fell in love.
 
-I am already writing this from my Manjaro Gnome setup. But i3 became a different beast all together.
+Having tried already several versions like mate, cinnamon, unity, gnome or budgie, the most recent playground is i3, but to much changes between them, and sometimes it's easy to forget how to solve some issue. Even more on i3.
+This repo's purpose is to record findings, instructions or links pertaining configurations, issues or any simple instructions that are relevant to my daily usage, and avoid hours of research for some small detail.
 
-Still, I have no clue to how improve, manage and be efficient with this tool.
-
-# Purpose
-This will report my findings and my pains, but hopefully also some configurations and growth.
-
-## i3 Manjaro
-Running on triple boot may cause troubles on the grub, run `sudo grub-update` to make sure the grub recognizes all files
-
-When first intalling i3 brings Palemoon as browser, no Firefox.
-
-### Installing
-Manjaro install is done by typing `sudo pacman -S [package]`
-
-Also, open the software manager/ installer and in preferences activate AUR, this will enable community packages.
+[Manjaro i3](i3/README.md)

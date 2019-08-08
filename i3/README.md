@@ -1,4 +1,5 @@
 # i3
+* [Manjaro](MANJARO.md)
 
 ## Settings
 To install packages in Mi3 use `sudo pacman -s <package-name>` or through pamac name as `Add/Remove software`.
@@ -234,6 +235,30 @@ For GOG games, download the `.sh` file and run it `sh <game-name.sh>`
 
 Bumblebee drivers should kick in when necessary, if not, it's possible to run `primusrun <game-name>`, however this will use different config settings [in /usr/shared][todo]
 
+## Packages
+
+[caffeine](APPEARANCE.md#caffeine)
+
+[compton](APPEARANCE.md#compton)
+
+[dunst](APPEARANCE.md#dunst)
+
+[feh](APPEARANCE.md#wallpaper)
+
+[i3bar](APPEARANCE.md#menu-bar)
+
+[lightdm](APPEARANCE.md#login-manager)
+
+[lxappearance](APPEARANCE.md#icon-packs-cursors-and-fonts)
+
+[nitrogen](APPEARANCE.md#wallpaper)
+
+[pywal](APPEARANCE.md#pywal)
+
+[redshift](APPEARANCE.md#redshift)
+
+[viewnior](APPEARANCE.md#wallpaper)
+
 ## Others
 Packages to remove:
 `palemoon`, `hexchat`.
@@ -242,9 +267,8 @@ Packages to remove:
 general color paleltte
 grub quiet directly to linux
 games: how to run them with primusrun and manage config.
-*pywal
 spotifyd, etc
-Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"
+`Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"`
 Pacman Rosetta
 gnome like win press
 macos like keyboard press- https://support.apple.com/en-us/HT201586
@@ -261,14 +285,13 @@ dmenu-manjaro 4.16-12 patched with recency-awareness and mouse-support
 additional categorized menu morc_menu
 alsa pre-installed with install_pulse script for easy upgrade to pulseaudio
 pamac package manager
-lxappearance and nitrogen for customization
 lxinput for mouse and keyboard configuration
 bmenu, ranger, moc and a variety of more CLI-utilities
-compton, dunst, i3-scrot, i3-exit and conky*
+i3-scrot, i3-exit and conky*
 pcmanfm file-browser
 gimp, viewnior, epdfview, manjaro-printer
 vlc, xfburn
-hexchat, transmission-gtk
+transmission-gtk
 manjaro-chroot, gparted, isousb
 base-devel
-
+zenity
