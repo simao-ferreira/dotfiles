@@ -3,11 +3,11 @@ When using clean Mi3 the visual setup is rather minimal, background and bars are
 
 ### Wallpaper
 There is an installation of Viewnior a image viewer and Nitrogen to setup a wallpaper.
-(Viewnior) [https://siyanpanayotov.com/project/viewnior] is a simple minimalist image viewer that provides a clean interface with extra space. 
-(Nitrogen) [https://wiki.archlinux.org/index.php/nitrogen] is light and simple desktop background browser and setter for X Window.
+[Viewnior](https://siyanpanayotov.com/project/viewnior) is a simple minimalist image viewer that provides a clean interface with extra space. 
+[Nitrogen](https://wiki.archlinux.org/index.php/nitrogen) is light and simple desktop background browser and setter for X Window.
 
 Nitrogen has some flaws, like not being able to recognize some file types.
-A good replacement for Viewnior and more versatile for the i3 config wallpaper settings setup, is (feh) [https://feh.finalrewind.org/].
+A good replacement for Viewnior and more versatile for the i3 config wallpaper settings setup, is [feh](https://feh.finalrewind.org/).
 Can be installed through pamac or`sudo pacman -S feh`.
 
 For changing the wallpaper add to `/.i3/config`:
@@ -21,7 +21,7 @@ Configuration resides in `.config/i3status/config`
 There are other popular options like `polybar`. [todo]
 
 ### Compton
-(Compton) [https://wiki.archlinux.org/index.php/Compton] is a window manager compositor  for Xorg.
+[Compton](https://wiki.archlinux.org/index.php/Compton) is a window manager compositor  for Xorg.
 It also provides transparency and shadow to windows through `compton`.
 To do this change `.config/compton.conf`, and add or modify as follows:
 `opacity-rule = [`
@@ -43,19 +43,18 @@ Fonts are loaded in different ways under Mi3, there are several config files or 
 When changing the `.i3/config` file the font input changes bar fonts, but not apps and terminal. For terminal Mi3 comes with URxvt as default, for it changed can be made `.Xresources`. URxvt is more configurable than usual, and when installing it from scratch it's look is extremely different from the configurations usually seem online.
 
 When setting new settings with `lxappearance` also can happen that some resources are unrecognizable for URxvt.
-(URxvt)[https://wiki.archlinux.org/index.php/Rxvt-unicode] manuals are very complete and detailed.
-
+[URxvt](https://wiki.archlinux.org/index.php/Rxvt-unicode) manuals are very complete and detailed.
 Important when using HiDpi screens, to increase font size first check `/usr/share/fonts/misc/fonts.alias` and take a look at settings.
 From there edit the `.Xresources` accordingly, `10x20` is a good setting for an HiDpi setup.
 
 Some apps like `gedit` or `chromium` have a specific configurations, usually found under preferences or settings.
 
 ### Redshift
-(redshift) [http://jonls.dk/redshift/] provides color temperature configurations, also known as night light.
+[redshift](http://jonls.dk/redshift/) provides color temperature configurations, also known as night light.
  
 Night light does not come with Mi3 as with other distro's, `redshift` is one of the options, as `flux`. 
 For redshift it's necessary to configure geo location, this can be mocked, providing a static value or coordinate. 
-Another options, more comprehensive,  is to install and use (geoclue) [https://gitlab.freedesktop.org/geoclue/geoclue/wikis/home], available under pamac or through pacman as `geoclue2`.
+Another options, more comprehensive, is to install and use [geoclue](https://gitlab.freedesktop.org/geoclue/geoclue/wikis/home), available under pamac or through pacman as `geoclue2`.
  
 The `geoclue2` configuration can be edited at `/etc/geoclue/geoclue.conf`, adding:
 
@@ -71,7 +70,7 @@ It is also necessary to start both applications at launch, for that edit the `/.
 
 ### Dunst
 The  default notification manager is `dunst` on i3 can be configured at `~/.config/dunst/dunstrc`.
-(Dunst) [https://dunst-project.org/] can be configured to have different colors, size and font, among other things.
+[Dunst](https://dunst-project.org/) can be configured to have different colors, size and font, among other things.
 
 ### Caffeine
 The screen saver in Mi3 is a locking mechanism configured via i3lock, that blurs the workspace. 
@@ -105,7 +104,7 @@ To update the URxvt color scheme with pywal is necessary to add to `~/.bashrc` o
 
 This will as well change the wallpaper to the one set as image, and run every time a terminal is run.
 
-(Pywal) [https://github.com/dylanaraps/pywal] sets it's configurations to `.cache/wal`, to enable it by default a line must be added to `.i3/config` from there will set colors at launch. It is possible to define a template and make it run the same configurations always. This will by run at start, an can overrun other configurations previously set.
+[Pywal](https://github.com/dylanaraps/pywal) sets it's configurations to `.cache/wal`, to enable it by default a line must be added to `.i3/config` from there will set colors at launch. It is possible to define a template and make it run the same configurations always. This will by run at start, an can overrun other configurations previously set.
 
 The color palette of `.Xresources` will not change directly so neither rofi or i3bar will change. Rofi and URxvt can be configured differently for this, or an external package can be used to manage this, this is also true to i3bar, since i3bar does not use system or `Xresources` to get it's configuration.
 
