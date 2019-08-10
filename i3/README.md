@@ -231,6 +231,10 @@ Steam is available through `pamac`.
 Steam Play, available through `proton` uses an internal version of `wine` with some special tweaks provided by valve.
 Enable `steam-beta` and `Steam Play` on steam settings.
 
+Bumblebee *auto-magically* detects the necessity to use Nvidia graphics. When necessary it's possible to define in steam which games run from start with nvidia,
+Set up a variable in the environment `sudo sh -c 'echo OPTIMUS_PREFIX=\"primusrun\" >> /etc/environment'`. Logout and login the desktop sessions. Then in steam client select the game from the library page, right-click, and select properties.
+Click the SET LAUNCH OPTIONS button and specify `$OPTIMUS_PREFIX %command%`for the command line.
+
 For GOG games, download the `.sh` file and run it `sh <game-name.sh>`
 
 Bumblebee drivers should kick in when necessary, if not, it's possible to run `primusrun <game-name>`, however this will use different config settings [in /usr/shared][todo]

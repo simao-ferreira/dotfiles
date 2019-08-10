@@ -110,8 +110,8 @@ source $ZSH/oh-my-zsh.sh
 # setsid wal -i ~/.wallpapers/green-leafs.jpg 
 
 # GNZH
-local user_host="TPi3"
-PROMPT="╭─${user_host} ${current_dir} \$(ruby_prompt_info) ${git_branch}
-╰─ ›$PR_PROMPT "
-RPROMPT="${return_code}"
+#local user_host="TPi3"
+#PROMPT="╭─${user_host} ${current_dir} \$(ruby_prompt_info) ${git_branch}
+#╰─ ›$PR_PROMPT "
+#RPROMPT="${return_code}"
 
