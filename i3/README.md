@@ -60,6 +60,9 @@ Out of the box spellcheck is not working. Some missing languages or conflict  wi
 Gedit uses `enchant` which act as a fronted for several spell checkers, some of those being `Hunspell`, `MySpell`, `Ispell` and `Aspell`.
 In `pamac` it's possible to install more packages, for example, `aspell-en` and `aspell-de`, this will add English and German spell checkers.
 
+To edit colors install `gedit color scheme` plugin from pamac, this usually installs the `developer-plugins`, which are a group of add-ons for gedit.
+To configure the new color scheme, enter `gedit` select `color scheme editor` and configure the changes needed, save under a new name and ID, this will save the new configuration to `.local/shares/gedit/styles`.
+Sometimes it add an underline under some text, just enter color scheme again and remove it.
 ## Time settings
 Dual boot always has some troubles with the time settings, by default WinOS and Linux have different settings regarding time, on WinOS the time by default is Local Time, this can be changed, on the BIOS/UEFI or even in the WinOS registry.
 However in easier to make Linux use Local time instead of Universal Time.
@@ -72,7 +75,7 @@ And to make Linux synchronized:
 
 ## Terminal
 On setup there are UTerm, UXterm and URxvt.
-URxvt is highly configurable. Highly.
+URxvt is highly configurable.
 
 By default Mi3 has `bash` shell, it's configurations can be found at `.bashrc`.
 
@@ -234,6 +237,9 @@ Enable `steam-beta` and `Steam Play` on steam settings.
 Bumblebee *auto-magically* detects the necessity to use Nvidia graphics. When necessary it's possible to define in steam which games run from start with nvidia,
 Set up a variable in the environment `sudo sh -c 'echo OPTIMUS_PREFIX=\"primusrun\" >> /etc/environment'`. Logout and login the desktop sessions. Then in steam client select the game from the library page, right-click, and select properties.
 Click the SET LAUNCH OPTIONS button and specify `$OPTIMUS_PREFIX %command%`for the command line.
+A simpler option is just to set directly launche options to  `primusrun %command%`.
+
+Some games refuse to start with any of the above configurations.
 
 For GOG games, download the `.sh` file and run it `sh <game-name.sh>`
 
