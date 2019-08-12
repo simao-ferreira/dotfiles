@@ -226,6 +226,10 @@ It is possible to change this over Firefox configuration, however some use can b
 
 Chromium does block this by default, and also has a specific add-on for this.
 
+## Battery
+
+* [Battery](BATTERY.md)
+
 ## Programming
 Intellij is available through pamac. It is also possible to install more recent implementations of java, openjdk11 is the more common. Is also available through the same way.
 
@@ -266,6 +270,8 @@ Bumblebee drivers should kick in when necessary, if not, it's possible to run `p
 [pywal](APPEARANCE.md#pywal)
 
 [redshift](APPEARANCE.md#redshift)
+
+[tlp](BATTERY.md#tlp)
 
 [viewnior](APPEARANCE.md#wallpaper)
 
