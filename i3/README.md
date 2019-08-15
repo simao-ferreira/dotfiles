@@ -5,7 +5,9 @@
 To install packages in Mi3 use `sudo pacman -s <package-name>` or through pamac name as `Add/Remove software`.
 To update to last versions use `sudo pacman -U`
 Is also possible to add user managed packages to pamac, to do this go to pamac top corner and under settings add `AUR`.
- 
+To install `AUR`packages from terminal use `yay -S <package>`.
+Other helpers for `pacman` can be used instead of `yay`, like `trizen`, `pikaur`, `pakku`, `aura` or `pacaur`. Semantics can be different for them.
+
 Mi3 also brings a command line menu to manage settings, run it by pressing `$mod+Ctrl+b` or `bmenu` in the terminal.
 This will bring a text UI with options, like install a new kernel. Or two, just in case it's needed for recovery options.
 This is important because Manjaro is a rolling distro based on Arch, and while is running behind the latest it can on occasion break. If it happens select a different kernel when booting.
@@ -15,7 +17,7 @@ Check which graphics correct, if NVIDIA optimus then use non-free graphics.
 
 Also gaps is enabled by default.
 
-Mi3  has a very complete user guide and a brilliant file included, accessible through `mod+Shift=h`, with the complete keyboard shortcuts.
+Mi3  has a very helpful user guide file included, accessible through `mod+Shift=h`, with the complete keyboard shortcuts.
 
 * [Appearance](APPEARANCE.md)
 
@@ -63,6 +65,7 @@ In `pamac` it's possible to install more packages, for example, `aspell-en` and 
 To edit colors install `gedit color scheme` plugin from pamac, this usually installs the `developer-plugins`, which are a group of add-ons for gedit.
 To configure the new color scheme, enter `gedit` select `color scheme editor` and configure the changes needed, save under a new name and ID, this will save the new configuration to `.local/shares/gedit/styles`.
 Sometimes it add an underline under some text, just enter color scheme again and remove it.
+
 ## Time settings
 Dual boot always has some troubles with the time settings, by default WinOS and Linux have different settings regarding time, on WinOS the time by default is Local Time, this can be changed, on the BIOS/UEFI or even in the WinOS registry.
 However in easier to make Linux use Local time instead of Universal Time.
@@ -87,100 +90,9 @@ From this it's possible to configure history and completion.
 
 The new configuration file is set as `.zshrc`.
 
-Optionally to install `oh-my-zsh` configuration setuo run:
+Optionally to install `oh-my-zsh` configuration setup run:
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 Adding to to `oh-my-zsh` there are several interesting plugins like git and `agnoster` theme. For themes it's necessary to install `powerline fonts`. This is possible through `AUR` installing `nerd-fonts-complete`. Change the `ZSH_THEME="agnoster"` or other to get "eye-candy" visuals.
-
-### Wallpaper
-There is an installation of Viewnior a image viewer and Nitrogen to setup a wallpaper, Nitrogen has some flaws, like not being able to recognize some file types.
-
-To replace Viewnior and help with the wallpaper setup install feh, through pamac or `sudo pacman -S feh`
- 
-For changing the wallpaper add to `/.i3/config`:
-`exec_always --no-startup-id feh --bg-scale ~/.wallpapers/forest-nightscape.jpg`
-But this might not work immediately, when pressing `mod4+Shift+r` if the new wallpaper appears but not when restarting, usually there is a line under `i3/config` starting Nitrogen, the wallpaper loader by default, that does not recognise .jpg files. By commenting this line, the previous instruction will work when rebooting.
-
-### Compton
-It's also possible to add transparency and shadow to windows through `compton`, on `.config/compton.conf` add:
-`opacity-rule = [`
-
-`  "75:class_g = 'URxvt' && focused",`
-
-`  "60:class_g = 'URxvt' && !focused"`
-
-`];`
-
-But this will not be set by default, it's necessary to add `compton -b` to launch it.
-Add `exec_always --no-startup-id feh --bg-scale ~/.wallpapers/sunset.jpg; sleep 1; compton -b` to `.i3/conf`
-
-Also can happen that this settings interfere with chromium. To solve this change `backend = "xrender` to `"backend = "glx"`.
-
-### Icon packs, cursors and fonts
-More configurations can be made, either bu modifying the config or using `lxappearence`, also called `Customize look and feel`, installed by default, with it is possible to load icon packs, mouse cursors, amongst other configurations. Also changing fonts and font size.
-
-However fonts are loaded in different config files.
-By default when changing the config file, the font input changes bar fonts, but not apps and terminal. For terminal URxvt comes as default, and with it the defaults can be changed at `.Xresources` however this terminal is more complex than usual to configure.
-
-When setting new settings with lxappearence also can happen that some resources are unrecognizable for URxvt.
-For more info go to `https://wiki.archlinux.org/index.php/Rxvt-unicode`, there it's possible to understand more about configurations like fonts on URxvt.
-
-To increase the font size got to `/usr/share/fonts/misc/fonts.alias` and take a look at settings.
-Edit the .Xresources accordingly, 10x20 is a good setting for an HiDPi setup.
-
-Apps like gedit have a specific configuration found under `preferences`.
-
-### Redshift
-Night light does not come with Mi3 as with other distro's, one options is to install Redshift. It needs Geo location to work, it's possible to setup a static value or location. A more comprehensive option is to install and use `geoclue2` for configure with Redshift. 
-The geoclue configuration can be edited at `/etc/geoclue/geoclue.conf` , just add:
-
-`[redshift]`
-`allowed=true`
-`system=false`
-`users=`
-
-After that is necessary to start both applications at launch, for that edit the `/.i3/config` settings for both Redshift and geoclue.
-
-`exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent`
-`exec --no-startup-id redshift-gtk`
-
-### Dunst
-The  default notification manager is `dunst` on i3 can be configured at `~/.config/dunst/dunstrc`.
-Dunst can be configured to have different colors, size and font, amongst other things.
-
-### Menu bar
-The standard status bar is i3bar, it can be manipulated with help of i3status.
-Configuration resides in `.config/i3status/config`
-There are other options to use, like `polybar`. [todo]
-
-### Caffeine
-Instead of a screen saver Mi3 has a locking mechanism configured via i3lock. It usually blocks when using Netflix or Spotify. To solve this, is possible to install `caffeine-ng` package, after add to `/.i3/config` the following line
-`exec -no-startup-id caffeine`. This also adds an icon to the bar and allows to switch it on/off when needed. the default is off.
-
-### Login manager
-The login manager is LightDM, the configuration for the greeter (login screen manager) is set at `/etc/lightdm/slick-greeter.conf`
-It's possible to check for other installed greeters at `/usr/share/xgreeters` all `.desktop` files are the greeters installed.
-To configure the login background `sudo lightdm-settings` and there you can change backgrounds.
-
-It's advisable to move the backgrounds to `/usr/share/backgrounds` or `/usr/share/pixmaps` depending on the greeter installed.
-To be available to `lightDM` images and pictures can't be located under `/home`. `dm-tool switch-to-greeter` permits to check the greeter changes from within the session.
-  
-### Pywal
-One interesting option to manage color schemes is `pywal`. It can be installed via `sudo pacman -S python-pywall` or `sudo pacman -S python-pip`+`sudo pip3 install pywal`+`pip3 install --user pywal`.
-To run it `wal -i </path/to/img.jpg>`.
-It will generate a new color scheme [TO WHERE?][todo].
-However given the split system used on Mi3, this will be applied to URxvt but not on i3bar, gedit, or rofi. Also may not be present after reboot.
-It's necessary to run `wal -R` on each startup of the system. In i3 you can add the command in the `.i3/config` with `exec --no-startup-id wal -R`.
-
-To update the URxvt color scheme with pywal is necessary to add to `~/.bashrc`
-`# pywal`
-`setsid wal -i <wallpaper-name>`
-This will however change the default wallpaper to the one set above. This might not be ideal.
-
-Pywal sets it's configurations to `.cache/wal`, to enable it by default a line must be added to `.i3/config` from there will set colors at launch. It is possible to define a template and make it run the same configurations always.
-However this will set them at start, this means more time spent running before desktop is ready.
-Also, it will not change the color palette of `.Xresources`, so neither rofi or i3bar will change. Rofi can be configured differently for this.
-But to do this in i3bar it's necessary another application.
-`Xresources` will not be used by i3bar as well. i3bar as to be always configured apart.
 
 ## Sound
 Out of the box Mi3 comes with AlsaMixer, but sound will not working from headphones, some comments online refer to Alsa not being able to play from Firefox and other programs. Within Mi3 there is also a script to install Pulse Audio with it. Pulse Audio will run on top of AlsaMixer to provide extra capabilities.
@@ -285,6 +197,7 @@ grub quiet directly to linux
 games: how to run them with primusrun and manage config.
 spotifyd, etc
 `Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"`
+i3wm-themer
 Pacman Rosetta
 gnome like win press
 macos like keyboard press- https://support.apple.com/en-us/HT201586

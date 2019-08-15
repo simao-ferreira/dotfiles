@@ -7,7 +7,7 @@ There is an installation of Viewnior a image viewer and Nitrogen to setup a wall
 
 [Nitrogen](https://wiki.archlinux.org/index.php/nitrogen) is light and simple desktop background browser and setter for X Window.
 
-Nitrogen has some flaws, like not being able to recognize some file types.
+Nitrogen has some flaws, like not being able to recognize some file types. Configurations can be found at `.config/nitrogen/bg-saved.cfg`.
 A good replacement for Viewnior and more versatile for the i3 config wallpaper settings setup, is [feh](https://feh.finalrewind.org/).
 Can be installed through pamac or`sudo pacman -S feh`.
 
@@ -73,7 +73,7 @@ It is also necessary to start both applications at launch, for that edit the `/.
 ### Dunst
 The  default notification manager is `dunst` on i3 can be configured at `~/.config/dunst/dunstrc`.
 
-[Dunst](https://dunst-project.org/) can be configured to have different colors, size and font, among other things.
+[Dunst](https://dunst-project.org/) can be configured to have different colors, size and font, among other settings.
 
 ### Caffeine
 The screen saver in Mi3 is a locking mechanism configured via i3lock, that blurs the workspace. 
@@ -105,9 +105,9 @@ It's necessary to run `wal -R` on each startup of the system. In i3 you can add 
 To update the URxvt color scheme with pywal is necessary to add to `~/.bashrc` or `/.zshrc` the following line:
 `setsid wal -i <wallpaper-name>`
 
-This will as well change the wallpaper to the one set as image, and run every time a terminal is run.
+This will as well change the wallpaper to the one set as image, and run every time a terminal is started.
 
-[Pywal](https://github.com/dylanaraps/pywal) sets it's configurations to `.cache/wal`, to enable it by default a line must be added to `.i3/config` from there will set colors at launch. It is possible to define a template and make it run the same configurations always. This will by run at start, an can overrun other configurations previously set.
+[Pywal](https://github.com/dylanaraps/pywal) sets it's configurations to `.cache/wal`, to enable it by default a line must be added to `.i3/config` from there will set colors at launch. It is possible to define a template and make it run the same configurations always. This will by run at start, and will overrun other configurations previously set.
 
 The color palette of `.Xresources` will not change directly so neither rofi or i3bar will change. Rofi and URxvt can be configured differently for this, or an external package can be used to manage this, this is also true to i3bar, since i3bar does not use system or `Xresources` to get it's configuration.
 
