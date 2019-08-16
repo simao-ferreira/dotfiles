@@ -20,6 +20,7 @@ Also gaps is enabled by default.
 Mi3  has a very helpful user guide file included, accessible through `mod+Shift=h`, with the complete keyboard shortcuts.
 
 * [Appearance](APPEARANCE.md)
+* [Package Manager](PACMAN.md)
 
 ## Browser
 Mi3 comes with palemoon as default browser. 
@@ -163,6 +164,8 @@ Bumblebee drivers should kick in when necessary, if not, it's possible to run `p
 
 ## Packages
 
+[AUR](PACMAN.md#AUR)
+
 [caffeine](APPEARANCE.md#caffeine)
 
 [compton](APPEARANCE.md#compton)
@@ -178,6 +181,10 @@ Bumblebee drivers should kick in when necessary, if not, it's possible to run `p
 [lxappearance](APPEARANCE.md#icon-packs-cursors-and-fonts)
 
 [nitrogen](APPEARANCE.md#wallpaper)
+
+[pacman](PACMAN.md#pacman)
+
+[pamac](PACMAN.md#pamac)
 
 [pywal](APPEARANCE.md#pywal)
 
@@ -198,7 +205,6 @@ games: how to run them with primusrun and manage config.
 spotifyd, etc
 `Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"`
 i3wm-themer
-Pacman Rosetta
 gnome like win press
 macos like keyboard press- https://support.apple.com/en-us/HT201586
 trim for ssd
@@ -213,7 +219,6 @@ customized, preconfigured i3status-manjaro 2.11
 dmenu-manjaro 4.16-12 patched with recency-awareness and mouse-support
 additional categorized menu morc_menu
 alsa pre-installed with install_pulse script for easy upgrade to pulseaudio
-pamac package manager
 lxinput for mouse and keyboard configuration
 bmenu, ranger, moc and a variety of more CLI-utilities
 i3-scrot, i3-exit and conky*
