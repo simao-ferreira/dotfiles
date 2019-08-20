@@ -1,5 +1,5 @@
 # i3
-* [Manjaro](MANJARO.md)
+* [Manjaro](info/MANJARO.md)
 
 ## Settings
 To install packages in Mi3 use `sudo pacman -s <package-name>` or through pamac name as `Add/Remove software`.
@@ -19,8 +19,8 @@ Also gaps is enabled by default.
 
 Mi3  has a very helpful user guide file included, accessible through `mod+Shift=h`, with the complete keyboard shortcuts.
 
-* [Appearance](APPEARANCE.md)
-* [Package Manager](PACMAN.md)
+* [Appearance](info/APPEARANCE.md)
+* [Package Manager](info/PACMAN.md)
 
 ## Browser
 Mi3 comes with palemoon as default browser. 
@@ -141,7 +141,7 @@ Chromium does block this by default, and also has a specific add-on for this.
 
 ## Battery
 
-* [Battery](BATTERY.md)
+* [Battery](info/BATTERY.md)
 
 ## Programming
 Intellij is available through pamac. It is also possible to install more recent implementations of java, openjdk11 is the more common. Is also available through the same way.
@@ -164,68 +164,8 @@ Bumblebee drivers should kick in when necessary, if not, it's possible to run `p
 
 ## Packages
 
-[AUR](PACMAN.md#AUR)
-
-[caffeine](APPEARANCE.md#caffeine)
-
-[compton](APPEARANCE.md#compton)
-
-[dunst](APPEARANCE.md#dunst)
-
-[feh](APPEARANCE.md#wallpaper)
-
-[i3bar](APPEARANCE.md#menu-bar)
-
-[lightdm](APPEARANCE.md#login-manager)
-
-[lxappearance](APPEARANCE.md#icon-packs-cursors-and-fonts)
-
-[nitrogen](APPEARANCE.md#wallpaper)
-
-[pacman](PACMAN.md#pacman)
-
-[pamac](PACMAN.md#pamac)
-
-[pywal](APPEARANCE.md#pywal)
-
-[redshift](APPEARANCE.md#redshift)
-
-[tlp](BATTERY.md#tlp)
-
-[viewnior](APPEARANCE.md#wallpaper)
-
-## Others
-Packages to remove:
-`palemoon`, `hexchat`.
+[Packages](info/PACKAGES.md)
 
 ## TODO
-general color paleltte
-grub quiet directly to linux
-games: how to run them with primusrun and manage config.
-spotifyd, etc
-`Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"`
-i3wm-themer
-gnome like win press
-macos like keyboard press- https://support.apple.com/en-us/HT201586
-trim for ssd
-spicetify-cli
-feh-blur
-polybar
-oblogout
-octopi (vs pamac)
-qt5ct & kvantum
-i3-gaps 4.13
-customized, preconfigured i3status-manjaro 2.11
-dmenu-manjaro 4.16-12 patched with recency-awareness and mouse-support
-additional categorized menu morc_menu
-alsa pre-installed with install_pulse script for easy upgrade to pulseaudio
-lxinput for mouse and keyboard configuration
-bmenu, ranger, moc and a variety of more CLI-utilities
-i3-scrot, i3-exit and conky*
-pcmanfm file-browser
-gimp, viewnior, epdfview, manjaro-printer
-vlc, xfburn
-transmission-gtk
-manjaro-chroot, gparted, isousb
-base-devel
-zenity
+
+[Todo](info/TODO.md)
