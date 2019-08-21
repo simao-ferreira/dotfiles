@@ -9,17 +9,19 @@
 ;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 ;
 ;==========================================================
+; Global WM Settings
+;==========================================================
 
-[colors]
-background = ${xrdb:color0:#222}
-:background = #222
-background-alt = #444
-foreground = ${xrdb:color7:#222}
-:foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+;==========================================================
+; Files to include
+;==========================================================
+
+include-file = ~repositories/unix/i3/.config/polybar/colors.ini
+
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -410,6 +412,3 @@ screenchange-reload = true
 ;compositing-border = over
 ;pseudo-transparency = false
 
-[global/wm]
-margin-top = 1
-margin-bottom = 5
