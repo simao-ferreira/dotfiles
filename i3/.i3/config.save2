@@ -305,8 +305,6 @@ set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	tray_output none
-	mode invisible
 	i3bar_command i3bar
 	status_command i3status
 	position bottom
@@ -341,7 +339,6 @@ bar {
         binding_mode       #369f09 #257134 #6b8d54
         urgent_workspace   #369f09 #9aca79 #E5201D
     }
-
 }
 
 # hide/unhide i3status bar

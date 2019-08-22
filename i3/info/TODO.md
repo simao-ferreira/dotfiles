@@ -1,5 +1,7 @@
 # Todo
 
+GNU Stow
+
 general color paleltte
 
 grub quiet directly to linux
