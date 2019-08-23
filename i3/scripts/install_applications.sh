@@ -11,7 +11,7 @@ sudo pacman -S firefox chromium --needed --noconfirm
 
 # Basic
 echo "Update util and appearence packages"
-sudo pacman -S git rofi feh neofetch gotop-git --needed --noconfirm
+sudo pacman -S git rofi feh neofetch gotop-git stow --needed --noconfirm
 
 # Terminal
 echo "Terminal updates"

@@ -29,4 +29,4 @@ This however needs some careful implementation, once more take a look at documen
 
 There is also `tlp-rdw` to manage and control wireless and bluetooth specs.
 
-Battery levels can be checked through `i3status` on the `i3bar`.
+Battery levels can be added to device bars using `i3status` on the `i3bar` or through polybar. 

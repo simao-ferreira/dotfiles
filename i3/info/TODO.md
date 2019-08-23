@@ -2,6 +2,10 @@
 
 GNU Stow
 
+remove quit from polybar, remove keybinding for quit script, add my on based on polybar one.
+
+remove conky cheatsheet and create one via rofi?
+
 general color paleltte
 
 grub quiet directly to linux

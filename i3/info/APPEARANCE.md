@@ -27,10 +27,11 @@ There are other popular options like `polybar`.
 [Compton](https://wiki.archlinux.org/index.php/Compton) is a window manager compositor  for Xorg.
 It also provides transparency and shadow to windows through `compton`.
 To do this change `.config/compton.conf`, and add or modify as follows:
-`opacity-rule = [`
-`  "75:class_g = 'URxvt' && focused",`
-`  "60:class_g = 'URxvt' && !focused"`
-`];`
+```opacity-rule = [
+  "75:class_g = 'URxvt' && focused",
+  "60:class_g = 'URxvt' && !focused"
+];
+```
 Other apps can be added or configured, with different transparencies. 
 
 Compton is not set by default, it's also necessary to add `compton -b` to `.i3/config` to launch it at start.
@@ -60,17 +61,17 @@ For redshift it's necessary to configure geo location, this can be mocked, provi
 Another options, more comprehensive, is to install and use [geoclue](https://gitlab.freedesktop.org/geoclue/geoclue/wikis/home), available under pamac or through pacman as `geoclue2`.
  
 The `geoclue2` configuration can be edited at `/etc/geoclue/geoclue.conf`, adding:
-
-`[redshift]`
-`allowed=true`
-`system=false`
-`users=`
+```[redshift]
+allowed=true
+system=false
+users=
+```
 
 It is also necessary to start both applications at launch, for that edit the `/.i3/config` settings for both Redshift and geoclue:
 
-`exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent`
-
-`exec --no-startup-id redshift-gtk`
+```exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+exec --no-startup-id redshift-gtk
+```
 
 ### Dunst
 The  default notification manager is `dunst` on i3 can be configured at `~/.config/dunst/dunstrc`.
@@ -86,6 +87,8 @@ To enable it add to `/.i3/config` the following line
 `exec -no-startup-id caffeine`. 
 
 This also adds an icon to the bar, where is possible to switch it on/off when needed. Default is off.
+
+The existence of the tray icon is specific to the [caffeine-ng](https://github.com/caffeine-ng/caffeine-ng) package, that is a split from the original one, mainly because of this.
 
 ### Login manager
 The login manager is LightDM, the configuration for the greeter (login screen manager) is set at `/etc/lightdm/slick-greeter.conf`

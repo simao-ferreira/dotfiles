@@ -261,6 +261,7 @@ exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # caffeine
 exec --no-startup-id caffeine
@@ -304,6 +305,7 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
+# Not using i3bar anymore > see polybar
 bar {
 	tray_output none
 	mode invisible
