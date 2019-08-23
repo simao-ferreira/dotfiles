@@ -21,7 +21,8 @@ First component to run polybar is a launcher script, to be added on the `.i3/con
 
 According to documentation it should be fairly straight forward and simple. Example:
 
-```#!/usr/bin/env bash
+```
+#!/usr/bin/env bash
 
 # Force kill all running instances of polybar
 killall -q polybar
@@ -36,7 +37,8 @@ polybar bar &
 After it's creation it's necessary to grant it executable rights `chmod +x ~/.config/polybar/<name>.sh`.
 On `.i3/config` add `exec_always --no-startup-id $HOME/.config/polybar/<name>.sh` to run the script at start, and remove 
 
-```bar {
+```
+bar {
 
     i3bar_command i3bar
 
@@ -57,7 +59,8 @@ Most often than not it's easier to separate this configs by different files, add
 
 Some examples:
 
-```[global/wm]
+```
+[global/wm]
 margin-top = 0
 margin-bottom = 0
 ; Included files 
@@ -66,7 +69,8 @@ include-file = ~/.config/polybar/bars.ini
 include-file = ~/.config/polybar/modules.ini
 ```
 
-```[colors]
+```
+[colors]
 background = #9ACA79
 foreground = #3ED808
 highlight = #257134
@@ -74,7 +78,8 @@ dark-text = #08200C
 alert = #BD2C40
 ```
 
-```[bar/top]
+```
+[bar/top]
 width = ${settings.bar-width}
 height = ${settings.bar-height}
 radius = 6.0
@@ -103,7 +108,8 @@ tray-padding = 0
 tray-reparent = true
 ```
 
-```[module/date]
+```
+[module/date]
 type = internal/date
 interval = 5
 date = " %a %d %b"
@@ -114,7 +120,8 @@ format-foreground = ${colors.pale-green}
 format-underline = ${colors.vivid-green}
 ```
 
-```[module/poweroffmenu]
+```
+[module/poweroffmenu]
 type = custom/text
 content = Quit
 content-padding = 1

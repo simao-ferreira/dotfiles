@@ -1,5 +1,5 @@
 # i3
-* [Manjaro](info/MANJARO.md)
+* [Manjaro](DOCS/MANJARO.md)
 
 ## Settings
 To install packages in Mi3 use `sudo pacman -s <package-name>` or through pamac name as `Add/Remove software`.
@@ -19,8 +19,8 @@ Also gaps is enabled by default.
 
 Mi3  has a very helpful user guide file included, accessible through `mod+Shift=h`, with the complete keyboard shortcuts.
 
-* [Appearance](info/APPEARANCE.md)
-* [Package Manager](info/PACMAN.md)
+* [Appearance](DOCS/APPEARANCE.md)
+* [Package Manager](DOCS/PACMAN.md)
 
 ## Browser
 Mi3 comes with palemoon as default browser. 
@@ -141,7 +141,7 @@ Chromium does block this by default, and also has a specific add-on for this.
 
 ## Battery
 
-* [Battery](info/BATTERY.md)
+* [Battery](DOCS/BATTERY.md)
 
 ## Programming
 Intellij is available through pamac. It is also possible to install more recent implementations of java, openjdk11 is the more common. Is also available through the same way.
@@ -162,10 +162,13 @@ For GOG games, download the `.sh` file and run it `sh <game-name.sh>`
 
 Bumblebee drivers should kick in when necessary, if not, it's possible to run `primusrun <game-name>`, however this will use different config settings [in /usr/shared][todo]
 
+## Dotfiles
+[Dotfiles](DOCS/DOTFILES.md)
+
 ## Packages
 
-[Packages](info/PACKAGES.md)
+[Packages](DOCS/PACKAGES.md)
 
 ## TODO
 
-[Todo](info/TODO.md)
+[Todo](DOCS/TODO.md)

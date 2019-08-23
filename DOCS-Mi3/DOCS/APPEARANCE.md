@@ -27,7 +27,9 @@ There are other popular options like `polybar`.
 [Compton](https://wiki.archlinux.org/index.php/Compton) is a window manager compositor  for Xorg.
 It also provides transparency and shadow to windows through `compton`.
 To do this change `.config/compton.conf`, and add or modify as follows:
-```opacity-rule = [
+
+```
+opacity-rule = [
   "75:class_g = 'URxvt' && focused",
   "60:class_g = 'URxvt' && !focused"
 ];
@@ -61,7 +63,9 @@ For redshift it's necessary to configure geo location, this can be mocked, provi
 Another options, more comprehensive, is to install and use [geoclue](https://gitlab.freedesktop.org/geoclue/geoclue/wikis/home), available under pamac or through pacman as `geoclue2`.
  
 The `geoclue2` configuration can be edited at `/etc/geoclue/geoclue.conf`, adding:
-```[redshift]
+
+```
+[redshift]
 allowed=true
 system=false
 users=
@@ -69,7 +73,8 @@ users=
 
 It is also necessary to start both applications at launch, for that edit the `/.i3/config` settings for both Redshift and geoclue:
 
-```exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+```
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 ```
 
@@ -99,7 +104,13 @@ For this to work is advisable to move the backgrounds to `/usr/share/backgrounds
 One helpful tool during this configuration is `dm-tool switch-to-greeter`, that allows to check the greeter changes from within the session. Login password it's necessary.
   
 ### Pywal
-One interesting option to manage color schemes is `pywal`. It can be installed via `sudo pacman -S python-pywall` or `sudo pacman -S python-pip`+`sudo pip3 install pywal`+`pip3 install --user pywal`.
+One interesting option to manage color schemes is `pywal`. It can be installed via `sudo pacman -S python-pywall` or 
+
+```
+sudo pacman -S python-pip
+sudo pip3 install pywal
+pip3 install --user pywal
+```
 To run it `wal -i </path/to/img.jpg>`.
 It will generate a new color scheme to `.cache/wal`.
 

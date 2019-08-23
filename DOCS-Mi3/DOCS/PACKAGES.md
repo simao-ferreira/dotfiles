@@ -30,6 +30,8 @@ This document refers the following packages:
 
 [redshift](APPEARANCE.md#redshift)
 
+[stow](DOTFILES.md#stow)
+
 [tlp](BATTERY.md#tlp)
 
 [viewnior](APPEARANCE.md#wallpaper)
