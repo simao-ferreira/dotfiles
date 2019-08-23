@@ -26,7 +26,12 @@ There are other popular options like `polybar`.
 ### Compton
 [Compton](https://wiki.archlinux.org/index.php/Compton) is a window manager compositor  for Xorg.
 It also provides transparency and shadow to windows through `compton`.
-To do this change `.config/compton.conf`, and add or modify as follows:
+
+The default configuration for compton can be found at `/etc/xdg/compton.conf` to modify it it can be copied to `~/.config/compton/compton.conf`, `~/.config/compton.conf` or `~/.compton.conf`.
+
+To configure another path run `compton --config path/to/compton.conf`
+
+To add transparency change `.config/compton/compton.conf`, and add or modify as follows:
 
 ```
 opacity-rule = [
@@ -34,6 +39,17 @@ opacity-rule = [
   "60:class_g = 'URxvt' && !focused"
 ];
 ```
+
+It's also possible to change or edit which applications have shadow, or remove it entirely.
+
+```
+shadow-exclude = [
+	"name = 'Notification'",
+	"class_g ?= 'i3-frame'",
+	"class_g ?= 'polybar'"
+];
+```
+
 Other apps can be added or configured, with different transparencies. 
 
 Compton is not set by default, it's also necessary to add `compton -b` to `.i3/config` to launch it at start.

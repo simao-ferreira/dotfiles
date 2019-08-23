@@ -2,14 +2,14 @@
   <author>Craig Russell</author>
   <description>Color scheme using Solarized dark color palette</description>
 
-  <style name="text"	foreground="#93A1A1" background="#061404" />
+  <style name="text"	foreground="#93A1A1" background="#030902" />
   <style name="selection"	foreground="#0c3c12" background="#657B83" underline="true" />
   <style name="cursor"	foreground="#93A1A1" />
   <style name="secondary-cursor"	foreground="#657B83" />
   <style name="current-line"	background="#073642" />
   <style name="line-numbers"	foreground="#586E75" background="#0c3c12" />
   <style name="background-pattern"	background="#032F3B" />
-  <style name="bracket-match"	foreground="#002B36" background="#586E75" />
+  <style name="bracket-match"	foreground="#000000" background="#586E75" />
   <style name="bracket-mismatch"	foreground="#DC322F" background="#586E75" />
   <style name="right-margin"	foreground="#EEE8D5" background="#93A1A1" />
   <style name="search-match"	foreground="#002B36" background="#B58900" />
