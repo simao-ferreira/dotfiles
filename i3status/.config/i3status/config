@@ -1,0 +1,64 @@
+general {
+        output_format = "i3bar"
+        colors = false
+        markup = pango
+        interval = 10
+        color_good = '#010500'
+		color_degraded = '#ebcb8b'
+		color_bad = '#ba5e57'
+}
+
+order += "load"
+order += "cpu_temperature 0"
+order += "disk /"
+order += "wireless wlp3s0"
+order += "battery 0"
+order += "battery 1"
+order += "tztime local"
+
+load {
+        format = "<span background='#369F09'> %5min Load </span>"
+}
+
+cpu_temperature 0 {
+        format = "<span background='#3ed808'> %degrees °C </span>"
+        path = "/sys/class/thermal/thermal_zone0/temp"
+}
+
+disk "/" {
+        format = "<span background='#369F09'> %free Free </span>"
+}
+
+wireless wlp3s0 {
+        format_up = "<span background='#3ed808'> %essid </span>"
+        format_down = "<span background='#ebcb8b'> Disconnected </span>"
+}
+
+battery 0 {
+	last_full_capacity = true
+        format = "<span background='#369F09'> %status %percentage %emptytime </span>"
+        format_down = "No Battery"
+        status_chr = "AC⚡"
+        status_bat = "B"
+        status_unk = "PAUSE"
+        status_full = "Charged"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 15
+}
+
+battery 1 {
+        last_full_capacity = true
+        format = "<span background='#3ed808'> %status %percentage %emptytime </span>"
+        format_down = "No Battery"
+        status_chr = "AC⚡"
+        status_bat = "B"
+        status_unk = "PAUSE"
+        status_full = "Charged"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 15
+}
+
+tztime local {
+		format = "<span background='#369F09'> %time </span>"
+		format_time = " %a %-d %b %H:%M"
+}
