@@ -99,6 +99,15 @@ The  default notification manager is `dunst` on i3 can be configured at `~/.conf
 
 [Dunst](https://dunst-project.org/) can be configured to have different colors, size and font, among other settings.
 
+Dunst needs to be initialized at start, even if it can otherwise be started by any deamon, but this can cause issues, like notifications failed, other notification manager launching or configurations not enabled.
+
+It is also possible to add `notify-send <message>` to bindings used on `/.i3/config`, but some like compton don't react well with it. 
+
+To test configurations be sure to restart dunst, most times Mi3 has shortcut for this, like `mod+Shift+d`.
+To close dunst notifications press `Ctrl+Alt+Space`
+
+Details to configure dunst can be found at [Arch wiki](https://wiki.archlinux.org/index.php/Dunst)
+
 ### Caffeine
 The screen saver in Mi3 is a locking mechanism configured via i3lock, that blurs the workspace. 
 It's configured defaults will block even when using the device with Netflix, Youtube or Spotify.

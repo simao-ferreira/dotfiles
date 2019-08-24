@@ -2,11 +2,13 @@
 
 battery warning
 
+polibar add cpu load and temp to one single module
+
 remove conky cheatsheet and create one via rofi?
 
 add auto-hide for polybar, no config possible yet, script is possible
 
-general color paleltte
+general color paleltte, include [terminal, polybar, i3bar, dunst, rofi, ...]
 
 grub quiet directly to linux
 
@@ -28,10 +30,6 @@ macos like keyboard press- https://support.apple.com/en-us/HT201586
 
 trim for ssd
 
-feh-blur?
-
-oblogout?
-
 octopi (vs pamac)
 
 qt5ct & kvantum
@@ -48,7 +46,9 @@ lxinput for mouse and keyboard configuration
 
 bmenu, ranger, moc and a variety of more CLI-utilities
 
-i3-scrot, i3-exit and conky*
+i3-exit
+
+conky*
 
 pcmanfm file-browser
 
@@ -63,4 +63,8 @@ manjaro-chroot, gparted, isousb
 base-devel
 
 zenity
+
+git secret
+
+vim
 

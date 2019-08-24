@@ -163,12 +163,59 @@ For GOG games, download the `.sh` file and run it `sh <game-name.sh>`
 
 Bumblebee drivers should kick in when necessary, if not, it's possible to run `primusrun <game-name>`, however this will use different config settings [in /usr/shared][todo]
 
+## Print Screen
+To take a print screen there is i3scrot, a command line application that takes a screenshot of your open displays.
+It's possible to use the Mi3 binds to take a screenshot without the command line, to do that press `mod+Print` to take full screen, or `mod+Shift+print` to select the area. Both are stored at `~/Pictures` by default.
+
 ## Dotfiles
 [Dotfiles](DOCS/DOTFILES.md)
 
-## Packages
+# Packages
 
-[Packages](DOCS/PACKAGES.md)
+This document refers the following packages:
+
+[AUR](DOCS/PACMAN.md#AUR)
+
+[caffeine](DOCS/APPEARANCE.md#caffeine)
+
+[compton](DOCS/APPEARANCE.md#compton)
+
+[dunst](DOCS/APPEARANCE.md#dunst)
+
+[feh](DOCS/APPEARANCE.md#wallpaper)
+
+[fwupd](DOCS/FIRMWARE.md)
+
+[i3bar](DOCS/APPEARANCE.md#menu-bar)
+
+[i3scrot](DOCS/README.md#print-screen)
+
+[lightdm](DOCS/APPEARANCE.md#login-manager)
+
+[lxappearance](DOCS/APPEARANCE.md#icon-packs-cursors-and-fonts)
+
+[nitrogen](DOCS/APPEARANCE.md#wallpaper)
+
+[pacman](DOCS/PACMAN.md#pacman)
+
+[pamac](DOCS/PACMAN.md#pamac)
+
+[polybar](DOCS/POLYBAR.md)
+
+[pywal](DOCS/APPEARANCE.md#pywal)
+
+[redshift](DOCS/APPEARANCE.md#redshift)
+
+[stow](DOCS/DOTFILES.md#stow)
+
+[tlp](DOCS/BATTERY.md#tlp)
+
+[viewnior](DOCS/APPEARANCE.md#wallpaper)
+
+[yay](DOCS/PACMAN.md#AUR)
+
+## Addicional packages
+[Others](DOCS/OTHERS.md)
 
 ## TODO
 

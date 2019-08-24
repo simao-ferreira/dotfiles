@@ -1,12 +1,11 @@
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
+font xft:TerminessTTFNerdFontMono bold 15
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 2
-new_float normal
+default_border pixel 3
+default_floating_border pixel 3
 hide_edge_borders none
-
-font xft:TerminessTTFNerdFontMono bold 15
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -35,7 +34,7 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w notify-send
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s notify-send
 
 focus_follows_mouse yes
 bindsym $mod+j focus left
@@ -132,21 +131,16 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 #assign [class="Franz"] $ws8
 
 # Open specific applications in floating mode
-#for_window [title="alsamixer"] floating enable border pixel 2
-#for_window [class="calamares"] floating enable border normal
-for_window [class="Clipgrab"] floating enable border pixel 2
-for_window [title="File Transfer*"] floating enable border pixel 2
-#for_window [class="Lightdm-settings"] floating enable
-#for_window [class="Lxappearance"] floating enable sticky enable border pixel 2
-for_window [class="Manjaro Settings Manager"] floating enable border pixel 2
-#for_window [class="Oblogout"] fullscreen enable
-for_window [class="Pamac-manager"] floating enable border pixel 2
-for_window [class="Pavucontrol"] floating enable border pixel 2
-for_window [class="qt5ct"] floating enable sticky enable border normal
-for_window [class="Qtconfig-qt4"] floating enable ticky enable border normal
+for_window [class="Clipgrab"] floating enable border pixel 3
+for_window [title="File Transfer*"] floating enable border pixel 3
+for_window [class="Manjaro Settings Manager"] floating enable border pixel 3
+for_window [class="Pamac-manager"] floating enable border pixel 3
+for_window [class="Pavucontrol"] floating enable border pixel 3
+for_window [class="qt5ct"] floating enable sticky enable border pixel 3
+for_window [class="Qtconfig-qt4"] floating enable sticky enable border pixel 3
 
 # switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
+for_window [urgent=latest] focus enable border pixel 3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -234,6 +228,12 @@ set_from_resource $term_color12    color12
 set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
+# TODO - not working ?
+set_from_resource $x.pg    pale-green
+set_from_resource $x.vg	  vivd-green
+set_from_resource $x.dg    dark-green
+set_from_resource $x.dt    dark-text
+set_from_resource $x.vr    vivid-red
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 # Not using i3bar anymore > see polybar
@@ -243,49 +243,56 @@ bar {
 	i3bar_command i3bar
 	status_command i3status
 	position bottom
-
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
 	bindsym button4 nop
 	bindsym button5 nop
 	strip_workspace_numbers yes
 
+# Theme colors [todo] link to Xresources
+# pale-green = #9ACA79
+# vivid-green = #3ED808
+# dark-green = #257134
+# dark-text = #08200C
+# vivid-yellow = #FFB52A
+# dark-yellow = #9A6400
+# vivid-red = #BD2C40
+# class 
+
     colors {
-        background #08200c
-        statusline #08200c
-        separator  #257134
+        background #08200C
+        statusline #08200C
+        separator  #08200C
 
 #                          border  backgr. text
-        focused_workspace  #ecf5e6 #369f09 #08200c
-        active_workspace   #9aca79 #257134 #9aca79
-        inactive_workspace #9aca79 #08200c #ecf5e6
-        binding_mode       #369f09 #257134 #6b8d54
-        urgent_workspace   #369f09 #9aca79 #E5201D
+        focused_workspace  #08200C #3ED808 #08200C
+        active_workspace   #08200C #08200C #9ACA79
+        inactive_workspace #08200C #08200C #9ACA79
+        binding_mode       #08200C #08200C #9ACA79
+        urgent_workspace   #08200C #BD2C40 #08200C
     }
 }
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
-# Theme colors
-# class                   border  backgr. text    indic.   child_border
-  client.focused          #08200c #08200c #369f09 #369f09
-  client.focused_inactive #08200c #08200c #6b8d54 #08200c
-  client.unfocused        #08200c #257134 #369f09 #08200c
-  client.urgent           #CB4B16 #9aca79 #369f09 #369f09
+# Theme colors [todo] link to Xresources
+# pale-green = #9ACA79
+# vivid-green = #3ED808
+# dark-green = #257134
+# dark-text = #08200C
+# vivid-yellow = #FFB52A
+# dark-yellow = #9A6400
+# vivid-red = #BD2C40
+# class                   border  bgd-bdr text    indic.   child_border
+  client.focused          #257134 #3ED808 #3ED808 #9ACA79
+  client.focused_inactive #257134 #257134 #3ED808 #9ACA79
+  client.unfocused        #257134 #257134 #3ED808 #9ACA79
+  client.urgent           #257134 #BD2C40 #BD2C40 #9ACA79
   client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
-  client.background       #08200c
+  client.background       #08200C
 
-# Settings for i3-gaps: ###
-gaps inner 25
+# Settings for i3-gaps:
+gaps inner 15
 gaps outer -2
-# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
-# gaps inner|outer current|all set|plus|minus <px>
-# gaps inner all set 10
-# gaps outer all plus 5
-# Smart gaps and borders (gaps used if only more than one container on the workspace)
 smart_gaps on
 smart_borders on
 
