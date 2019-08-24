@@ -12,6 +12,8 @@ This document refers the following packages:
 
 [feh](APPEARANCE.md#wallpaper)
 
+[fwupd](FIRMWARE.md)
+
 [i3bar](APPEARANCE.md#menu-bar)
 
 [lightdm](APPEARANCE.md#login-manager)

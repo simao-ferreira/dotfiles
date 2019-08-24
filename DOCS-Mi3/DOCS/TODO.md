@@ -1,5 +1,7 @@
 # Todo
 
+battery warning
+
 remove conky cheatsheet and create one via rofi?
 
 add auto-hide for polybar, no config possible yet, script is possible
