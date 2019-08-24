@@ -14,6 +14,8 @@ games: how to run them with primusrun and manage config.
 
 sound, alsa and pulseaudio not working 100%
 
+Music player: mocp
+
 spotifyd, spicetify-cli, modiply (something like that)
 
 `Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"`
