@@ -1,10 +1,8 @@
 # Todo
 
-remove quit from polybar, remove keybinding for quit script, add my on based on polybar one.
-
 remove conky cheatsheet and create one via rofi?
 
-add auto-hide for polybar
+add auto-hide for polybar, no config possible yet, script is possible
 
 general color paleltte
 
@@ -22,15 +20,15 @@ spotifyd, spicetify-cli, modiply (something like that)
 
 i3wm-themer
 
-gnome like win press > ALL OPEN APPLICATIONS
+gnome like mod(win) press > ALL OPEN APPLICATIONS
 
 macos like keyboard press- https://support.apple.com/en-us/HT201586
 
 trim for ssd
 
-feh-blur
+feh-blur?
 
-oblogout
+oblogout?
 
 octopi (vs pamac)
 
