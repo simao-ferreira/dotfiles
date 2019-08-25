@@ -1,5 +1,7 @@
 # Todo
 
+update rofi shutdown to include suspend/hibernate
+
 battery warning
 
 polibar add cpu load and temp to one single module

@@ -55,11 +55,11 @@ Xft.lcdfilter: lcddefault
 *.color66: #010500
 *color66:  #010500
 
-!!!!!!!!!!!!!!!!
-!!    URXVT   !!
-!!!!!!!!!!!!!!!!
-!!    TODO    !!
-!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!
+!! PYWAL SETUP !!
+!!!!!!!!!!!!!!!!!
+!!   X colors  !!
+!!!!!!!!!!!!!!!!!
 *foreground:        #9aca79
 *background:        #010500
 *.foreground:       #9aca79
@@ -75,8 +75,55 @@ URxvt*cursorColor:  #9aca79
 XTerm*cursorColor:  #9aca79
 UXTerm*cursorColor: #9aca79
 URxvt*borderColor:  [100]#010500
+
+! XTerm*background:        #222D31
+! XTerm*foreground:        #d8d8d8
+! XTerm*pointerColor:      #1ABB9B
+
+XTerm*faceName:          Fixed
+XTerm*faceSize:          11
+XTerm*reverseVideo:      on
+XTerm*selectToClipboard: true
+
+!*background:                      #222D31
+!*foreground:                      #d8d8d8
+!*fading:                          8
+!*fadeColor:                       black
+!*cursorColor:                     #1ABB9B
+!*pointerColorBackground:          #2B2C2B
+!*pointerColorForeground:          #16A085
+
+!! black dark/light
+! *color0:                          #222D31
+! *color8:                          #585858
+!! red dark/light
+! *color1:                          #ab4642
+! *color9:                          #ab4642
+!! green dark/light
+! *color2:                          #7E807E
+! *color10:                         #8D8F8D
+!! yellow dark/light
+! *color3:                          #f7ca88
+! *color11:                         #f7ca88
+!! blue dark/light
+! *color4:                          #7cafc2
+! *color12:                         #7cafc2
+!! magenta dark/light
+! *color5:                          #ba8baf
+! *color13:                         #ba8baf
+!! cyan dark/light
+! *color6:                          #1ABB9B
+! *color14:                         #1ABB9B
+!! white dark/light
+! *color7:                          #d8d8d8
+! *color15:                         #f8f8f8
+!! green dark/light
+! *color16:			 #0f705d
+! *color17:			 #1ABB9B
+
 ! Set depth to make transparency work.
 URxvt*depth: 32
+
 Xcursor.theme: xcursor-breeze-snow
 Xcursor.size:                     0
 
@@ -84,9 +131,12 @@ Xcursor.size:                     0
 URxvt.font:                        10x20,xft:TerminessTTFNerdFontMono
 
 URxvt.depth:                      32
+!URxvt.background:                 [100]#222D31
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
+!URxvt*background:                 black
+!URxvt*foreground:                 grey
 URxvt*saveLines:                  5000
 
 ! Normal copy-paste keybindings without perls

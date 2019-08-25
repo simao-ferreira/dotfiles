@@ -197,43 +197,12 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 exec_always --no-startup-id feh --bg-scale ~/.wallpapers/green-leafs.jpg; sleep 1; compton -b
 
-# todo
-# Color palette used for the terminal ( ~/.Xresources file )
-# Colors are gathered based on the documentation:
-# https://i3wm.org/docs/userguide.html#xresources
-# Change the variable name at the place you want to match the color
-# of your terminal like this:
-# [example]
-# If you want your bar to have the same background color as your 
-# terminal background change the line 362 from:
-# background #14191D
-# to:
-# background $term_background
-# Same logic applied to everything else.
-set_from_resource $term_background background
-set_from_resource $term_foreground foreground
-set_from_resource $term_color0     color0
-set_from_resource $term_color1     color1
-set_from_resource $term_color2     color2
-set_from_resource $term_color3     color3
-set_from_resource $term_color4     color4
-set_from_resource $term_color5     color5
-set_from_resource $term_color6     color6
-set_from_resource $term_color7     color7
-set_from_resource $term_color8     color8
-set_from_resource $term_color9     color9
-set_from_resource $term_color10    color10
-set_from_resource $term_color11    color11
-set_from_resource $term_color12    color12
-set_from_resource $term_color13    color13
-set_from_resource $term_color14    color14
-set_from_resource $term_color15    color15
-# TODO - not working ?
-set_from_resource $x.pg    pale-green
-set_from_resource $x.vg	  vivd-green
-set_from_resource $x.dg    dark-green
-set_from_resource $x.dt    dark-text
-set_from_resource $x.vr    vivid-red
+set_from_resource $color0    color0
+set_from_resource $color1    color1
+set_from_resource $color2    color2
+set_from_resource $color10   color10
+set_from_resource $color3    color3
+set_from_resource $color11   color11
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 # Not using i3bar anymore > see polybar
@@ -247,48 +216,29 @@ bar {
 	bindsym button5 nop
 	strip_workspace_numbers yes
 
-# Theme colors [todo] link to Xresources
-# pale-green = #9ACA79
-# vivid-green = #3ED808
-# dark-green = #257134
-# dark-text = #08200C
-# vivid-yellow = #FFB52A
-# dark-yellow = #9A6400
-# vivid-red = #BD2C40
-# class 
-
     colors {
-        background #08200C
-        statusline #08200C
-        separator  #08200C
+        background $color0
+        statusline $color0
+        separator  $color0
 
-#                          border  backgr. text
-        focused_workspace  #08200C #3ED808 #08200C
-        active_workspace   #08200C #08200C #9ACA79
-        inactive_workspace #08200C #08200C #9ACA79
-        binding_mode       #08200C #08200C #9ACA79
-        urgent_workspace   #08200C #BD2C40 #08200C
+#                          border	background	text
+        focused_workspace  $color0 	$color10 	$color0
+        active_workspace   $color0 	$color0 	$color3
+        inactive_workspace $color0 	$color0 	$color3
+        binding_mode       $color0 	$color0 	$color3
+        urgent_workspace   $color0 	$color11 	$color0
     }
 }
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
-# Theme colors [todo] link to Xresources
-# pale-green = #9ACA79
-# vivid-green = #3ED808
-# dark-green = #257134
-# dark-text = #08200C
-# vivid-yellow = #FFB52A
-# dark-yellow = #9A6400
-# vivid-red = #BD2C40
-# class                   border  bgd-bdr text    indic.   child_border
-  client.focused          #257134 #3ED808 #3ED808 #9ACA79
-  client.focused_inactive #257134 #257134 #3ED808 #9ACA79
-  client.unfocused        #257134 #257134 #3ED808 #9ACA79
-  client.urgent           #257134 #BD2C40 #BD2C40 #9ACA79
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
-
-  client.background       #08200C
+#			 bckg 	 bckg-txt text	  indic
+  client.focused          $color2 $color10 $color10 $color3
+  client.focused_inactive $color2 $color2  $color10 $color3
+  client.unfocused        $color2 $color2  $color10 $color3
+  client.urgent           $color2 $color11 $color11 $color3
+  client.placeholder      #000000 #0c0c0c  #ffffff  #000000 
+  client.background       $color0
 
 # Settings for i3-gaps:
 gaps inner 15

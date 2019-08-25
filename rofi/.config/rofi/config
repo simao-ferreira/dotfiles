@@ -7,12 +7,17 @@
 ! active vivid-green			#369f09
 ! active palid-green			#6b8d54
 ! urgent				#46cf0c
+! pale-green 				#9ACA79
+! dark-green 				#257134
+! vivid-green				#3ED808
 
 rofi.color-enabled: true
-rofi.color-window: #08200c, #08200c, #08200c
-rofi.color-normal: #08200c, #ced6d0, #08200c, #08200c, #369f09
-rofi.color-active: #08200c, #369f09, #08200c, #08200c, #6b8d54
+rofi.color-window: #08200c, #3ED808, #08200c
+rofi.color-normal: #08200c, #9ACA79, #08200c, #08200c, #3ED808
+rofi.color-active: #08200c, #3ED808, #08200c, #08200c, #6b8d54
 rofi.color-urgent: #08200c, #46cf0c, #08200c, #08200c, #46cf0c
 rofi.modi: run,drun,window
 
 rofi.font: TerminessTTFNerdFontMono 14
+
+! todo add ${xrdb:color0:#222}
