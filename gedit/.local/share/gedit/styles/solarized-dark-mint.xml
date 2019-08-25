@@ -2,7 +2,7 @@
   <author>Craig Russell</author>
   <description>Color scheme using Solarized dark color palette</description>
 
-  <style name="text"	foreground="#93A1A1" background="#08200b" underline="true" />
+  <style name="text"	foreground="#9bae9e" background="#051607" />
   <style name="selection"	foreground="#0c3c12" background="#657B83" underline="true" />
   <style name="cursor"	foreground="#93A1A1" />
   <style name="secondary-cursor"	foreground="#657B83" />
