@@ -7,17 +7,20 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 ! special
-*.foreground:   #9bae9e
+*.foreground:   #9aca79
 *.background:   #051608
-*.cursorColor:  #9bae9e
+*.cursorColor:  #9aca79
+.foreground:   #9aca79
+.background:   #051608
+.cursorColor:  #9aca79
 
 ! black
 *.color0:       #257134
-*.color8:       #66876c
+*.color8:       #257134
 
 ! red
-*.color1:       #dc322f
-*.color9:       #dc322f
+*.color1:       #dc582f
+*.color9:       #dc582f
 
 ! green
 *.color2:       #3ed808
@@ -28,41 +31,30 @@ Xft.lcdfilter: lcddefault
 *.color11:      #ffb52a
 
 ! blue
-*.color4:       #268bd2
-*.color12:      #268bd2
+*.color4:       #26d297
+*.color12:      #26d297
 
 ! magenta
-*.color5:       #6c71c4
-*.color13:      #6c71c4
+*.color5:       #ffb52a
+*.color13:      #ffb52a
 
 ! cyan
-*.color6:       #2aa198
-*.color14:      #2aa198
+*.color6:       #0ef6e5
+*.color14:      #0ef6e5
 
 ! white
-*.color7:       #93a1a1
+*.color7:       #48504a
 *.color15:      #9aca79
 
-!!!!!!!!!!!!!!!!
-!!    URXVT   !!
-!!!!!!!!!!!!!!!!
-!!    TODO    !!
-!!!!!!!!!!!!!!!!
-*foreground:        #9aca79
-*background:        #010500
-*.foreground:       #9aca79
-*.background:       #010500
+!! Personalization
+*.dark-green:	color0
+*.palid-green:	color15
+*.vivid-green:	color2
+*.vivid-red: 	color1
+*.vivid-yellow:	color3
+*.dark-bg:	background
+*.bg:		#051608
 
-URxvt*foreground:   #9aca79
-XTerm*foreground:   #9aca79
-UXTerm*foreground:  #9aca79
-URxvt*background:   [100]#010500
-XTerm*background:   #010500
-UXTerm*background:  #010500
-URxvt*cursorColor:  #9aca79
-XTerm*cursorColor:  #9aca79
-UXTerm*cursorColor: #9aca79
-URxvt*borderColor:  [100]#010500
 ! Set depth to make transparency work.
 URxvt*depth: 32
 Xcursor.theme: xcursor-breeze-snow

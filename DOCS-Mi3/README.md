@@ -22,6 +22,7 @@ Mi3  has a very helpful user guide file included, accessible through `mod+Shift=
 * [Appearance](DOCS/APPEARANCE.md)
 * [Package Manager](DOCS/PACMAN.md)
 * [Firmware](DOCS/FIRMWARE.md)
+* [Color Palette](DOCS/COLOR-PALETTE.md)
 
 ## Browser
 Mi3 comes with palemoon as default browser. 

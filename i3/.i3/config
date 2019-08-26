@@ -200,9 +200,16 @@ exec_always --no-startup-id feh --bg-scale ~/.wallpapers/green-leafs.jpg; sleep 
 set_from_resource $color0    color0
 set_from_resource $color1    color1
 set_from_resource $color2    color2
-set_from_resource $color10   color10
 set_from_resource $color3    color3
-set_from_resource $color11   color11
+set_from_resource $color15   color15
+set_from_resource $bg        background
+
+#*.dark-green:		color0		#257134
+#*.palid-green:		color15		#9aca79
+#*.vivid-green:		color2		#3ed808
+#*.vivid-red: 		color1		#dc582f
+#*.vivid-yellow:	color3		#ffb52a
+#*.dark-bg:		background	#051608
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 # Not using i3bar anymore > see polybar
@@ -217,26 +224,26 @@ bar {
 	strip_workspace_numbers yes
 
     colors {
-        background $color0
-        statusline $color0
-        separator  $color0
+        background $bg
+        statusline $bg
+        separator  $bg
 
 #                          border	background	text
-        focused_workspace  $color0 	$color10 	$color0
+        focused_workspace  $color0 	$color2 	$color0
         active_workspace   $color0 	$color0 	$color3
-        inactive_workspace $color0 	$color0 	$color3
+        inactive_workspace $color0 	$color0 	$color2
         binding_mode       $color0 	$color0 	$color3
-        urgent_workspace   $color0 	$color11 	$color0
+        urgent_workspace   $color0 	$color3 	$color0
     }
 }
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
 #			 bckg 	 bckg-txt text	  indic
-  client.focused          $color2 $color10 $color10 $color3
-  client.focused_inactive $color2 $color2  $color10 $color3
-  client.unfocused        $color2 $color2  $color10 $color3
-  client.urgent           $color2 $color11 $color11 $color3
+  client.focused          $color2 $color2  $color2  $color3
+  client.focused_inactive $color2 $color2  $color2  $color3
+  client.unfocused        $color2 $color2  $color2  $color3
+  client.urgent           $color2 $color3  $color3  $color3
   client.placeholder      #000000 #0c0c0c  #ffffff  #000000 
   client.background       $color0
 

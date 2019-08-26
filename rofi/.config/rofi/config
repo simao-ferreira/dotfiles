@@ -1,21 +1,18 @@
 ! ------------------------------------------------------------------------------
 ! Rofi configs
 ! ------------------------------------------------------------------------------
-
-! background dark-green			#08200c
-! letters light-gray-green		#ced6d0 
-! active vivid-green			#369f09
-! active palid-green			#6b8d54
-! urgent				#46cf0c
-! pale-green 				#9ACA79
-! dark-green 				#257134
-! vivid-green				#3ED808
+!*.dark-green:		color0		#257134
+!*.palid-green:		color15		#9aca79
+!*.vivid-green:		color2		#3ed808
+!*.vivid-red: 		color1		#dc582f
+!*.vivid-yellow:	color3		#ffb52a
+!*.dark-bg:		background	#051608
 
 rofi.color-enabled: true
-rofi.color-window: #08200c, #3ED808, #08200c
-rofi.color-normal: #08200c, #9ACA79, #08200c, #08200c, #3ED808
-rofi.color-active: #08200c, #3ED808, #08200c, #08200c, #6b8d54
-rofi.color-urgent: #08200c, #46cf0c, #08200c, #08200c, #46cf0c
+rofi.color-window: #051608, #3ed808, #051608
+rofi.color-normal: #051608, #9aca79, #051608, #051608, #3ed808
+rofi.color-active: #051608, #3ed808, #051608, #051608, #6b8d54
+rofi.color-urgent: #051608, #dc582f, #051608, #051608, #dc582f
 rofi.modi: run,drun,window
 
 rofi.font: TerminessTTFNerdFontMono 14
