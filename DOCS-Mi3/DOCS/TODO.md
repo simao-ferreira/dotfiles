@@ -2,6 +2,8 @@
 
 update rofi shutdown to include suspend/hibernate
 
+update rofi to rasi
+
 battery warning
 
 polibar add cpu load and temp to one single module
