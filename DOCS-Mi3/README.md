@@ -33,7 +33,13 @@ Firefox has some issues with webRTC calls and is not reliable in VPN mode.
 (add link)
 
 ## File Manager
-Mi3 has two file managers, one is ranger, a terminal file manager. Neat!
+Mi3 has two file managers, one is ranger, a terminal file manager.
+Ranger is written in python, has three columns, the middle one is the *working* panel, to move between them you can use arrows or other defined keys. The most right column allows previews for files and images. It includes capabilities *vim-like* with keybindings and bookmarks. It is also possible to use external scripts. 
+
+To make `ranger` display hidden files edit `rc.conf` with `set show_hidden true`.
+
+Ranger uses the default color scheme defined at `.Xresources`, but a specific theme can be set, adding `set colorscheme <scheme>`, by default comes with `deafult`, `jungle`, `snow` and `solarized`.
+ 
 Adding to Ranger there is also pcmanfm, a very well integrated File Manager. Very similar to the gnome version.
 
 ## Menu
@@ -204,6 +210,8 @@ This document refers the following packages:
 [polybar](DOCS/POLYBAR.md)
 
 [pywal](DOCS/APPEARANCE.md#pywal)
+
+[ranger](README.md#file-manager)
 
 [redshift](DOCS/APPEARANCE.md#redshift)
 

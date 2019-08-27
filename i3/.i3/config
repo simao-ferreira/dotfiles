@@ -17,7 +17,7 @@ bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 60 -location 0 -show win
 bindsym $mod+Ctrl+c exec ~/dotfiles/scripts/poff.sh
 bindsym $mod+z exec --no-startup-id morc_menu
 bindsym $mod+Ctrl+m exec pavucontrol
-exec --no-startup-id volumeicon
+# exec --no-startup-id volumeicon
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
@@ -182,7 +182,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
+# exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 exec --no-startup-id start_conky_maia
 
