@@ -1,12 +1,12 @@
 # Todo
 
-edit ranger configs > Update documentation > Add ranger to polybar
+edit ranger configs > Update documentation > Add ranger to polybar or remove the folders module
 
-update rofi shutdown to include suspend/hibernate
+update rofi shutdown to include suspend > look into i3/config for command
 
 update rofi to rasi > check use of rasi as general color palette definition. 
 
-battery warning
+battery warning, looks like is not possible with polybar, bash script should do it
 
 run gotop inside rofi
 

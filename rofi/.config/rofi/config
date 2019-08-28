@@ -1,12 +1,12 @@
 ! ------------------------------------------------------------------------------
 ! Rofi configs
 ! ------------------------------------------------------------------------------
-!*.dark-green:		color0		#257134
-!*.palid-green:		color15		#9aca79
-!*.vivid-green:		color2		#3ed808
-!*.vivid-red: 		color1		#dc582f
-!*.vivid-yellow:	color3		#ffb52a
-!*.dark-bg:		background	#051608
+!*.dark-base:		color0		#257134
+!*.vivid-base:		color1		#3ed808
+!*.palid-base:		color2		#9aca79
+!*.vivid-alert:		color3		#dc582f
+!*.vivid-highlight:	color4		#ffb52a
+!*.dark-background:	background	#051608
 
 rofi.color-enabled: true
 rofi.color-window: #051608, #3ed808, #051608
@@ -16,5 +16,3 @@ rofi.color-urgent: #051608, #dc582f, #051608, #051608, #dc582f
 rofi.modi: run,drun,window
 
 rofi.font: TerminessTTFNerdFontMono 14
-
-! todo add ${xrdb:color0:#222}

@@ -48,16 +48,21 @@ Theme in use: Solarized.dark with green as base color.
 ```
 Six set for other apps:
 ```
-;*.dark-green:		color0		#257134
-;*.palid-green:		color15		#9aca79
-;*.vivid-green:		color2		#3ed808
-;*.vivid-red: 		color1		#dc582f
-;*.vivid-yellow:	color3		#ffb52a
-;*.dark-bg:		background	#051608
+dark-base:		color0		#257134
+vivid-base:		color1		#3ed808
+palid-base:		color2		#9aca79
+vivid-alert:		color3		#dc582f
+vivid-highlight:	color4		#ffb52a
+dark-background:	background	#051608
 ```
 
 To reload the terminal without logging off run `xrdb .Xresources` and then open a new terminal window.
 
+The alert color stands as red, the highlight stands for yellow, other represent base color in various grades and background, usually a base color near black.
+
+### State
+To change color palette change first on `.Xresources`, this will change `URxvt terminal`, `polybar` and `.i3/config` according to current six base as defined.
+Others still have to be change manually, these are: `dunst` and `rofi`, 
 
 ## Gcolor2
 `gcolor2` comes with Mi3, it's a basic program to detect colors, you can use it to get the hex code for a color on-screen.

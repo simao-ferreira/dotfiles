@@ -2,13 +2,13 @@
     # COLORS
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    # pale-green = #9ACA79
-    # vivid-green = #3ED808
-    # dark-green = #257134
-    # dark-text = #08200C
-    # vivid-yellow = #FFB52A
-    # dark-yellow = #9A6400
-    # vivid-red = #BD2C40
+    # .Xresources colors
+    #*.dark-base:		color0		#257134
+    #*.vivid-base:		color1		#3ed808
+    #*.palid-base:		color2		#9aca79
+    #*.vivid-alert:		color3		#dc582f
+    #*.vivid-highlight:		color4		#ffb52a
+    #*.dark-background:		background	#051608
 
     frame_width = 3
     frame_color = "#3ED808"
@@ -62,46 +62,20 @@
     # Set to 0 to disable.
     # default 120
     idle_threshold = 120 
-    
-    # Which monitor should the notifications be displayed on.
     monitor = 0
-    
-    # Display notification on focused monitor.  Possible modes are:
-    #   mouse: follow mouse pointer
-    #   keyboard: follow window with keyboard focus
-    #   none: don't follow anything
-    # 
-    # "keyboard" needs a windowmanager that exports the
-    # _NET_ACTIVE_WINDOW property.
-    # This should be the case for almost all modern windowmanagers.
-    # 
-    # If this option is set to mouse or keyboard, the monitor option
-    # will be ignored.
     follow = mouse
-    
-    # Should a notification popped up from history be sticky or timeout
-    # as if it would normally do.
     sticky_history = yes
-    
-    # Maximum amount of notifications kept in history
     history_length = 20
-    
-    # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
     
     # The height of a single line.  If the height is smaller than the
     # font height, it will get raised to the font height.
     # This adds empty space above and under the text.
     line_height = 0
-    
-    # Draw a line of "separator_height" pixel height between two
-    # notifications.
-    # Set to 0 to disable.
     separator_height = 1
-    
-    # Padding between text and separator.
     padding = 8
     horizontal_padding = 10
+
     # possible values are:
     #  * auto: dunst tries to find a color fitting to the background;
     #  * foreground: use the same color as the foreground;
@@ -134,8 +108,8 @@
     timeout = 15
 
 [urgency_critical]
-    background = "#BD2C40"
-    foreground = "#08200C"
+    background = "#08200C"
+    foreground = "#ffb52a"
     timeout = 0
 
 

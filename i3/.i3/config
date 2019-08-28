@@ -197,19 +197,19 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 exec_always --no-startup-id feh --bg-scale ~/.wallpapers/green-leafs.jpg; sleep 1; compton -b
 
-set_from_resource $color0    color0
-set_from_resource $color1    color1
-set_from_resource $color2    color2
-set_from_resource $color3    color3
-set_from_resource $color15   color15
-set_from_resource $bg        background
+set_from_resource $color0   color0
+set_from_resource $color1   color1
+set_from_resource $color2   color2
+set_from_resource $color3   color3
+set_from_resource $color4   color4
+set_from_resource $bg       background
 
-#*.dark-green:		color0		#257134
-#*.palid-green:		color15		#9aca79
-#*.vivid-green:		color2		#3ed808
-#*.vivid-red: 		color1		#dc582f
-#*.vivid-yellow:	color3		#ffb52a
-#*.dark-bg:		background	#051608
+#*.dark-base:		color0		#257134
+#*.vivid-base:		color1		#3ed808
+#*.palid-base:		color2		#9aca79
+#*.vivid-alert:		color3		#dc582f
+#*.vivid-highlight:	color4		#ffb52a
+#*.dark-background:	background	#051608
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 # Not using i3bar anymore > see polybar
@@ -229,21 +229,21 @@ bar {
         separator  $bg
 
 #                          border	background	text
-        focused_workspace  $color0 	$color2 	$color0
-        active_workspace   $color0 	$color0 	$color3
-        inactive_workspace $color0 	$color0 	$color2
-        binding_mode       $color0 	$color0 	$color3
-        urgent_workspace   $color0 	$color3 	$color0
+        focused_workspace  $color0 	$color1 	$color0
+        active_workspace   $color0 	$color0 	$color4
+        inactive_workspace $color0 	$color0 	$color1
+        binding_mode       $color0 	$color0 	$color4
+        urgent_workspace   $color0 	$color4 	$color0
     }
 }
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
 #			 bckg 	 bckg-txt text	  indic
-  client.focused          $color2 $color2  $color2  $color3
-  client.focused_inactive $color2 $color2  $color2  $color3
-  client.unfocused        $color2 $color2  $color2  $color3
-  client.urgent           $color2 $color3  $color3  $color3
+  client.focused          $color1 $color1  $color1  $color4
+  client.focused_inactive $color1 $color1  $color1  $color4
+  client.unfocused        $color1 $color1  $color1  $color4
+  client.urgent           $color1 $color4  $color4  $color4
   client.placeholder      #000000 #0c0c0c  #ffffff  #000000 
   client.background       $color0
 
