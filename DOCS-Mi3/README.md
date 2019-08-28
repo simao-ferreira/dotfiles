@@ -1,5 +1,8 @@
 # i3
 * [Manjaro](DOCS/MANJARO.md)
+## Status
+
+![Progress status](DOCS/status_28_08_19.png)
 
 ## Settings
 To install packages in Mi3 use `sudo pacman -s <package-name>` or through pamac name as `Add/Remove software`.
@@ -192,6 +195,8 @@ This document refers the following packages:
 [feh](DOCS/APPEARANCE.md#wallpaper)
 
 [fwupd](DOCS/FIRMWARE.md)
+
+[gcolor2](DOCS/COLOR-PALETTE.md#gcolor2)
 
 [i3bar](DOCS/APPEARANCE.md#menu-bar)
 

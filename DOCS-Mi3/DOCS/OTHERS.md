@@ -1,10 +1,14 @@
 # Others
 
-## Removes
+## Removed
 
 Palemoon
 
 Hexchat
+
+Deluge
+
+Htop
 
 ## Optional
 

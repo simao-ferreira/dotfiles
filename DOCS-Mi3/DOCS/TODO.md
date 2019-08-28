@@ -46,39 +46,17 @@ macos like keyboard press- https://support.apple.com/en-us/HT201586
 
 trim for ssd
 
-octopi (vs pamac)
-
 qt5ct & kvantum
 
-i3-gaps 4.13
-
-customized, preconfigured i3status-manjaro 2.11
-
-dmenu-manjaro 4.16-12 patched with recency-awareness and mouse-support
-
-additional categorized menu morc_menu
+i3-gaps, i3bar, i3status
 
 lxinput for mouse and keyboard configuration
 
-bmenu, ranger, moc and a variety of more CLI-utilities
+dmenu-manjaro, bmenu, ranger, moc, morc_menu, i3-exit, i3-msg
 
-i3-exit
+conky* > remove conky uses, but keep configuration?
 
-conky*
-
-pcmanfm file-browser
-
-gimp, viewnior, epdfview, manjaro-printer
-
-vlc, xfburn
-
-transmission-gtk
-
-manjaro-chroot, gparted, isousb
-
-base-devel
-
-zenity
+pcmanfm, viewnior, epdfview, manjaro-printer, vlc, xarchiver, xfburn, manjaro-chroot, gparted, isousb, gimp
 
 newsboat
 
