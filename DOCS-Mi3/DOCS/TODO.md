@@ -2,8 +2,6 @@
 
 edit ranger configs > Update documentation > Add ranger to polybar or remove the folders module
 
-update rofi shutdown to include suspend > look into i3/config for command
-
 update rofi to rasi > check use of rasi as general color palette definition. 
 
 battery warning, looks like is not possible with polybar, bash script should do it
@@ -12,13 +10,9 @@ run gotop inside rofi
 
 polibar add cpu load and temp to one single module
 
-remove conky cheatsheet and create one via rofi?
+prettify polybar, configure fonts, add icon fonts to polybar
 
-prettify polybar
-
-configure fonts, add icon fonts to polybar 
-
-Sound does not accept headphones input (vol up and down), some 
+Sound does not accept headphones input (vol up and down), sometimes, not always
 
 add auto-hide for polybar, no config possible yet, script is possible
 
