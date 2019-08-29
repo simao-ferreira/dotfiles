@@ -61,8 +61,8 @@ To reload the terminal without logging off run `xrdb .Xresources` and then open 
 The alert color stands as red, the highlight stands for yellow, other represent base color in various grades and background, usually a base color near black.
 
 ### State
-To change color palette change first on `.Xresources`, this will change `URxvt terminal`, `polybar` and `.i3/config` according to current six base as defined.
-Others still have to be change manually, these are: `dunst` and `rofi`, 
+To change color palette change first on `.Xresources`, this will change `URxvt terminal`, `polybar`, `ranger` and `.i3/config` according to current six base as defined.
+Others still have to be change manually, these are: `dunst` and `rofi`, To gedit there are a set of base themes, editable manually.o
 
 ## Gcolor2
 `gcolor2` comes with Mi3, it's a basic program to detect colors, you can use it to get the hex code for a color on-screen.
