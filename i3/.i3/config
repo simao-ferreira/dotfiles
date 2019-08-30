@@ -12,8 +12,10 @@ floating_modifier $mod
 
 bindsym $mod+Return exec terminal
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 
-bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 60 -location 0 -show window -sidebar-mode -columns 3
+#bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3
+bindsym $mod+d exec rofi -theme themes/rofi-menu.rasi -lines 10 -show drun -sidebar-mode
+#bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 60 -location 0 -show window -sidebar-mode -columns 3
+bindsym $mod+Tab exec rofi -theme themes/rofi-menu.rasi -lines 10 -show drun -sidebar-mode
 bindsym $mod+z exec --no-startup-id morc_menu
 bindsym $mod+Ctrl+m exec pavucontrol
 # exec --no-startup-id volumeicon
