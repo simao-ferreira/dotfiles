@@ -36,7 +36,8 @@ bindsym $mod+Print --release exec --no-startup-id i3-scrot -w notify-send
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s notify-send
 
 # My scripts
-bindsym $mod+Ctrl+c exec ~/dotfiles/scripts/poff.sh
+#bindsym $mod+Ctrl+c exec ~/dotfiles/scripts/poff.sh
+bindsym $mod+Ctrl+c exec ~/dotfiles/scripts/poff-rasi.sh
 bindsym $mod+p exec ~/dotfiles/scripts/help.sh
 
 focus_follows_mouse yes
