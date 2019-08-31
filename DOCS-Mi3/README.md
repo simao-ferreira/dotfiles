@@ -64,6 +64,9 @@ Rofi can be configured in several different ways.
 `rofi -help` will give you the current configuration and location.
 By adding `~/.config/rofi/config.` you can specify the look and feel of rofi window.
 
+Another option, more complex but easier to update is using rasi configurations, this allows to define a theme, with a color pattern and different settings, in addition to the config file.
+This allows visuals more complex, but defined with a more modular approach, easier to manage and change, makes them easy to integrate them with scripts. It's also easy to find [rasi-themes](https://github.com/davatorium/rofi-themes) to use or as example.
+
 Mi3 also has a small menu gnome style, `mod+z` opens a small menu on top. Good emergency option.
 
 ## Text Editor
@@ -219,6 +222,8 @@ This document refers the following packages:
 [ranger](README.md#file-manager)
 
 [redshift](DOCS/APPEARANCE.md#redshift)
+
+[rofi](README.md#Menu)
 
 [stow](DOCS/DOTFILES.md#stow)
 

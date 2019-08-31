@@ -1,18 +1,16 @@
 # Todo
 
+prettify polybar, add and configure fonts, add icon fonts to polybar (like rofi?)
+
 edit ranger configs > Update documentation > Add ranger to polybar or remove the folders module
 
-update rofi to rasi > check use of rasi as general color palette definition. 
+rofi rasi > gnome like mod(win) press > open all started applications
 
 battery warning, looks like is not possible with polybar, bash script should do it
 
-run gotop inside rofi
-
 polibar add cpu load and temp to one single module
 
-prettify polybar, configure fonts, add icon fonts to polybar
-
-Sound does not accept headphones input (vol up and down), sometimes, not always
+sound, alsa and pulseaudio not working 100%, sometimes headphones input is not recognized (vol up and down) always
 
 add auto-hide for polybar, no config possible yet, script is possible
 
@@ -22,8 +20,6 @@ grub quiet directly to linux, but keeping dual boot access
 
 games: how to run them with primusrun and manage config.
 
-sound, alsa and pulseaudio not working 100%
-
 Music player: mocp
 
 linuxify chromium
@@ -32,9 +28,7 @@ spotifyd, spicetify-cli, modiply (something like that)
 
 `Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"`
 
-i3wm-themer
-
-gnome like mod(win) press > ALL OPEN APPLICATIONS
+i3wm-themer, check python scripts, or create a kotlin version
 
 macos like keyboard press- https://support.apple.com/en-us/HT201586
 
@@ -57,4 +51,6 @@ newsboat
 git secret
 
 vim
+
+define a second color pattern and schema for changing background and theme
 
