@@ -7,7 +7,7 @@ For the i3 config file it's possible to set a pattern and use `.Xresources` colo
 
 Extract a palette from `terminal.sexy` or `pywal`. from that pattern chose six colors to use and then change `rofi`. If the pattern is based on a theme, like `solarized dark` it's possible to modify gedit scheme.
 
-Theme in use: Solarized.dark with green as base color.
+The theme used here as example is based of Solarized.dark but with green as base color.
 ```
 ! special
 *.foreground:   #9aca79
@@ -62,7 +62,7 @@ The alert color stands as red, the highlight stands for yellow, other represent 
 
 ### State
 To change color palette change first on `.Xresources`, this will change `URxvt terminal`, `polybar`, `ranger` and `.i3/config` according to current six base as defined.
-Others still have to be change manually, these are: `dunst` and `rofi`, To gedit there are a set of base themes, editable manually.o
+Others still have to be change manually, these are: `dunst` and `rofi`(and rasi theme), To gedit there are a set of base themes, editable manually.
 
 ## Gcolor2
 `gcolor2` comes with Mi3, it's a basic program to detect colors, you can use it to get the hex code for a color on-screen.

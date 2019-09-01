@@ -1,5 +1,8 @@
 # i3
+This documentation here exists for facilitating configuration updates and is an ongoing process, some change may not be completely documented. This is for personal use and contain mainly basic explanations, in some cases incomplete or insufficient for other uses.
+ 
 * [Manjaro](DOCS/MANJARO.md)
+
 ## Status
 
 ![Progress status](DOCS/status_28_08_19.png)
@@ -13,22 +16,25 @@ Other helpers for `pacman` can be used instead of `yay`, like `trizen`, `pikaur`
 
 Mi3 also brings a command line menu to manage settings, run it by pressing `$mod+Ctrl+b` or `bmenu` in the terminal.
 This will bring a text UI with options, like install a new kernel. Or two, just in case it's needed for recovery options.
-This is important because Manjaro is a rolling distro based on Arch, and while is running behind the latest it can on occasion break. If it happens select a different kernel when booting.
-
-bmenu is also able to manage drivers, if gaming is an option and graphic is NVIDIA it's necessary to install bumblebee drivers. This should be installed by default if the initial OS installation was done correctly.
-Check which graphics correct, if NVIDIA optimus then use non-free graphics.
+This is important because Manjaro is a rolling distro based on Arch, and while is running behind the latest it can on occasion break. If it happens select a different kernel when booting. `bmenu` is also able to manage drivers, if gaming is an option and graphic is NVIDIA it's necessary to install bumblebee drivers. This should be installed by default if the initial OS installation was done correctly.
+Check which graphics are correct for the setup, if NVIDIA optimus then use non-free graphics.
 
 Also gaps is enabled by default.
 
 Mi3  has a very helpful user guide file included, accessible through `mod+Shift=h`, with the complete keyboard shortcuts.
 
+Other settings:
+
 * [Appearance](DOCS/APPEARANCE.md)
-* [Package Manager](DOCS/PACMAN.md)
-* [Firmware](DOCS/FIRMWARE.md)
+* [Battery](DOCS/BATTERY.md)
 * [Color Palette](DOCS/COLOR-PALETTE.md)
+* [Dotfiles](DOCS/DOTFILES.md)
+* [Firmware](DOCS/FIRMWARE.md)
+* [Package Manager](DOCS/PACMAN.md)
 
 ## Browser
-Mi3 comes with palemoon as default browser. 
+Mi3 comes with [pale moon](https://github.com/MoonchildProductions/UXP) as default browser. `pale moon` is a fork of `firefox` with emphasis in customization, there is however significant changes between `pale moon` and `firefox`, like running in single-process or not using gecko as engine (uses the goanna fork).
+
 Install Firefox. `sudo pacman -S firefox` or through software manager
 Same for Chromium.
 
@@ -37,16 +43,18 @@ Firefox has some issues with webRTC calls and is not reliable in VPN mode.
 
 ## File Manager
 Mi3 has two file managers, one is ranger, a terminal file manager.
-Ranger is written in python, has three columns, the middle one is the *working* panel, to move between them you can use arrows or other defined keys. The most right column allows previews for files and images. It includes capabilities *vim-like* with keybindings and bookmarks. It is also possible to use external scripts. 
+Ranger is written in python, by default presents three columns, the middle one is the *working* panel, to move between them you can use arrows or other defined keys. The most right column allows previews for files and images. It includes capabilities *vim-like* with keybindings and bookmarks. It is also possible to use external scripts. 
 
 To make `ranger` display hidden files edit `rc.conf` with `set show_hidden true`.
 
 Ranger uses the default color scheme defined at `.Xresources`, but a specific theme can be set, adding `set colorscheme <scheme>`, by default comes with `deafult`, `jungle`, `snow` and `solarized`.
  
-Adding to Ranger there is also pcmanfm, a very well integrated File Manager. Very similar to the gnome version.
+Adding to Ranger there is also pcmanfm, a standard linux integrated File Manager. Very similar to the gnome version.
 
 ## Menu
-By default there dmenu, a bar, usually on the top, where it's possible to search for applications.
+By default there dmenu, a fast and light menu for the X system, it's presented as a bar, usually on the top, where it reads text from STDIN and creates a menu with options related to the user input, the navigation is done by moving through options using the arrow keys (or other defined for the same purpose) and uses the `dmenu_run` wrapper for application launcher.
+
+To run it from the console run`dmenu_run`, if a top bar exists, like `i3status` or `polybar`, `dmenu` will appear on top of it.
 
 However there are other options, with more "eye-candy" one of those is rofi.
 
@@ -54,7 +62,9 @@ Install rofi, a "better dmenu" through pamac or `sudo pacman -S rofi`.
 
 After installing edit the .i3/config file, comment the line about dmenu and add:
 `bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3`
-This will replace the usual call to dmenu. dmenu still works if another keybinding is provided. That is a important setting case something breaks on installation.
+* This command works for the initial setup, some changes need to be made according to settings, for example using a rasi theme.
+
+This will replace the usual call to `dmenu`. However `dmenu` still works if another keybinding is provided. That is a important setting case something breaks on installation.
 To move between types like windows, ssh or drun press `shift` while on rofi.
 
 Also it is possible to configure a faster keybinding like the one used on WindowsOS. For moving between open windows: 
@@ -64,10 +74,12 @@ Rofi can be configured in several different ways.
 `rofi -help` will give you the current configuration and location.
 By adding `~/.config/rofi/config.` you can specify the look and feel of rofi window.
 
-Another option, more complex but easier to update is using rasi configurations, this allows to define a theme, with a color pattern and different settings, in addition to the config file.
-This allows visuals more complex, but defined with a more modular approach, easier to manage and change, makes them easy to integrate them with scripts. It's also easy to find [rasi-themes](https://github.com/davatorium/rofi-themes) to use or as example.
+Another option, more powerful but easier to update is using rasi configurations, this allows to define a theme, with a color pattern and different settings, as an example is possible to define different look for specified modules.
+Rasi themes work in addition to the config file.
+This allows visuals more complex, but defined with a more modular approach, easier to manage and change, also make it easy to integrate with scripts. 
+To find themes [rasi-themes](https://github.com/davatorium/rofi-themes) has a few to use or as example.
 
-Mi3 also has a small menu gnome style, `mod+z` opens a small menu on top. Good emergency option.
+Mi3 also has a small categorized menu cascade style `morc_menu`, called with `mod+z`, that will open a simple menu up top, displaying categories with applications. Good emergency option.
 
 ## Text Editor
 There are as usual several options already installed. `vim` and `nano` are already in Mi3.
@@ -85,7 +97,7 @@ Sometimes it add an underline under some text, just enter color scheme again and
 Dual boot always has some troubles with the time settings, by default WinOS and Linux have different settings regarding time, on WinOS the time by default is Local Time, this can be changed, on the BIOS/UEFI or even in the WinOS registry.
 However in easier to make Linux use Local time instead of Universal Time.
 
-For this:
+for this run `timedatectl`, to query and change system clock setting:
 `timedatectl set-local-rtc 1`
 
 And to make Linux synchronized:
@@ -153,10 +165,6 @@ It is possible to change this over Firefox configuration, however some use can b
 
 Chromium does block this by default, and also has a specific add-on for this.
 
-## Battery
-
-* [Battery](DOCS/BATTERY.md)
-
 ## Programming
 Intellij is available through pamac. It is also possible to install more recent implementations of java, openjdk11 is the more common. Is also available through the same way.
 
@@ -180,58 +188,37 @@ Bumblebee drivers should kick in when necessary, if not, it's possible to run `p
 To take a print screen there is i3scrot, a command line application that takes a screenshot of your open displays.
 It's possible to use the Mi3 binds to take a screenshot without the command line, to do that press `mod+Print` to take full screen, or `mod+Shift+print` to select the area. Both are stored at `~/Pictures` by default.
 
-## Dotfiles
-[Dotfiles](DOCS/DOTFILES.md)
+# Dependencies
+Managed dependencies on this documentation.
 
-# Packages
-
-This document refers the following packages:
-
-[AUR](DOCS/PACMAN.md#AUR)
-
-[caffeine](DOCS/APPEARANCE.md#caffeine)
-
-[compton](DOCS/APPEARANCE.md#compton)
-
-[dunst](DOCS/APPEARANCE.md#dunst)
-
-[feh](DOCS/APPEARANCE.md#wallpaper)
-
-[fwupd](DOCS/FIRMWARE.md)
-
-[gcolor2](DOCS/COLOR-PALETTE.md#gcolor2)
-
-[i3bar](DOCS/APPEARANCE.md#menu-bar)
-
-[i3scrot](DOCS/README.md#print-screen)
-
-[lightdm](DOCS/APPEARANCE.md#login-manager)
-
-[lxappearance](DOCS/APPEARANCE.md#icon-packs-cursors-and-fonts)
-
-[nitrogen](DOCS/APPEARANCE.md#wallpaper)
-
-[pacman](DOCS/PACMAN.md#pacman)
-
-[pamac](DOCS/PACMAN.md#pamac)
-
-[polybar](DOCS/POLYBAR.md)
-
-[pywal](DOCS/APPEARANCE.md#pywal)
-
-[ranger](README.md#file-manager)
-
-[redshift](DOCS/APPEARANCE.md#redshift)
-
-[rofi](README.md#Menu)
-
-[stow](DOCS/DOTFILES.md#stow)
-
-[tlp](DOCS/BATTERY.md#tlp)
-
-[viewnior](DOCS/APPEARANCE.md#wallpaper)
-
-[yay](DOCS/PACMAN.md#AUR)
+| Package        | Description                                                                             |
+| :------------: |:--------------------------------------------------------------------------------------- |
+| [AUR](DOCS/PACMAN.md#AUR) | Community driven repository
+| [caffeine](DOCS/APPEARANCE.md#caffeine) | Prevents screen-saver and "sleep" 
+| [compton](DOCS/APPEARANCE.md#compton) | Compositor, used to manage for example transparency and shadow
+| [dunst](DOCS/APPEARANCE.md#dunst) | Notification manager
+| [dmenu](README.md#Menu) | Desktop Menu, also used as package launcher
+| [feh](DOCS/APPEARANCE.md#wallpaper) | Image viewer, can be used to manage desktop background
+| [fwupd](DOCS/FIRMWARE.md) | Firmware Manager
+| [gcolor2](DOCS/COLOR-PALETTE.md#gcolor2) | Color picker GUI
+| [geoclue2](DOCS/APPEARANCE.md#redshift) | Location framwork
+| [i3bar](DOCS/APPEARANCE.md#menu-bar) | Status bar
+| [i3scrot](DOCS/README.md#print-screen) | Screen capture utility
+| [lightdm](DOCS/APPEARANCE.md#login-manager) | Display Manager, used to manage login
+| [lxappearance](DOCS/APPEARANCE.md#icon-packs-cursors-and-fonts) | Gtk theme switcher
+| [nitrogen](DOCS/APPEARANCE.md#wallpaper) | Background manager
+| [pacman](DOCS/PACMAN.md#pacman) | Package Manager
+| [pale moon](README.md#browser) | Browser
+| [pamac](DOCS/PACMAN.md#pamac) | Package Manager GUI wrapper
+| [polybar](DOCS/POLYBAR.md) | Status bar, powerful and configurable
+| [pywal](DOCS/APPEARANCE.md#pywal) | Color scheme generator
+| [ranger](README.md#file-manager) | File Manager
+| [redshift](DOCS/APPEARANCE.md#redshift) | Screen color temperature utility
+| [rofi](README.md#Menu) | Window switcher, also used as package launcher
+| [stow](DOCS/DOTFILES.md#stow) | Symlink utility, used for generating git managed configuration files 
+| [tlp](DOCS/BATTERY.md#tlp) | Battery Manager
+| [viewnior](DOCS/APPEARANCE.md#wallpaper) | Image viewer
+| [yay](DOCS/PACMAN.md#AUR) | Command line AUR helper
 
 ## Addicional packages
 [Others](DOCS/OTHERS.md)

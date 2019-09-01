@@ -12,14 +12,14 @@ The arch documentation has a very detailed article about [dotfiles](https://wiki
 
 This make it extra easy to make a repository out of it.
 
-Here more [info](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html) can bem found, containing an old but very good description about how to work with it.
+Here more [info](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html) can be found, containing an old but very good description about how to work with it.
 
 ###TL,DR
 Install stow, 
 
-* Create a dotfile directory on $HOME
+* Create a <dotfile> directory on $HOME
 * Create a folder with the name of the package to config
-* Create a directory structure identical to the default used by the package to config.
+* Create a directory structure identical to the default used by the package to config in the previous folder.
 * Move config file to there
 * Run stow <folder name>
 

@@ -4,7 +4,7 @@ prettify polybar, add and configure fonts, add icon fonts to polybar (like rofi?
 
 edit ranger configs > Update documentation > Add ranger to polybar or remove the folders module
 
-rofi rasi > gnome like mod(win) press > open all started applications
+rofi rasi > gnome like mod(win) press > open all started applications > maybe change the mod+Tab window
 
 battery warning, looks like is not possible with polybar, bash script should do it
 
