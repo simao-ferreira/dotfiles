@@ -1,3 +1,8 @@
+.window-frame {
+  box-shadow: none;
+  margin: 0;
+}
+
 # Gnome 3 - based on https://blog.samalik.com/make-your-gnome-title-bars-smaller/
 .header-bar.default-decoration {
     padding-top: 3px;
@@ -8,10 +13,7 @@
     padding: 0px;
 }
 
-
 # --------------------------------------------------
-
-
 # Gnome 3.20+ - based on https://blog.samalik.com/make-your-gnome-title-bar-smaller-fedora-24-update/
 window.ssd headerbar.titlebar {
     padding-top: 4px;

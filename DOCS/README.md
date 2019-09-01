@@ -1,11 +1,11 @@
 # i3
 This documentation here exists for facilitating configuration updates and is an ongoing process, some change may not be completely documented. This is for personal use and contain mainly basic explanations, in some cases incomplete or insufficient for other uses.
  
-* [Manjaro](DOCS/MANJARO.md)
+* [Manjaro](MANJARO.md)
 
 ## Status
 
-![Progress status](DOCS/status_28_08_19.png)
+![Progress status](IMG/status_28_08_19.png)
 
 ## Settings
 To install packages in Mi3 use `sudo pacman -s <package-name>` or through pamac name as `Add/Remove software`.
@@ -25,16 +25,15 @@ Mi3  has a very helpful user guide file included, accessible through `mod+Shift=
 
 Other settings:
 
-* [Appearance](DOCS/APPEARANCE.md)
-* [Battery](DOCS/BATTERY.md)
-* [Color Palette](DOCS/COLOR-PALETTE.md)
-* [Dotfiles](DOCS/DOTFILES.md)
-* [Firmware](DOCS/FIRMWARE.md)
-* [Package Manager](DOCS/PACMAN.md)
+* [Appearance](APPEARANCE.md)
+* [Battery](BATTERY.md)
+* [Color Palette](COLOR-PALETTE.md)
+* [Dotfiles](DOTFILES.md)
+* [Firmware](FIRMWARE.md)
+* [Package Manager](PACMAN.md)
 
 ## Browser
-Mi3 comes with [pale moon](https://github.com/MoonchildProductions/UXP) as default browser. `pale moon` is a fork of `firefox` with emphasis in customization, there is however significant changes between `pale moon` and `firefox`, like running in single-process or not using gecko as engine (uses the goanna fork).
-
+Mi3 comes with `pale moon` as default browser.
 Install Firefox. `sudo pacman -S firefox` or through software manager
 Same for Chromium.
 
@@ -136,25 +135,16 @@ As so make sure to use only one method of auto starting applications. pulse audi
 These will conflict with the `/.i3/config` file line, commenting it there resolves the issue.
 
 ### Sound player
-One good option for streaming players is Tizonia, very heavy but very capable, it includes spotify, plex and google play.
-Configuration file can be found at `.config/tizonia`. 
-To start spotify ` tizonia --spotify-playlist "#MOON" -s` the -s flag starts the playlist in random.
-Or `tizonia  --spotify-recommendations-by-artist-id "2wouN3QXejYa5tKetYdcVX" -s`, the artist id can be obtained through spotify web.
-To move to the next track press `n`. `+` and `-` for volume.
-For more settings `tizonia --help keyboard`
-Documentation at `http://docs.tizonia.org/usage/keyboard.html`
+With the initial installation comes `vlc`.
 
-There is also possible to use `spicetify-cli`, but this will run on top of the normal spotify app, just changes the app appearance.
-
-For "eye-candy" is also possible to install cava, it runs on the command line and uses alsa or pulse to get the played music.
+There are some other possible installations like `tizonia`, `spicetify-cli`, `spotifyd` or `mopidy`.
+* [Music players](MUSIC-PLAYER.md)
 
 ## Monitoring
-Installed and working is already a module of conky, can be configured. 
-Opposite to normal behaviour, conky on Mi3, is configured `/usr/share/conky/` and then auto started on`/.i3/config`, the script used to run it is found on `/usr/bin/`.
-On Mi3 there are two conky setups, one for cheat sheets and another to settings. By modifying the `/usr/bin/` file relative to the launcher is possible to ignore one, or both.
-
-Other important options are neofetch to get system info and `htop` or `gotop`.
+Options for monitoring are neofetch to get system info and `htop` or `gotop`.
 `gotop` is a more "eye-candy" version.
+
+Most of options available on `htop` or `gotop` are possible to configure to work with `i3bar/i3status` or `polybar`.
 
 ## Network Manager
 The network manager already is installed, to configure the VPN download the OpenVpn server configuration file and add a new VPN using the Network Manager configuration.
@@ -193,36 +183,41 @@ Managed dependencies on this documentation.
 
 | Package        | Description                                                                             |
 | :------------: |:--------------------------------------------------------------------------------------- |
-| [AUR](DOCS/PACMAN.md#AUR) | Community driven repository
-| [caffeine](DOCS/APPEARANCE.md#caffeine) | Prevents screen-saver and "sleep" 
-| [compton](DOCS/APPEARANCE.md#compton) | Compositor, used to manage for example transparency and shadow
-| [dunst](DOCS/APPEARANCE.md#dunst) | Notification manager
+| [AUR](PACMAN.md#AUR) | Community driven repository
+| [caffeine](APPEARANCE.md#caffeine) | Prevents screen-saver and "sleep" 
+| [cava]((MUSIC-PLAYER.md#cava)) | Sound vizualizer 
+| [compton](APPEARANCE.md#compton) | Compositor, used to manage for example transparency and shadow
+| [conky](OTHERS.md#conky) | Lightweight system monitor, used on desktop 
+| [dunst](APPEARANCE.md#dunst) | Notification manager
 | [dmenu](README.md#Menu) | Desktop Menu, also used as package launcher
-| [feh](DOCS/APPEARANCE.md#wallpaper) | Image viewer, can be used to manage desktop background
-| [fwupd](DOCS/FIRMWARE.md) | Firmware Manager
-| [gcolor2](DOCS/COLOR-PALETTE.md#gcolor2) | Color picker GUI
-| [geoclue2](DOCS/APPEARANCE.md#redshift) | Location framwork
-| [i3bar](DOCS/APPEARANCE.md#menu-bar) | Status bar
-| [i3scrot](DOCS/README.md#print-screen) | Screen capture utility
-| [lightdm](DOCS/APPEARANCE.md#login-manager) | Display Manager, used to manage login
-| [lxappearance](DOCS/APPEARANCE.md#icon-packs-cursors-and-fonts) | Gtk theme switcher
-| [nitrogen](DOCS/APPEARANCE.md#wallpaper) | Background manager
-| [pacman](DOCS/PACMAN.md#pacman) | Package Manager
-| [pale moon](README.md#browser) | Browser
-| [pamac](DOCS/PACMAN.md#pamac) | Package Manager GUI wrapper
-| [polybar](DOCS/POLYBAR.md) | Status bar, powerful and configurable
-| [pywal](DOCS/APPEARANCE.md#pywal) | Color scheme generator
+| [feh](APPEARANCE.md#wallpaper) | Image viewer, can be used to manage desktop background
+| [fwupd](FIRMWARE.md) | Firmware Manager
+| [gedit](README.md#text-editor) | Gnome UI Text editor
+| [gcolor2](COLOR-PALETTE.md#gcolor2) | Color picker GUI
+| [geoclue2](APPEARANCE.md#redshift) | Location framwork
+| [i3bar](APPEARANCE.md#menu-bar) | Status bar
+| [i3scrot](README.md#print-screen) | Screen capture utility
+| [lightdm](APPEARANCE.md#login-manager) | Display Manager, used to manage login
+| [lxappearance](APPEARANCE.md#icon-packs-cursors-and-fonts) | Gtk theme switcher
+| [nitrogen](APPEARANCE.md#wallpaper) | Background manager
+| [pacman](PACMAN.md#pacman) | Package Manager
+| [pale moon](OTHERS.md#palemoon) | Browser
+| [pamac](PACMAN.md#pamac) | Package Manager GUI wrapper
+| [polybar](POLYBAR.md) | Status bar, powerful and configurable
+| [pywal](APPEARANCE.md#pywal) | Color scheme generator
 | [ranger](README.md#file-manager) | File Manager
-| [redshift](DOCS/APPEARANCE.md#redshift) | Screen color temperature utility
+| [redshift](APPEARANCE.md#redshift) | Screen color temperature utility
 | [rofi](README.md#Menu) | Window switcher, also used as package launcher
-| [stow](DOCS/DOTFILES.md#stow) | Symlink utility, used for generating git managed configuration files 
-| [tlp](DOCS/BATTERY.md#tlp) | Battery Manager
-| [viewnior](DOCS/APPEARANCE.md#wallpaper) | Image viewer
-| [yay](DOCS/PACMAN.md#AUR) | Command line AUR helper
+| [spicetify-cli]((MUSIC-PLAYER.md#spicetify)) | Spotify wrapper
+| [stow](DOTFILES.md#stow) | Symlink utility, used for generating git managed configuration files
+| [tizonia]((MUSIC-PLAYER.md#tizonia)) | Terminal audio stream player 
+| [tlp](BATTERY.md#tlp) | Battery Manager
+| [viewnior](APPEARANCE.md#wallpaper) | Image viewer
+| [yay](PACMAN.md#AUR) | Command line AUR helper
 
 ## Addicional packages
-[Others](DOCS/OTHERS.md)
+[Others](OTHERS.md)
 
 ## TODO
 
-[Todo](DOCS/TODO.md)
+[Todo](TODO.md)

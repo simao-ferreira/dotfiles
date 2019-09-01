@@ -24,7 +24,7 @@ Music player: mocp
 
 linuxify chromium
 
-spotifyd, spicetify-cli, modiply (something like that)
+spotifyd, mopidy
 
 `Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"`
 
