@@ -13,7 +13,7 @@
     frame_width = 3
     frame_color = "#3ED808"
     
-    font = TerminessTTFNerdFontMono 15
+    font = IosevkaNerdFontMono 15
     markup = yes
     format = "%s %p\n%b"
     sort = yes

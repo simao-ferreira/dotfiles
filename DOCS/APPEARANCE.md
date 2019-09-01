@@ -62,7 +62,7 @@ Modify the wallpaper setup as:
 More configurations can be made, either by adding or modifying the config or using the GUI of `lxappearance`, also called `Customize look and feel`. This package is installed by default, from it with it is possible to load new icon packs, mouse cursors, among other configurations. Also changing fonts and font size.
 
 Fonts are loaded in different ways under Mi3, there are several config files or applications with different fonts setup.
-When changing the `.i3/config` file the font input changes bar fonts, but not apps and terminal. For terminal Mi3 comes with URxvt as default, for it changed can be made `.Xresources`. URxvt is more configurable than usual, and when installing it from scratch it's look is extremely different from the configurations usually seem online.
+When changing the `.i3/config` file the font input changes bar fonts, but not apps and terminal. For terminal Mi3 comes with URxvt as default, for it changed can be made `.Xresources`. URxvt is more configurable than usual, and when installing it from scratch it's look is extremely different from the configurations usually seen online.
 
 When setting new settings with `lxappearance` also can happen that some resources are unrecognizable for URxvt.
 [URxvt](https://wiki.archlinux.org/index.php/Rxvt-unicode) manuals are very complete and detailed.

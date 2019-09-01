@@ -15,4 +15,4 @@ rofi.color-active: #051608, #3ed808, #051608, #051608, #6b8d54
 rofi.color-urgent: #051608, #dc582f, #051608, #051608, #dc582f
 rofi.modi: run,drun,window
 
-rofi.font: TerminessTTFNerdFontMono 14
+rofi.font: IosevkaNerdFontMono 14

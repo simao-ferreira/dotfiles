@@ -66,8 +66,8 @@ URxvt*depth: 32
 Xcursor.theme: xcursor-breeze-snow
 Xcursor.size:                     0
 
-!URxvt.font:                       9x15bold,xft:TerminessTTFNerdFontMono
-URxvt.font:                        10x20,xft:TerminessTTFNerdFontMono
+!URxvt.font:                        10x20,xft:TerminessTTFNerdFontMono
+URxvt.font:                       xft:Iosevka Nerd Font Mono:size=14
 
 URxvt.depth:                      32
 URxvt*scrollBar:                  false
