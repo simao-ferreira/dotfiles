@@ -30,10 +30,6 @@ entry {
 	text-color: @pale;
 	padding: @option-box;
 }
-mode-switcher {
-	text-color: @pale;
-	padding: @option-box;
-}
 * {
 	background-color: @background;
 	text-color: @vivid;
@@ -43,8 +39,8 @@ element {
 	text-color: @dark;
 }
 element.selected {
-	background-color: @background;
-	text-color: @vivid;
+	background-color: @dark;
+	text-color: @pale;
 }
 
 

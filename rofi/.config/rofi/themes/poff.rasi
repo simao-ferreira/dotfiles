@@ -23,7 +23,9 @@
 	text-color: @pale;
 }
 #element.selected {
-	background-color: @vivid;
+	background-color: @pale;
+	border-radius: 5px;
+	color: @vivid;
 	text-color: @background;
 }
 #window {

@@ -43,8 +43,8 @@ element {
 	text-color: @dark;
 }
 element.selected {
-	background-color: @background;
-	text-color: @vivid;
+	background-color: @dark;
+	text-color: @pale;
 }
 
 
