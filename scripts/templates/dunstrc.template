@@ -10,9 +10,9 @@
 ## background:		background	#051608
 
 [global]
-	font = IosevkaNerdFontMono 15    
-	frame_width = 3
-    	frame_color = "#3ED808"
+	font = "{#font#} {#font_size#}"    
+	frame_width = {#border#}
+    	frame_color = "{#vivid#}"
 	
 	geometry = "0x4-0+40"
 	monitor = 0
@@ -46,17 +46,17 @@
 	context = ctrl+mod1+c
 
 [urgency_low]
-	background = "#051608"
-	foreground = "#9ACA79"
+	background = "{#background#}"
+	foreground = "{#pale#}"
 	timeout = 10
 
 [urgency_normal]
-	background = "#051608"
-	foreground = "#3ED808"
+	background = "{#background#}"
+	foreground = "{#vivid#}"
 	timeout = 15
 
 [urgency_critical]
-	background = "#051608"
-	foreground = "#ffb52a"
-	frame_color = "#ffb52a"
+	background = "{#background#}"
+	foreground = "{#highlight#}"
+	frame_color = "{#highlight#}"
 	timeout = 25
