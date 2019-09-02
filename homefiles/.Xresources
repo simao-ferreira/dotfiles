@@ -10,9 +10,6 @@ Xft.lcdfilter: lcddefault
 *.foreground:   #9aca79
 *.background:   #051608
 *.cursorColor:  #9aca79
-.foreground:   #9aca79
-.background:   #051608
-.cursorColor:  #9aca79
 
 ! black
 *.color0:       #257134
@@ -61,6 +58,8 @@ Xft.lcdfilter: lcddefault
 *.vivid-highlight:	color4
 *.dark-background:	background
 
+
+!! URxvt configs !!
 ! Set depth to make transparency work.
 URxvt*depth: 32
 Xcursor.theme: xcursor-breeze-snow
