@@ -13,6 +13,7 @@
 	font = "{#font#} {#font_size#}"    
 	frame_width = {#border#}
     	frame_color = "{#vivid#}"
+	corner_radius = "{#radius#}"
 	
 	geometry = "0x4-0+40"
 	monitor = 0

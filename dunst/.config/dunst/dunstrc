@@ -13,6 +13,7 @@
 	font = IosevkaNerdFontMono 15    
 	frame_width = 3
     	frame_color = "#3ED808"
+	corner_radius = 5
 	
 	geometry = "0x4-0+40"
 	monitor = 0
