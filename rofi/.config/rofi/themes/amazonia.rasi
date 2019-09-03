@@ -1,8 +1,10 @@
 @import "palette.rasi"
-*{
-	option-padding:		300px 1000px 300px 1000px;
-	option-inputbar:	0px 0px 10px 0px;
-	option-box:		10px;
+@import "optional.rasi"
+
+* {
+	background-color: @background;
+	text-color: @vivid;
+	font: "Iosevka Nerd Font Mono 16";
 }
 
 window {
@@ -10,6 +12,7 @@ window {
 	height: 100%;
 	padding: @option-padding;
 }
+
 inputbar {
 	children: [prompt, textbox-prompt-colon, entry];
 	padding: @option-inputbar;
@@ -18,6 +21,7 @@ prompt {
 	background-color: @dark;
 	padding: @option-box;
 	text-color: @pale;
+	border-radius: @option-border-left;
 }
 textbox-prompt-colon {
 	background-color: @dark;
@@ -25,22 +29,22 @@ textbox-prompt-colon {
 	str: ":";
 	padding: @option-box;
 	text-color: @pale;
+	border-radius: @option-border-right;
 }
 entry {
 	text-color: @pale;
 	padding: @option-box;
 }
-* {
-	background-color: @background;
-	text-color: @vivid;
+mode-switcher {
+	text-color: @pale;
+	padding: @option-box;
 }
 element {
-	padding: @option-element-padding;
+	border-radius: 5px;
+	padding: @option-entry-box;
 	text-color: @dark;
 }
 element.selected {
 	background-color: @dark;
 	text-color: @pale;
 }
-
-

@@ -1,9 +1,8 @@
 #!/bin/sh
 
-rofi_command="rofi -theme themes/help-menu.rasi"
+rofi_command="rofi -theme themes/amazonia.rasi"
 
-MENU="$(echo -e "
-New terminal: +Enter
+MENU="$(echo -e "New terminal: +Enter
 Rofi: +d / +Tab
 Browser: +c
 Audio: +Ctrl+m
@@ -26,4 +25,4 @@ Kill/Reload compton: +t / +Ctrl+t
 Restart notifications: +Shift+d
 Kill notifications: +Ctrl+Space
 Shutdown: +Ctrl+c / +0
-Help: +Shift+h" | $rofi_command -dmenu)"
+Help: +Shift+h" | $rofi_command -dmenu -p "Help")"

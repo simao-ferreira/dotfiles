@@ -6,7 +6,7 @@ Manjaro is an open-source linux distro based on Arch rolling distro, contrary to
 To install Manjaro download it from [Manjaro](https://manjaro.org/download/) page, during this process open the [user-guide](http://rwthaachen.dl.osdn.jp/storage/g/m/ma/manjaro/Manjaro-User-Guide.pdf).
 
 ### TLDR
-To create a live USB on the terminal use `sudo -fdisk -l` to get the USB drive name, usually something like *sdb*, replace [downloaded-version] and [device] and use `sudo dd if=manjaro-[downloaded-version].iso of=/dev/[device] bs=4M`.
+To create a live USB on the terminal use `sudo fdisk -l` to get the USB drive name, usually something like *sdb*, replace [downloaded-version] and [device] and use `sudo dd if=manjaro-[downloaded-version].iso of=/dev/[device] bs=4M`.
 
 Manjaro has two installers, `architect`, a terminal based installer to more experienced users and a GUI `calamares` based installer, intuitive and easy to use.
 From setup is possible to install non-free graphic drivers, like Nvidia, diminishing troubles when setting up the inicial environment.

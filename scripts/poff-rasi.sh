@@ -1,6 +1,6 @@
 #!/bin/sh
 
-rofi_command="rofi -theme themes/poff.rasi"
+rofi_command="rofi -theme themes/amazonia.rasi"
 
 #commands
 shutdown=" Shutdown"
@@ -10,7 +10,7 @@ reboot=" Reboot"
 suspend="鈴 Suspend"
 options="$shutdown\n$logout\n$lock\n$reboot\n$suspend"
 
-MENU="$(echo -e "$options" | $rofi_command -dmenu -selected-row 2)"
+MENU="$(echo -e "$options" | $rofi_command -dmenu)"
             case "$MENU" in
                 $shutdown) i3exit shutdown;;
                 $logout) i3-msg exit;;
