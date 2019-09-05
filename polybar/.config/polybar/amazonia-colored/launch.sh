@@ -9,5 +9,5 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Launch bar1 and bar2
 #polybar top -c ~/repositories/unix/i3/.config/polybar/config.ini &
 #polybar bottom -c ~/repositories/unix/i3/.config/polybar/config.ini &
-polybar top -c ~/.config/polybar/simple-amazonia/config.ini &
-polybar bottom -c ~/.config/polybar/simple-amazonia/config.ini &
+polybar top -c ~/.config/polybar/amazonia-colored/config.ini &
+polybar bottom -c ~/.config/polybar/amazonia-colored/config.ini &
