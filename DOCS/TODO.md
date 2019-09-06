@@ -1,15 +1,10 @@
 # Todo
 
-prettify polybar, add and configure fonts, add icon fonts to polybar:
-	* This might be more difficult then expected, some artifacts appear when using unicode triangles, a small line of the color under for example.
-
-edit ranger configs > Update documentation > Add ranger to polybar or remove the files module
+manage and share bookmarks between various browsers > take a look at buku
 
 rofi rasi > gnome like mod(win) press > open all started applications 
 
 battery warning, looks like is not possible with polybar, bash script should do it
-
-polybar add cpu load and temp to one single module > maybe remove cpu load, it's not relevant enough
 
 consider moving everything to one bar, some modules like memory or cpu load are rarely valuable for usual load. Even wireless is redundant.
 

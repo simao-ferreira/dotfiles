@@ -5,7 +5,7 @@ This documentation here exists for facilitating configuration updates and is an 
 
 ## Status
 
-![Progress status](IMG/status_28_08_19.png)
+![Progress status](IMG/status_06_09_19.png)
 
 ## Settings
 To install packages in Mi3 use `sudo pacman -s <package-name>` or through pamac name as `Add/Remove software`.
