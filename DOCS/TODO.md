@@ -1,14 +1,17 @@
 # Todo
 
-prettify polybar, add and configure fonts, add icon fonts to polybar (like rofi?)
+prettify polybar, add and configure fonts, add icon fonts to polybar:
+	* This might be more difficult then expected, some artifacts appear when using unicode triangles, a small line of the color under for example.
 
-edit ranger configs > Update documentation > Add ranger to polybar or remove the folders module
+edit ranger configs > Update documentation > Add ranger to polybar or remove the files module
 
-rofi rasi > gnome like mod(win) press > open all started applications > maybe change the mod+Tab window
+rofi rasi > gnome like mod(win) press > open all started applications 
 
 battery warning, looks like is not possible with polybar, bash script should do it
 
-polibar add cpu load and temp to one single module
+polybar add cpu load and temp to one single module > maybe remove cpu load, it's not relevant enough
+
+consider moving everything to one bar, some modules like memory or cpu load are rarely valuable for usual load. Even wireless is redundant.
 
 sound, alsa and pulseaudio not working 100%, sometimes headphones input is not recognized (vol up and down) always
 
@@ -22,7 +25,7 @@ games: how to run them with primusrun and manage config.
 
 Music player: mocp
 
-linuxify chromium
+linuxify chromium & firefox
 
 spotifyd, mopidy
 
@@ -30,19 +33,14 @@ spotifyd, mopidy
 
 i3wm-themer, check python scripts, or create a kotlin version
 
-macos like keyboard press- https://support.apple.com/en-us/HT201586
-
-trim for ssd
-
-qt5ct & kvantum
+macos like keyboard press and hold - https://support.apple.com/en-us/HT201586:
+	* Best solution seems to be compose: https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Configuring_compose_key
 
 i3-gaps, i3bar, i3status
 
 lxinput for mouse and keyboard configuration
 
 dmenu-manjaro, bmenu, ranger, moc, morc_menu, i3-exit, i3-msg
-
-conky* > remove conky uses, but keep configuration?
 
 pcmanfm, viewnior, epdfview, manjaro-printer, vlc, xarchiver, xfburn, manjaro-chroot, gparted, isousb, gimp
 
