@@ -83,7 +83,7 @@ Mi3 also has a small categorized menu cascade style `morc_menu`, called with `mo
 ## Text Editor
 There are as usual several options already installed. `vim` and `nano` are already in Mi3.
 
-For a windowed text editor gnome-editor `gedit` is a reliable option. 
+For a windowed text editor Mi3 brings `mousepad`, however gnome-editor `gedit` is a reliable option. 
 Out of the box spellcheck is not working. Some missing languages or conflict  with the languages installed.
 Gedit uses `enchant` which act as a fronted for several spell checkers, some of those being `Hunspell`, `MySpell`, `Ispell` and `Aspell`.
 In `pamac` it's possible to install more packages, for example, `aspell-en` and `aspell-de`, this will add English and German spell checkers.
@@ -141,8 +141,12 @@ There are some other possible installations like `tizonia`, `spicetify-cli`, `sp
 * [Music players](MUSIC-PLAYER.md)
 
 ## Monitoring
-Options for monitoring are neofetch to get system info and `htop` or `gotop`.
-`gotop` is a more "eye-candy" version.
+Favorite options for monitoring are neofetch to get system info and `gotop` to get live system status.
+`gotop` is a terminal "eye-candy" version.
+
+[Neofetch](https://github.com/dylanaraps/neofetch) configuration file is placed in `.config/neofetch`, in it it's possible to change position of display information, also witch info is displayed. It is possible to change the image displayed.
+
+Mi3 comes with `htop` and `screenfetch`, `htop` is visually less clear and `screenfetch` is not as configurable.
 
 Most of options available on `htop` or `gotop` are possible to configure to work with `i3bar/i3status` or `polybar`.
 
@@ -199,6 +203,7 @@ Managed dependencies on this documentation.
 | [i3scrot](README.md#print-screen) | Screen capture utility
 | [lightdm](APPEARANCE.md#login-manager) | Display Manager, used to manage login
 | [lxappearance](APPEARANCE.md#icon-packs-cursors-and-fonts) | Gtk theme switcher
+| [neofetch](README.md#monitoring) | Command line system information tool
 | [nitrogen](APPEARANCE.md#wallpaper) | Background manager
 | [pacman](PACMAN.md#pacman) | Package Manager
 | [pale moon](OTHERS.md#palemoon) | Browser
@@ -208,6 +213,7 @@ Managed dependencies on this documentation.
 | [ranger](README.md#file-manager) | File Manager
 | [redshift](APPEARANCE.md#redshift) | Screen color temperature utility
 | [rofi](README.md#Menu) | Window switcher, also used as package launcher
+| [screenfetch](OTHERS.md#screenfetch) | Bash system information tool
 | [spicetify-cli]((MUSIC-PLAYER.md#spicetify)) | Spotify wrapper
 | [stow](DOTFILES.md#stow) | Symlink utility, used for generating git managed configuration files
 | [tizonia]((MUSIC-PLAYER.md#tizonia)) | Terminal audio stream player 

@@ -1,5 +1,9 @@
 # Todo
 
+mousepad
+
+w3m - terminal browser, read about it.
+
 manage and share bookmarks between various browsers > take a look at buku
 
 rofi rasi > gnome like mod(win) press > open all started applications 
