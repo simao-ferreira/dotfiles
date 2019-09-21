@@ -197,6 +197,7 @@ Managed dependencies on this documentation.
 | [feh](APPEARANCE.md#wallpaper) | Image viewer, can be used to manage desktop background
 | [fwupd](FIRMWARE.md) | Firmware Manager
 | [gedit](README.md#text-editor) | Gnome UI Text editor
+| [git-secret](GIT-SECRET.md) | Git tool to encrypt files
 | [gcolor2](COLOR-PALETTE.md#gcolor2) | Color picker GUI
 | [geoclue2](APPEARANCE.md#redshift) | Location framwork
 | [i3bar](APPEARANCE.md#menu-bar) | Status bar

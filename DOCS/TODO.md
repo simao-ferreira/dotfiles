@@ -16,7 +16,7 @@ sound, alsa and pulseaudio not working 100%, sometimes headphones input is not r
 
 add auto-hide for polybar, no config possible yet, script is possible
 
-general color paleltte, include [terminal, polybar, i3bar, dunst, rofi] > Make this automatic > update documentation
+general color paleltte, include [terminal, polybar, i3bar, dunst, rofi, firfox?] > Make this automatic > update documentation
 
 grub quiet directly to linux, but keeping dual boot access
 

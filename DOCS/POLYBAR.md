@@ -132,6 +132,8 @@ click-left = ~/.config/polybar/scripts/poff MENU
 It is also possible to run scripts through `type=custom/scripts`, those scripts should be allocated under `.config/polybar/scripts`
 The documentation is extensive.
 
+To add symbols define font with symbol capacity, then `"%{T<number>}<symbol>%{T-}"` and change number to match number reference and symbol is the desired icon.
+
 
 
 
