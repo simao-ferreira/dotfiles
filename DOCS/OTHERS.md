@@ -27,7 +27,7 @@ Oblogout is a configurable logout script with graphical UI, that allows to cance
 * Rofi script is used instead.
 
 ### Palemoon
-[pale moon](https://github.com/MoonchildProductions/UXP) as default browser. `pale moon` is a fork of `firefox` with emphasis in customization, there is however significant changes between `pale moon` and `firefox`, like running in single-process or not using gecko as engine (uses the goanna fork).
+[pale moon](https://github.com/MoonchildProductions/UXP) is the Mi3 default browser. `pale moon` is a fork of `firefox` with emphasis in customization, there is however significant changes between `pale moon` and `firefox`, like running in single-process or not using gecko as engine (uses the goanna fork).
 * Removed, firefox or chromium are default tools
 
 ### Screenfetch

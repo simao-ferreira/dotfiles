@@ -1,5 +1,5 @@
 # Dotfiles
-Dotfiles are usually the files used to configure user settings in applications, hence the name dotfiles. They referenced in the user home folder and some other locations making it difficult to version manage.
+Dotfiles are usually the files used to configure user settings in applications, hence the name dotfiles. They reside in the user home folder and some other locations making it difficult to version manage.
 
 Version management can be important for various reasons, from synchronization across various hosts to fast machine installation. 
 

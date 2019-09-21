@@ -5,7 +5,7 @@ This documentation here exists for facilitating configuration updates and is an 
 
 ## Status
 
-![Progress status](IMG/status_06_09_19.png)
+![Progress status](IMG/status_21_09_19.png)
 
 ## Settings
 To install packages in Mi3 use `sudo pacman -s <package-name>` or through pamac name as `Add/Remove software`.
@@ -55,16 +55,16 @@ By default there dmenu, a fast and light menu for the X system, it's presented a
 
 To run it from the console run`dmenu_run`, if a top bar exists, like `i3status` or `polybar`, `dmenu` will appear on top of it.
 
-However there are other options, with more "eye-candy" one of those is rofi.
+However there are other options with more "eye-candy", one of those is rofi.
 
 Install rofi, a "better dmenu" through pamac or `sudo pacman -S rofi`.
 
-After installing edit the .i3/config file, comment the line about dmenu and add:
+After installing edit the `.i3/config` file, comment the line about dmenu and add:
 `bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3`
 * This command works for the initial setup, some changes need to be made according to settings, for example using a rasi theme.
 
 This will replace the usual call to `dmenu`. However `dmenu` still works if another keybinding is provided. That is a important setting case something breaks on installation.
-To move between types like windows, ssh or drun press `shift` while on rofi.
+To move between types like windows, ssh or drun press `shift+<arrows>` while on rofi.
 
 Also it is possible to configure a faster keybinding like the one used on WindowsOS. For moving between open windows: 
 `bindsym $mod+Tab exec rofi -lines 12 -padding 18 -width 60 -location 0 -show window -sidebar-mode -columns 3`
@@ -73,10 +73,10 @@ Rofi can be configured in several different ways.
 `rofi -help` will give you the current configuration and location.
 By adding `~/.config/rofi/config.` you can specify the look and feel of rofi window.
 
-Another option, more powerful but easier to update is using rasi configurations, this allows to define a theme, with a color pattern and different settings, as an example is possible to define different look for specified modules.
+Another option, more powerful but easier to update is using rasi configurations, this allows to define a theme, with a color pattern and different settings, as an example is possible to define looks for specified modules.
 Rasi themes work in addition to the config file.
 This allows visuals more complex, but defined with a more modular approach, easier to manage and change, also make it easy to integrate with scripts. 
-To find themes [rasi-themes](https://github.com/davatorium/rofi-themes) has a few to use or as example.
+To find themes got to [rasi-themes](https://github.com/davatorium/rofi-themes), this repo has a few to use or as example.
 
 Mi3 also has a small categorized menu cascade style `morc_menu`, called with `mod+z`, that will open a simple menu up top, displaying categories with applications. Good emergency option.
 
@@ -84,7 +84,7 @@ Mi3 also has a small categorized menu cascade style `morc_menu`, called with `mo
 There are as usual several options already installed. `vim` and `nano` are already in Mi3.
 
 For a windowed text editor Mi3 brings `mousepad`, however gnome-editor `gedit` is a reliable option. 
-Out of the box spellcheck is not working. Some missing languages or conflict  with the languages installed.
+Out of the box spellcheck is not working on gedit. Some missing languages or conflict  with the languages installed.
 Gedit uses `enchant` which act as a fronted for several spell checkers, some of those being `Hunspell`, `MySpell`, `Ispell` and `Aspell`.
 In `pamac` it's possible to install more packages, for example, `aspell-en` and `aspell-de`, this will add English and German spell checkers.
 
@@ -116,7 +116,7 @@ From this it's possible to configure history and completion.
 
 The new configuration file is set as `.zshrc`.
 
-Optionally to install `oh-my-zsh` configuration setup run:
+Optionally there is [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) to manage the zsh configuration, to add it run:
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 Adding to to `oh-my-zsh` there are several interesting plugins like git and `agnoster` theme. For themes it's necessary to install `powerline fonts`. This is possible through `AUR` installing `nerd-fonts-complete`. Change the `ZSH_THEME="agnoster"` or other to get "eye-candy" visuals.
 
@@ -141,14 +141,14 @@ There are some other possible installations like `tizonia`, `spicetify-cli`, `sp
 * [Music players](MUSIC-PLAYER.md)
 
 ## Monitoring
-Favorite options for monitoring are neofetch to get system info and `gotop` to get live system status.
-`gotop` is a terminal "eye-candy" version.
+For monitoring some favorite options are neofetch, to get system info, and `gotop`, to get live system status.
+`gotop` is a terminal "eye-candy" version of common tools like `htop`.
 
-[Neofetch](https://github.com/dylanaraps/neofetch) configuration file is placed in `.config/neofetch`, in it it's possible to change position of display information, also witch info is displayed. It is possible to change the image displayed.
+[Neofetch](https://github.com/dylanaraps/neofetch) configuration file is placed in `.config/neofetch`, in it it's possible to change position of display information, also witch info is displayed. It is also possible to change the image displayed.
 
 Mi3 comes with `htop` and `screenfetch`, `htop` is visually less clear and `screenfetch` is not as configurable.
 
-Most of options available on `htop` or `gotop` are possible to configure to work with `i3bar/i3status` or `polybar`.
+Most of options available on `htop` or `gotop` are possible to get if configured on `i3bar/i3status` or `polybar`.
 
 ## Network Manager
 The network manager already is installed, to configure the VPN download the OpenVpn server configuration file and add a new VPN using the Network Manager configuration.
@@ -160,7 +160,7 @@ It is possible to change this over Firefox configuration, however some use can b
 Chromium does block this by default, and also has a specific add-on for this.
 
 ## Programming
-Intellij is available through pamac. It is also possible to install more recent implementations of java, openjdk11 is the more common. Is also available through the same way.
+Intellij is available through pamac. It is also possible to install more recent implementations of java, openjdk11 is the one more widely used. Is also available through the same way.
 
 ## Gaming
 Steam is available through `pamac`.
@@ -176,11 +176,11 @@ Some games refuse to start with any of the above configurations.
 
 For GOG games, download the `.sh` file and run it `sh <game-name.sh>`
 
-Bumblebee drivers should kick in when necessary, if not, it's possible to run `primusrun <game-name>`, however this will use different config settings [in /usr/shared][todo]
+Bumblebee drivers should kick in when necessary, if not, it's possible to run `primusrun <game-name>`, however this will start a different profile/config settings in `/usr/shared`.
 
 ## Print Screen
 To take a print screen there is i3scrot, a command line application that takes a screenshot of your open displays.
-It's possible to use the Mi3 binds to take a screenshot without the command line, to do that press `mod+Print` to take full screen, or `mod+Shift+print` to select the area. Both are stored at `~/Pictures` by default.
+It's possible to use the Mi3 binds to take a screenshot without the command line, to do that press `Print` or `mod+Print` to take full screen, or `mod+Shift+print` to select the area. Both are stored at `~/Pictures` by default.
 
 # Dependencies
 Managed dependencies on this documentation.
@@ -199,7 +199,7 @@ Managed dependencies on this documentation.
 | [gedit](README.md#text-editor) | Gnome UI Text editor
 | [git-secret](GIT-SECRET.md) | Git tool to encrypt files
 | [gcolor2](COLOR-PALETTE.md#gcolor2) | Color picker GUI
-| [geoclue2](APPEARANCE.md#redshift) | Location framwork
+| [geoclue2](APPEARANCE.md#redshift) | Location framework
 | [i3bar](APPEARANCE.md#menu-bar) | Status bar
 | [i3scrot](README.md#print-screen) | Screen capture utility
 | [lightdm](APPEARANCE.md#login-manager) | Display Manager, used to manage login

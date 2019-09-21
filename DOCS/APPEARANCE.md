@@ -14,7 +14,9 @@ Can be installed through pamac or`sudo pacman -S feh`.
 For changing the wallpaper add to `/.i3/config`:
 `exec_always --no-startup-id feh --bg-scale ~/.wallpapers/forest-nightscape.jpg`.
 It can occur that this does not work after configuration. This is because nitrogen takes precedence when `.i3/config` runs. 
-To test if the configuration is working press `mod4+Shift+r`. If after reboot the new wallpaper is not set, usually there is a line under `i3/config` starting Nitrogen, the wallpaper loader by default. By commenting this line, the new setup instruction will work when rebooting.
+To test if the configuration is working press `mod+Shift+r`. 
+
+If after reboot the new wallpaper is not set, usually there is a line under `i3/config` starting Nitrogen, the wallpaper loader by default. By commenting this line, the new setup instruction will work when rebooting.
 
 ### Menu bar
 The standard status bar is i3bar, it uses the i3status as default source for data, this can be changed.
@@ -24,8 +26,8 @@ There are other popular options like `polybar`.
 * [Polybar](POLYBAR.md)
 
 ### Compton
-[Compton](https://wiki.archlinux.org/index.php/Compton) is a window manager compositor  for Xorg.
-It also provides transparency and shadow to windows through `compton`.
+[Compton](https://wiki.archlinux.org/index.php/Compton) is a window manager compositor for Xorg.
+It also provides transparency and shadow to windows.
 
 The default configuration for compton can be found at `/etc/xdg/compton.conf` to modify it it can be copied to `~/.config/compton/compton.conf`, `~/.config/compton.conf` or `~/.compton.conf`.
 
@@ -56,7 +58,7 @@ Compton is not set by default, it's also necessary to add `compton -b` to `.i3/c
 Modify the wallpaper setup as: 
 `exec_always --no-startup-id feh --bg-scale ~/.wallpapers/sunset.jpg; sleep 1; compton -b`.
 
-`Chromium` and other apps might not function properly after changes to `compton`. A possible solution is to change the `compron.config` from `backend = "xrender` to `"backend = "glx"`.
+`Chromium` and other apps might not function properly after changes to `compton`. A common solution is to change the configuration file from `backend = "xrender` to `"backend = "glx"`.
 
 ### Icon packs, cursors and fonts
 More configurations can be made, either by adding or modifying the config or using the GUI of `lxappearance`, also called `Customize look and feel`. This package is installed by default, from it with it is possible to load new icon packs, mouse cursors, among other configurations. Also changing fonts and font size.
@@ -67,14 +69,14 @@ When changing the `.i3/config` file the font input changes bar fonts, but not ap
 When setting new settings with `lxappearance` also can happen that some resources are unrecognizable for URxvt.
 [URxvt](https://wiki.archlinux.org/index.php/Rxvt-unicode) manuals are very complete and detailed.
 Important when using HiDpi screens, to increase font size first check `/usr/share/fonts/misc/fonts.alias` and take a look at settings.
-From there edit the `.Xresources` accordingly, `10x20` is a good setting for an HiDpi setup.
+From there edit the `.Xresources` accordingly, `10x20` is a good setting for some HiDpi setup.
 
-Some apps like `gedit` or `chromium` have a specific configurations, usually found under preferences or settings.
+Some apps like `gedit`, `firefox` or `chromium` have a specific configurations, usually found under preferences or settings.
 
 ### Redshift
 [redshift](http://jonls.dk/redshift/) provides color temperature configurations, also known as night light.
  
-Night light does not come with Mi3 as with other distro's, `redshift` is one of the options, as `flux`. 
+Night light does not come with Mi3 as with other distro's, `redshift` is one of the options, as is `flux`. 
 For redshift it's necessary to configure geo location, this can be mocked, providing a static value or coordinate. 
 Another options, more comprehensive, is to install and use [geoclue](https://gitlab.freedesktop.org/geoclue/geoclue/wikis/home), available under pamac or through pacman as `geoclue2`.
  
@@ -109,7 +111,7 @@ To close dunst notifications press `Ctrl+Alt+Space`
 Details to configure dunst can be found at [Arch wiki](https://wiki.archlinux.org/index.php/Dunst)
 
 ### Caffeine
-The screen saver in Mi3 is a locking mechanism configured via i3lock, that blurs the workspace. 
+The screen saver in Mi3 is a locking mechanism configured via i3lock, that blocks the workspace. 
 It's configured defaults will block even when using the device with Netflix, Youtube or Spotify.
 It is possible to add a script and stop the i3lock from blocking the system when sound is playing or by placing the mouse at a specified spot. 
 Other option is to install a application like the `caffeine-ng` package, that enable the user to specify and change the locking. Caffeine works without altering the i3lock configurations.
@@ -139,7 +141,7 @@ pip3 install --user pywal
 To run it `wal -i </path/to/img.jpg>`.
 It will generate a new color scheme to `.cache/wal`.
 
-However given the split system used on Mi3, this will be applied to URxvt but not on i3bar, gedit, or rofi. Also may not be present after reboot.
+However given the split system used on Mi3, this will be applied to URxvt, can be configured to apply on polybar but not on i3bar, gedit, or rofi. Also will not be present after reboot unless some configs are added.
 
 It's necessary to run `wal -R` on each startup of the system. In i3 you can add the command in the `.i3/config` with `exec --no-startup-id wal -R`.
 
