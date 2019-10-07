@@ -37,7 +37,7 @@ Mi3 comes with `pale moon` as default browser.
 Install Firefox. `sudo pacman -S firefox` or through software manager
 Same for Chromium.
 
-Firefox has some issues with webRTC calls and is not reliable in VPN mode. To [chnage](https://www.privacytools.io/browsers/#webrtc) this enter `about:config` in the firefox address bar and press enter, search for `media.peerconnection.enabled` and change it to false. 
+Firefox has some issues with webRTC calls and is not reliable in VPN mode. To [change](https://www.privacytools.io/browsers/#webrtc) this enter `about:config` in the firefox address bar and press enter, search for `media.peerconnection.enabled` and change it to false. 
 To make shore every single WebRTC related setting is disabled change also `media.peerconnection.turn.disable` to `true`, `media.peerconnection.use_document_iceservers` to `false`, `media.peerconnection.video.enabled` to `false` and `media.peerconnection.identity.timeout` to `1`.
 
 When using an external mouse firefox scrolling will be very slow, it's possible to [change](https://wiki.archlinux.org/index.php/Firefox/Tweaks#Mouse_wheel_scroll_speed) this in `about:config` modifying `mousewheel.acceleration.start` to `-1`, `mousewheel.acceleration.factor` to the desired number (`10` to `20` are common values).
@@ -157,13 +157,16 @@ Most of options available on `htop` or `gotop` are possible to get if configured
 The network manager already is installed, to configure the VPN download the OpenVpn server configuration file and add a new VPN using the Network Manager configuration.
 
 By default Nord recommends UDP connection, less stable but more adequate to over the web communications.
-Firefox however does not block webRTC java script requests, that makes it insecure to use video streams and other uses as well.
+Firefox however does not block webRTC javascript requests, that makes it insecure to use video streams and other uses as well.
 It is possible to change this over Firefox configuration, however some use can be affected. 
 
 Chromium does block this by default, and also has a specific add-on for this.
 
 ## Programming
 Intellij is available through pamac. It is also possible to install more recent implementations of java, openjdk11 is the one more widely used. Is also available through the same way.
+
+* [Java](PROGRAMMING.MD#java)
+
 
 ## Gaming
 Steam is available through `pamac`.
