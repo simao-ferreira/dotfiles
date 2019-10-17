@@ -1,29 +1,36 @@
+```
+ _  _____ 
+(_)|____ |
+ _     / /
+| |    \ \
+| |.___/ /
+|_|\____/ 
+```
 # i3
-This documentation here exists for facilitating configuration updates and is an ongoing process, some change may not be completely documented. This is for personal use and contain mainly basic explanations, in some cases incomplete or insufficient for other uses.
+The purpose of this documentation is to provide context for the existing configuration files and support for future updates on this setup.
+
+This is an ongoing process, not all changes are completely documented. 
+
+This is for personal use and contain the results of research and experimentation, this documentation provides basic explanations, some can be incomplete or insufficient for other purposes.
  
 * [Manjaro](MANJARO.md)
+
+The following details where conceived for the i3 version of Manjaro. 
 
 ## Status
 
 ![Progress status](IMG/status_21_09_19.png)
 
-## Settings
-To install packages in Mi3 use `sudo pacman -s <package-name>` or through pamac name as `Add/Remove software`.
-To update to last versions use `sudo pacman -U`
-Is also possible to add user managed packages to pamac, to do this go to pamac top corner and under settings add `AUR`.
-To install `AUR`packages from terminal use `yay -S <package>`.
-Other helpers for `pacman` can be used instead of `yay`, like `trizen`, `pikaur`, `pakku`, `aura` or `pacaur`. Semantics can be different for them.
+## Basic settings
+Installing new software under Manjaro is primarily be done through the package manager `pacman`. This can be done through terminal by running `sudo pacman -s <package-name>` or through the GUI wrapper `pamac`, described as `Add/Remove software`.
 
-Mi3 also brings a command line menu to manage settings, run it by pressing `$mod+Ctrl+b` or `bmenu` in the terminal.
-This will bring a text UI with options, like install a new kernel. Or two, just in case it's needed for recovery options.
-This is important because Manjaro is a rolling distro based on Arch, and while is running behind the latest it can on occasion break. If it happens select a different kernel when booting. `bmenu` is also able to manage drivers, if gaming is an option and graphic is NVIDIA it's necessary to install bumblebee drivers. This should be installed by default if the initial OS installation was done correctly.
-Check which graphics are correct for the setup, if NVIDIA optimus then use non-free graphics.
+Mi3 has a terminal menu to manage settings, run it by pressing `$mod+Ctrl+b` or `bmenu` in the terminal. This will open a text UI with options, to install new kernels, it's important to install more than one just in case it's needed for recovery. This can be important because Manjaro is a rolling distro based on Arch, and while is running behind the latest, to provide extra protection, it can on occasion break. To recover select a different kernel when booting. 
 
-Also gaps is enabled by default.
+`bmenu` manages other system settings like manage drivers, if gaming is an option and graphic is NVIDIA, installations of bumblebee drivers is recomended. This can be installed by default in the initial OS installation. Check which graphics are correct for the setup, if NVIDIA optimus then use non-free graphics.
 
 Mi3  has a very helpful user guide file included, accessible through `mod+Shift=h`, with the complete keyboard shortcuts.
 
-Other settings:
+Detailed settings:
 
 * [Appearance](APPEARANCE.md)
 * [Battery](BATTERY.md)
@@ -33,23 +40,22 @@ Other settings:
 * [Package Manager](PACMAN.md)
 
 ## Browser
-Mi3 comes with `pale moon` as default browser.
-Install Firefox. `sudo pacman -S firefox` or through software manager
-Same for Chromium.
+Mi3 xhampions `pale moon` as default browser. To install Firefox. `sudo pacman -S firefox` or through software manager, same for Chromium.
 
 Firefox has some issues with webRTC calls and is not reliable in VPN mode. To [change](https://www.privacytools.io/browsers/#webrtc) this enter `about:config` in the firefox address bar and press enter, search for `media.peerconnection.enabled` and change it to false. 
 To make shore every single WebRTC related setting is disabled change also `media.peerconnection.turn.disable` to `true`, `media.peerconnection.use_document_iceservers` to `false`, `media.peerconnection.video.enabled` to `false` and `media.peerconnection.identity.timeout` to `1`.
 
-When using an external mouse firefox scrolling will be very slow, it's possible to [change](https://wiki.archlinux.org/index.php/Firefox/Tweaks#Mouse_wheel_scroll_speed) this in `about:config` modifying `mousewheel.acceleration.start` to `-1`, `mousewheel.acceleration.factor` to the desired number (`10` to `20` are common values).
+When using an external mouse firefox scrolling can be very slow, it's possible to [change](https://wiki.archlinux.org/index.php/Firefox/Tweaks#Mouse_wheel_scroll_speed) this in `about:config` modifying `mousewheel.acceleration.start` to `-1`, `mousewheel.acceleration.factor` to the desired number (`10` to `20` are common values).
 Mozilla's recommendation is to set `mousewheel.default.delta_multiplier_y` between `200` and `500` (default: `100`, adequate: `300`).
 
 ## File Manager
-Mi3 has two file managers, one is ranger, a terminal file manager.
+Mi3 file managers are ranger, a terminal file manager, and `pcmanfm`, a more typical graphical interface.
+
 Ranger is written in python, by default presents three columns, the middle one is the *working* panel, to move between them you can use arrows or other defined keys. The most right column allows previews for files and images. It includes capabilities *vim-like* with keybindings and bookmarks. It is also possible to use external scripts. 
 
 To make `ranger` display hidden files edit `rc.conf` with `set show_hidden true`.
 
-Ranger uses the default color scheme defined at `.Xresources`, but a specific theme can be set, adding `set colorscheme <scheme>`, by default comes with `deafult`, `jungle`, `snow` and `solarized`.
+Ranger uses the default color scheme defined at `.Xresources`, but a specific theme can be set, adding `set colorscheme <scheme>`, original setup contains `deafult`, `jungle`, `snow` and `solarized` themes.
  
 Adding to Ranger there is also pcmanfm, a standard linux integrated File Manager. Very similar to the gnome version.
 

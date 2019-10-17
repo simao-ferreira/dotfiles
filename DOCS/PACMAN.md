@@ -1,3 +1,12 @@
+```
+ _____      __      ___    ___ ___      __      ___    
+/\ '__`\  /'__`\   /'___\/' __` __`\  /'__`\  /' _ `\  
+\ \ \L\ \/\ \L\.\_/\ \__//\ \/\ \/\ \/\ \L\.\_/\ \/\ \ 
+ \ \ ,__/\ \__/.\_\ \____\ \_\ \_\ \_\ \__/.\_\ \_\ \_\
+  \ \ \/  \/__/\/_/\/____/\/_/\/_/\/_/\/__/\/_/\/_/\/_/
+   \ \_\                                               
+    \/_/          
+```
 # PACMAN
 
 Pacman is the package manager for Arch based systems. [Pacman](https://wiki.archlinux.org/index.php/pacman) allows the installation of binary repository packages, adding the capability to edit or replace the building scripts.

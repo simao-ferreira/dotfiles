@@ -1,3 +1,11 @@
+```
+             o8   oooo                                           
+  ooooooo  o888oo  888ooooo   ooooooooo8 oo oooooo    oooooooo8  
+888     888 888    888   888 888oooooo8   888    888 888ooooooo  
+888     888 888    888   888 888          888                888 
+  88ooo88    888o o888o o888o  88oooo888 o888o       88oooooo88  
+
+```
 # Others
 
 ## Removed
@@ -34,6 +42,18 @@ Oblogout is a configurable logout script with graphical UI, that allows to cance
 [Screenfetch](https://github.com/KittyKatt/screenFetch) is a bash terminal informational tool, much to the like of `neofetch`, capable of displaying as much of information as alternatives, however, does not have a config file placed on `home`, what make it harder to manage in a dotfile style.
 * Removed, neofetch used instead.
 
+### Figlet
+[Figlet](https://github.com/cmatsuoka/figlet) is a program to create characters in various types of configurations, run `figlet <text>` or `figlet -f <font> <text>`.
+* Mostly used for beautification of readme files and program headers.
+
+Example:
+```
+ _ _ _          _   _     _       
+| (_) | _____  | |_| |__ (_)___   
+| | | |/ / _ \ | __| '_ \| / __|  
+| | |   <  __/ | |_| | | | \__ \_ 
+|_|_|_|\_\___|  \__|_| |_|_|___(_)
+```
 ## Gnome
 Mostly useful on Gnome desktop
 * [Gnome bars](GNOME.md)
