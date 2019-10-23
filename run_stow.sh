@@ -7,16 +7,19 @@ echo "Updating i3 config files"
 stow i3
 
 echo "Updating home dotfiles"
-stow homefiles zsh
+stow homefiles
 
-echo "Updating compton, dunst, ranger, polybar, rofi, i3status"
-stow compton dunst ranger polybar rofi i3status
+echo "Updating compton, dunst, i3status, neofetch, ranger, redshift"
+stow config
 
-echo "Updating gedit and redshift"
-stow gedit redshift
+echo "Updating rofi and polybar"
+stow polybar rofi
 
-echo "Updating fonts and wallpapers"
-stow fonts wallpapers
+echo "Updating gedit and fonts"
+stow local
+
+echo "Updating wallpapers"
+stow wallpapers
 
 # Useful for Gnome desktop
 #echo "Updating gtk css bars"

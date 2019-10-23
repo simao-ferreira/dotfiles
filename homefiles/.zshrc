@@ -100,3 +100,6 @@ prompt_context() {
     prompt_segment black default "%(!.%{%F{yellow}%}.)TPi3"
   fi
 }
+
+# Ruby
+PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
