@@ -200,7 +200,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id caffeine
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
-exec_always --no-startup-id feh --bg-fill ~/.wallpapers/green-coffee.jpg; sleep 1; compton -b
+exec_always --no-startup-id feh --bg-fill ~/.wallpapers/green-triangle.png; sleep 1; compton -b
 
 set_from_resource $color0   color0
 set_from_resource $color1   color1
