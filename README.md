@@ -7,4 +7,4 @@
 
 Personal repository containing configuration files (AKA dotfiles) for personal use.
 
-Settings for [i3](DOCS/README.md)
+Settings for [i3](documentation/README.md)
