@@ -19,7 +19,7 @@ The following details where conceived for the i3 version of Manjaro.
 
 ## Status
 
-![Progress status](IMG/status_21_09_19.png)
+![Progress status](IMG/status_27_12_19.png)
 
 ## Basic settings
 Installing new software under Manjaro is primarily be done through the package manager `pacman`. This can be done through terminal by running `sudo pacman -s <package-name>` or through the GUI wrapper `pamac`, described as `Add/Remove software`.
