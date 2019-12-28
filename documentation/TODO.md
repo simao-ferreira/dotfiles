@@ -28,6 +28,10 @@ linuxify chromium & firefox
 
 spotifyd, mopidy
 
+reinstall machine, update partitions, smaller win
+
+virtualbox
+
 `Gtk-WARNING **: 23:31:44.440: Unable to locate theme engine in module_path: "adwaita"`
 
 i3wm-themer, check python scripts, or create a kotlin version
