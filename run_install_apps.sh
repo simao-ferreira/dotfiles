@@ -7,7 +7,7 @@ sudo pacman -Syy
 
 # Browser
 echo "Updating browsers"
-sudo pacman -S firefox chromium --needed --noconfirm
+sudo pacman -S firefox thunderbird --needed --noconfirm
 
 # Basic
 echo "Update util and appearence packages"
@@ -32,14 +32,7 @@ sudo pacman -S ttf-font-awesome adobe-source-code-pro-fonts --needed --noconfirm
 echo "AUR installations and updates"
 if [ -x "$(command -v yay)" ]; then
     yay -S ttf-nerd-fonts-symbols nerd-fonts-complete --noconfirm
-elif [ -x "$(command -v trizen)" ]; then
-    trizen -S ttf-nerd-fonts-symbols nerd-fonts-complete
-elif [ -x "$(command -v pikaur)" ]; then
-    pikaur -S ttf-nerd-fonts-symbols nerd-fonts-complete
-elif [ -x "$(command -v pakku)" ]; then
-    pakku -S ttf-nerd-fonts-symbols nerd-fonts-complete
-elif [ -x "$(command -v pacaur)" ]; then
-    pacaur -S ttf-nerd-fonts-symbols nerd-fonts-complete
+    yay -S zim --noconfirm
 else
     echo "No AUR helper was found! Installation failed!"
     exit 1
