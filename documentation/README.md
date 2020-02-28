@@ -215,6 +215,7 @@ Managed dependencies on this documentation.
 | [i3bar](APPEARANCE.md#menu-bar) | Status bar
 | [i3scrot](README.md#print-screen) | Screen capture utility
 | [lightdm](APPEARANCE.md#login-manager) | Display Manager, used to manage login
+| [logiops](MOUSE.md) | Bluetooth mouse configuration 
 | [lxappearance](APPEARANCE.md#icon-packs-cursors-and-fonts) | Gtk theme switcher
 | [neofetch](README.md#monitoring) | Command line system information tool
 | [nitrogen](APPEARANCE.md#wallpaper) | Background manager

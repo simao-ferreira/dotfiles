@@ -38,7 +38,6 @@ bindsym $mod+Print --release exec --no-startup-id i3-scrot -w notify-send
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s notify-send
 
 # Scripts
-#bindsym $mod+Ctrl+c exec ~/dotfiles/scripts/poff.sh
 bindsym $mod+Ctrl+c exec ~/dotfiles/scripts/poff-rasi.sh
 bindsym $mod+p exec ~/dotfiles/scripts/help.sh
 
@@ -68,7 +67,7 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 # split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle notify-send 'tile split'
+#bindsym $mod+q split toggle notify-send 'tile split'
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
@@ -134,7 +133,7 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
-#assign [class="Franz"] $ws8
+assign [class="Thunderbird"] $ws8
 
 # Open specific applications in floating mode
 for_window [class="Clipgrab"] floating enable
@@ -188,13 +187,12 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
-# exec --no-startup-id clipit
+#exec --no-startup-id clipit
 #exec --no-startup-id blueman-applet
 
 #Todo: Better autolock
 exec --no-startup-id xautolock -time 10 -locker blurlock
 
-#exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id caffeine
