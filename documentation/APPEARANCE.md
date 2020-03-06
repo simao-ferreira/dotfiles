@@ -155,3 +155,12 @@ This will as well change the wallpaper to the one set as image, and run every ti
 The color palette of `.Xresources` will not change directly so neither rofi or i3bar will change. Rofi and URxvt can be configured differently for this, or an external package can be used to manage this, this is also true to i3bar, since i3bar does not use system or `Xresources` to get it's configuration.
 
 Other option is to manually use pywal to generate color palette and manually get it's hex colors for changing the configurations. On `.cache/wal` are already defined some specific files, for `.Xresources` or `rofi`.
+
+## Layout
+Saving workspace [layout](https://i3wm.org/docs/layout-saving.html) can be done through the use of `i3-save-tree`, this can be used to print to stdout a JSON containing a data structure for the selected layout. 
+This JSON has a dump of the workspace content, without workspace properties and with all relevant windows data commented. It is necessary to uncomment window data that has relevance and ass a workspace layout wrap.
+
+Add `exec --no-startup-id "i3-msg 'workspace 8; append_layout ~/.i3/ws8.json'"` to i3 config for lock the workspace layout, however the apps need to be initiated at startup as well if necessary to be working from the beginning.
+
+* The error `Can't locate AnyEvent/I3.pm` can be solved by installing `perl-anyevent-i3` from manjaro repos.
+//TODO: Make this a separate doc and implement a working version of this

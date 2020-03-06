@@ -21,7 +21,7 @@ Community supported versions are also available like:
 There are several others, but these are the most common ones.
 
 ## Basics
-Manjaro package manager is `pacman` not use `apt-get`. [Pacman](https://wiki.manjaro.org/index.php?title=Pacman_Overview) is mantained from carefully managed repositories, it also has two GUI options to wrap pacman, `octopi` and `pamac`. [Pamac](https://wiki.manjaro.org/index.php/Pamac) is the i3 default GUI. 
+Manjaro package manager is [pacman](PACMAN.md#pacman) instead of `apt-get`. [Pacman](https://wiki.manjaro.org/index.php?title=Pacman_Overview) is mantained from carefully managed repositories, it also has two GUI options to wrap pacman, `octopi` and [pamac](PACMAN.md#pamac) which is the i3 default GUI.
 
 Manjaro also allows Arch user based packages, though `AUR`, that can be enable on settings, these are managed by the community and contain the dependencies, age and repository on the details.
 

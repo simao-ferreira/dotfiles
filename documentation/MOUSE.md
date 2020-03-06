@@ -26,6 +26,4 @@ devices: (
 );
 ```
 
-To set it up as service `systemctl start logid.service` or run `logid`.
-
-Is possible to change file destination running `logid -c <destination>`.
+To set it up as service `systemctl enable logid.service` or run `logid`. To change file destination running `logid -c <destination>`. 

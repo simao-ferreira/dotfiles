@@ -19,5 +19,11 @@ Documentation at `http://docs.tizonia.org/usage/keyboard.html`
 
 It allows also for inclusion of custom apps, in the same spotify window.
 
+## Spotify-tui
+[Spotify-tui](https://github.com/Rigellute/spotify-tui) is a console client for spotify, however it needs spotify or spotifyd installed as it's just a wrapper for the web API which does not handle streaming.
+
 ## Cava
 [Cava](https://github.com/karlstav/cava) is a terminal based visualizer for audio, is not accurate, it does not represent a proper sound spectrum. Is is only purpose is to look aesthetic when playing music.
+
+## Spotify
+When installing the `spotify` app is normal that the keys do not match. For whatever reason, change DNS to something different (1.1.1.1) and try again.

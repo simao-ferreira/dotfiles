@@ -33,14 +33,10 @@ There are options as a GUI wrapper for `pacman`, one of those is `pamac`, very s
 
 Is possible to add `AUR` through the options of `pamac`.
 
-One other option is `octopi` [todo]
-
 ## AUR
 [AUR](https://wiki.archlinux.org/index.php/Arch_User_Repository), or Arch user repository is a community management tool for repositories. Some of the official repositories start as AUR repos, but it allows Arch to provide more extensive number os repositories. 
 The downside is the content is user produced, that carries some risks.
 
 To install through command line it's possible to use `yay`. [yay](https://github.com/Jguer/yay) is a helper for `pacman` and `AUR`.
 
-## OTHERS
-pamac vs octopi
-yay, etc...
+[cleaning-tidying](https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans))
