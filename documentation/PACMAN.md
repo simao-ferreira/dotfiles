@@ -39,4 +39,5 @@ The downside is the content is user produced, that carries some risks.
 
 To install through command line it's possible to use `yay`. [yay](https://github.com/Jguer/yay) is a helper for `pacman` and `AUR`.
 
-[cleaning-tidying](https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans))
+### Maintenance
+[Cleaning](https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)) your installation of orphan packages.

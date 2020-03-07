@@ -1,17 +1,17 @@
 ```
- _  _____ 
-(_)|____ |
- _     / /
-| |    \ \
-| |.___/ /
-|_|\____/ 
+ _ _____  __        ___ _    _ 
+(_)___ /  \ \      / (_) | _(_)
+| | |_ \   \ \ /\ / /| | |/ / |
+| |___) |   \ V  V / | |   <| |
+|_|____/     \_/\_/  |_|_|\_\_|
+
 ```
 # i3
-The purpose of this documentation is to provide context for the existing configuration files and support for future updates on this setup.
+The purpose of this documentation is to provide context for the existing configuration files and support for this setup.
 
 This is an ongoing process, not all changes are completely documented. 
 
-This is for personal use and contain the results of research and experimentation, this documentation provides basic explanations, some can be incomplete or insufficient for other purposes.
+This is for personal use and contain the results of research and experimentation, this documentation provides basic explanations, some can be incomplete, insufficient or even misleading, this is only conceived for personal purposes.
  
 * [Manjaro](MANJARO.md)
 
@@ -22,17 +22,20 @@ The following details where conceived for the i3 version of Manjaro.
 ![Progress status](IMG/status_27_12_19.png)
 
 ## Basic settings
-Installing new software under Manjaro is primarily be done through the package manager `pacman`. This can be done through terminal by running `sudo pacman -s <package-name>` or through the GUI wrapper `pamac`, described as `Add/Remove software`.
+Installing new software under Manjaro is primarily be done through [pacman](PACMAN.md) the package manager. 
+This is done through terminal by running `sudo pacman -s <package-name>` or through the GUI wrapper `pamac`, package description is `Add/Remove software`.
 
-Mi3 has a terminal menu to manage settings, run it by pressing `$mod+Ctrl+b` or `bmenu` in the terminal. This will open a text UI with options, to install new kernels, it's important to install more than one just in case it's needed for recovery. This can be important because Manjaro is a rolling distro based on Arch, and while is running behind the latest, to provide extra protection, it can on occasion break. To recover select a different kernel when booting. 
+Mi3 has a terminal menu to manage settings, run it by pressing `$mod+Ctrl+b` or running `bmenu` in the terminal. This will open a text UI with options, to install new kernels, it's important to install more than one just in case it's needed for recovery. 
+This can be important because Manjaro is a rolling distro based on Arch, and while is running behind the latest, to provide extra protection, it can on occasion break. To recover select a different kernel when booting. 
 
 `bmenu` manages other system settings like manage drivers, if gaming is an option and graphic is NVIDIA, installations of bumblebee drivers is recomended. This can be installed by default in the initial OS installation. Check which graphics are correct for the setup, if NVIDIA optimus then use non-free graphics.
 
-Mi3  has a very helpful user guide file included, accessible through `mod+Shift=h`, with the complete keyboard shortcuts.
+Mi3  has a very helpful user guide file included, accessible through `mod+Shift+h`, with some of the most important keyboard shortcuts.
 
 Detailed settings:
 
 * [Appearance](APPEARANCE.md)
+* [Audio](WIP/AUDIO.md)
 * [Battery](BATTERY.md)
 * [Color Palette](COLOR-PALETTE.md)
 * [Dotfiles](DOTFILES.md)
@@ -40,7 +43,7 @@ Detailed settings:
 * [Package Manager](PACMAN.md)
 
 ## Browser
-Mi3 xhampions `pale moon` as default browser. To install Firefox. `sudo pacman -S firefox` or through software manager, same for Chromium.
+Mi3 champions `pale moon` as default browser. To install Firefox run `sudo pacman -S firefox` or through software manager, same for any other browser.
 
 Firefox has some issues with webRTC calls and is not reliable in VPN mode. To [change](https://www.privacytools.io/browsers/#webrtc) this enter `about:config` in the firefox address bar and press enter, search for `media.peerconnection.enabled` and change it to false. 
 To make shore every single WebRTC related setting is disabled change also `media.peerconnection.turn.disable` to `true`, `media.peerconnection.use_document_iceservers` to `false`, `media.peerconnection.video.enabled` to `false` and `media.peerconnection.identity.timeout` to `1`.
@@ -101,6 +104,8 @@ To edit colors install `gedit color scheme` plugin from pamac, this usually inst
 To configure the new color scheme, enter `gedit` select `color scheme editor` and configure the changes needed, save under a new name and ID, this will save the new configuration to `.local/shares/gedit/styles`.
 Sometimes it add an underline under some text, just enter color scheme again and remove it.
 
+Other option is to use something like OSS-Code (Visual Studio Code), Sublime, Atom, etc...
+
 ## Time settings
 Dual boot always has some troubles with the time settings, by default WinOS and Linux have different settings regarding time, on WinOS the time by default is Local Time, this can be changed, on the BIOS/UEFI or even in the WinOS registry.
 However in easier to make Linux use Local time instead of Universal Time.
@@ -115,39 +120,15 @@ And to make Linux synchronized:
 On setup there are UTerm, UXterm and URxvt.
 URxvt is highly configurable.
 
-By default Mi3 has `bash` shell, it's configurations can be found at `.bashrc`.
+By default Mi3 has `bash` shell, to install `zsh` run `sudo pacman -S zsh` and `sudo pacman -S zsh-completions`.
 
-A more complete and versatile option is `zsh`, found through `sudo pacman -S zsh`.
-Add also `sudo pacman -S zsh-completions`.
+Running `zsh` will run zsh first time configuration, if doesn't run `zsh-newuser-install`, from this it's possible to configure history and completion. The new configuration file is found as `.zshrc`.
 
-Running `zsh` will run zsh, if it's first time it should open `zsh-newuser-install`. Note: Make sure your terminal's size is at least 72×15 otherwise `zsh-newuser-install` will not run.
-From this it's possible to configure history and completion.
-
-The new configuration file is set as `.zshrc`.
+Note: Make sure your terminal's size is at least 72×15 otherwise `zsh-newuser-install` will not run.
 
 Optionally there is [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) to manage the zsh configuration, to add it run:
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-Adding to to `oh-my-zsh` there are several interesting plugins like git and `agnoster` theme. For themes it's necessary to install `powerline fonts`. This is possible through `AUR` installing `nerd-fonts-complete`. Change the `ZSH_THEME="agnoster"` or other to get "eye-candy" visuals.
-
-## Sound
-Out of the box Mi3 comes with AlsaMixer, but sound will not working from headphones, some comments online refer to Alsa not being able to play from Firefox and other programs. Within Mi3 there is also a script to install Pulse Audio with it. Pulse Audio will run on top of AlsaMixer to provide extra capabilities.
-
-Too install it run the scrip `install_pulse`, with that the `/.i3/config` file will change and auto-magically apply all configurations necessary.
-
-To manage external input `mod+ctrl+m` brings the Pulse Audio manager and from there is easy to select the input. For example USB headphones.
-
-After first reboot Pulse Audio may not work. Using `pulseaudio --check` and `pulseaudio -D` makes it work, but once reboot again, it will not run by default again. After some research seams pulse audio is being started before the `/.i3/config` is run.
-As so make sure to use only one method of auto starting applications. pulse audio includes these files:
-`/etc/X11/xinit/xinitrc.d/pulseaudio`
-`/etc/xdg/autostart/pulseaudio.desktop`
-`/etc/xdg/autostart/pulseaudio-kde.desktop`
-These will conflict with the `/.i3/config` file line, commenting it there resolves the issue.
-
-### Sound player
-With the initial installation comes `vlc`.
-
-There are some other possible installations like `tizonia`, `spicetify-cli`, `spotifyd` or `mopidy`.
-* [Music players](MUSIC-PLAYER.md)
+Adding to to `oh-my-zsh` there are several plugins like git and `agnoster` theme. For themes it can be necessary to install `powerline fonts`. This is possible through `AUR` installing `nerd-fonts-complete`. Change the `ZSH_THEME="agnoster"` or other to get "eye-candy" visuals.
 
 ## Monitoring
 For monitoring some favorite options are neofetch, to get system info, and `gotop`, to get live system status.
@@ -162,7 +143,7 @@ Most of options available on `htop` or `gotop` are possible to get if configured
 ## Network Manager
 The network manager already is installed, to configure the VPN download the OpenVpn server configuration file and add a new VPN using the Network Manager configuration.
 
-By default Nord recommends UDP connection, less stable but more adequate to over the web communications.
+By default UDP is the recommended connection, less stable but more adequate to over the web communications.
 Firefox however does not block webRTC javascript requests, that makes it insecure to use video streams and other uses as well.
 It is possible to change this over Firefox configuration, however some use can be affected. 
 
@@ -201,7 +182,7 @@ Managed dependencies on this documentation.
 | :------------: |:--------------------------------------------------------------------------------------- |
 | [AUR](PACMAN.md#AUR) | Community driven repository
 | [caffeine](APPEARANCE.md#caffeine) | Prevents screen-saver and "sleep" 
-| [cava]((MUSIC-PLAYER.md#cava)) | Sound vizualizer 
+| [cava](WIP/AUDIO.md#cava) | Sound vizualizer 
 | [compton](APPEARANCE.md#compton) | Compositor, used to manage for example transparency and shadow
 | [conky](OTHERS.md#conky) | Lightweight system monitor, used on desktop 
 | [dunst](APPEARANCE.md#dunst) | Notification manager
@@ -228,9 +209,10 @@ Managed dependencies on this documentation.
 | [redshift](APPEARANCE.md#redshift) | Screen color temperature utility
 | [rofi](README.md#Menu) | Window switcher, also used as package launcher
 | [screenfetch](OTHERS.md#screenfetch) | Bash system information tool
-| [spicetify-cli]((MUSIC-PLAYER.md#spicetify)) | Spotify wrapper
+| [spotify](WIP/AUDIO.md#spotify) | Spotify official player
+| [spicetify-cli](WIP/AUDIO.md#spicetify) | Spotify wrapper
 | [stow](DOTFILES.md#stow) | Symlink utility, used for generating git managed configuration files
-| [tizonia]((MUSIC-PLAYER.md#tizonia)) | Terminal audio stream player 
+| [tizonia]((WIP/AUDIO.md#tizonia)) | Terminal audio stream player 
 | [tlp](BATTERY.md#tlp) | Battery Manager
 | [viewnior](APPEARANCE.md#wallpaper) | Image viewer
 | [yay](PACMAN.md#AUR) | Command line AUR helper
@@ -240,4 +222,4 @@ Managed dependencies on this documentation.
 
 ## TODO
 
-[Todo](TODO.md)
+[Todo](WIP/TODO.md)

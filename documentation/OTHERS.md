@@ -14,7 +14,7 @@ Hexchat
 
 Deluge
 
-Htop
+Htop, Gotop
 
 Screenfetch
 
