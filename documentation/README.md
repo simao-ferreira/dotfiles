@@ -193,6 +193,7 @@ Managed dependencies on this documentation.
 | [git-secret](GIT-SECRET.md) | Git tool to encrypt files
 | [gcolor2](COLOR-PALETTE.md#gcolor2) | Color picker GUI
 | [geoclue2](APPEARANCE.md#redshift) | Location framework
+| [gtk](GNOME.md) | GTK detail configuration
 | [i3bar](APPEARANCE.md#menu-bar) | Status bar
 | [i3scrot](README.md#print-screen) | Screen capture utility
 | [lightdm](APPEARANCE.md#login-manager) | Display Manager, used to manage login
@@ -219,6 +220,7 @@ Managed dependencies on this documentation.
 
 ## Addicional packages
 [Others](OTHERS.md)
+[Maintenance](MAINTENANCE.md)
 
 ## TODO
 

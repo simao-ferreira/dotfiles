@@ -1,10 +1,14 @@
 # Todo 
 To research/install/discuss in no order of priority:
+- go through .xsessions-errors and clean all errors
+
 - Browsers: firefox security/privacy, qutebrowser, alternatives?
 
 - searx
 
 - mps-youtube
+
+- remove compton for picom
 
 - install a extra de, xfce/budgie/mate/cinnamon
 

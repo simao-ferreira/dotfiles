@@ -1,6 +1,6 @@
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
-font xft:IosevkaNerdFontMono bold 15
+font xft:IosevkaNerdFontMono bold 13
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 for_window [class="^.*"] border pixel 3
@@ -285,10 +285,12 @@ mode "$mode_gaps_outer" {
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
-set $mode_display Ext Screen (d) DP1 ON, (x) DP1 OFF
+set $mode_display Ext Screen (d) DP1 ON, (r) DP1 Vertical , (x) DP1 as Mirror, (c) eDP1 on support
 mode "$mode_display" {
-    bindsym d exec --no-startup-id xrandr --output DP1 --auto --above eDP1, mode "default"
-    bindsym x exec --no-startup-id xrandr --output DP1 --auto --off, mode "default"
+    bindsym d exec --no-startup-id xrandr --output eDP1 --primary --mode 2560x1440 --scale 1x1 --pos 219x1872 --rotate normal --output DP1 --mode 2560x1440 --scale 1x1 --pos 0x0 --rotate normal, mode "default"; exec i3 restart
+    bindsym r exec --no-startup-id xrandr --output eDP1 --primary --mode 2560x1440 --scale 1x1 --pos 0x3328 --rotate normal --output DP1 --mode 2560x1440 --scale 1x1 --pos 0x0 --rotate left, mode "default"; exec i3 restart
+    bindsym x exec --no-startup-id xrandr --output eDP1 --primary --mode 2560x1440 --scale 1x1 --pos 0x0 --rotate normal --output DP1 --mode 2560x1440 --scale 1x1 --rotate normal, mode "default"; exec i3 restart
+    bindsym c exec --no-startup-id xrandr --output eDP1 --primary --mode 1920x1080 --scale 1x1 --pos 219x1872 --rotate normal --output DP1 --mode 2560x1440 --scale 1x1 --pos 0x0 --rotate normal, mode "default"; exec i3 restart
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"

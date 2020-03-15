@@ -1,0 +1,17 @@
+.window-frame {
+  box-shadow: none;
+  margin: 0;
+}
+.titlebar, headerbar {
+    min-height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+headerbar entry,
+headerbar spinbutton,
+headerbar button,
+headerbar separator {
+    min-height: 0px;
+    padding: 0px;
+    margin: 1px;
+}
