@@ -1,5 +1,9 @@
 # Todo 
 To research/install/discuss in no order of priority:
+- create a rofi control center
+
+- new rofi non-full screen menu
+
 - go through .xsessions-errors and clean all errors
 
 - Browsers: firefox security/privacy, qutebrowser, alternatives?

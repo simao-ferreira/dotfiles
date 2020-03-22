@@ -6,41 +6,25 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-! special
 *.foreground:   #bbd2ac
 *.background:   #141d15
 *.cursorColor:  #bbd2ac
 
-! black
 *.color0:       #15421e
-*.color8:       #1fa339
-
-! red - green
 *.color1:       #53b92f
-*.color9:       #72ef49
-
-! green
-*.color2:       #959812
-*.color10:      #9daf23
-
-! yellow
+*.color2:       #78824b
 *.color3:       #b58900
-*.color11:      #e7b722
-
-! blue
-*.color4:       #3986bb
-*.color12:      #539ed4
-
-! magenta - red
-*.color5:       #dc322f
-*.color13:      #f85d5a
-
-! cyan
+*.color4:       #39bb94
+*.color5:       #95522a
 *.color6:       #508252
-*.color14:      #8ec07c
-
-! white
 *.color7:       #4a594d
+*.color8:       #1fa339
+*.color9:       #65e039
+*.color10:      #8d9958
+*.color11:      #e7b722
+*.color12:      #57dd9d
+*.color13:      #b36d43
+*.color14:      #8ec07c
 *.color15:      #bbd2ac
 
 !! URxvt configs !!
