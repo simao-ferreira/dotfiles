@@ -7,57 +7,41 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 ! special
-*.foreground:   #9aca79
-*.background:   #051608
-*.cursorColor:  #9aca79
+*.foreground:   #bbd2ac
+*.background:   #141d15
+*.cursorColor:  #bbd2ac
 
 ! black
-*.color0:       #257134
-*.color8:       #257134
+*.color0:       #15421e
+*.color8:       #1fa339
 
 ! red
-*.color1:       #3ed808
-*.color9:       #3ed808
+*.color1:       #53b92f
+*.color9:       #4aef15
 
 ! green
-*.color2:       #9aca79
-*.color10:      #9aca79
+*.color2:       #95981a
+*.color10:      #9fbb26
 
 ! yellow
-*.color3:       #dc582f
-*.color11:      #dc582f
+*.color3:       #d79921
+*.color11:      #f9cb5e
 
 ! blue
-*.color4:       #ffb52a
-*.color12:      #ffb52a
+*.color4:       #3f4462
+*.color12:      #838ba5
 
 ! magenta
-*.color5:       #0ef6e5
-*.color13:      #0ef6e5
+*.color5:       #bf3215
+*.color13:      #fb4934
 
 ! cyan
-*.color6:       #26d297
-*.color14:      #26d297
+*.color6:       #548856
+*.color14:      #8ec07c
 
 ! white
-*.color7:       #48504a
-*.color15:      #48504a
-
-!! Personalization
-*.dark-green:	color0
-*.vivid-green:	color1
-*.palid-green:	color2
-*.vivid-red: 	color3
-*.vivid-yellow:	color4
-*.bg:		background
-
-*.dark-base:		color0
-*.vivid-base:		color1
-*.palid-base:		color2
-*.vivid-alert: 		color3
-*.vivid-highlight:	color4
-*.dark-background:	background
-
+*.color7:       #4a594d
+*.color15:      #bbd2ac
 
 !! URxvt configs !!
 ! Set depth to make transparency work.

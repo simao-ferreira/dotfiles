@@ -8,8 +8,8 @@
  */
 
 * {
-  dark:             #257134;
-  vivid:            #3ed808;
-  pale:             #9aca79;
-  background:       #051608;
+  dark:             #15421e;
+  vivid:            #53b92f;
+  pale:             #8ec07c;
+  background:       #141d15;
 }

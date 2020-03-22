@@ -3,8 +3,8 @@ set $mod Mod4
 font xft:IosevkaNerdFontMono bold 13
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-for_window [class="^.*"] border pixel 3
-for_window [title="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 1
+for_window [title="^.*"] border pixel 1
 hide_edge_borders none
 
 # Use Mouse+$mod to drag floating windows
@@ -180,7 +180,7 @@ mode "resize" {
 }
 
 # Lock screen [todo]
-bindsym $mod+9 exec --no-startup-id blurlock
+bindsym $mod+9 exec --no-startup-id i3lock -i ~/.wallpapers/green-leafs.png -t
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -191,13 +191,12 @@ exec --no-startup-id pamac-tray
 #exec --no-startup-id blueman-applet
 
 #Todo: Better autolock
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker i3lock -i ~/.wallpapers/green-leafs.png -t
 
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id caffeine
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-exec --no-startup-id redshift-gtk
+exec --no-startup-id redshift
 exec_always --no-startup-id feh --bg-fill ~/.wallpapers/green-triangle.png; sleep 1; compton -b
 
 set_from_resource $color0   color0
@@ -205,14 +204,9 @@ set_from_resource $color1   color1
 set_from_resource $color2   color2
 set_from_resource $color3   color3
 set_from_resource $color4   color4
+set_from_resource $color5   color5
+set_from_resource $color6   color6
 set_from_resource $bg       background
-
-#*.dark-base:		color0		#257134
-#*.vivid-base:		color1		#3ed808
-#*.palid-base:		color2		#9aca79
-#*.vivid-alert:		color3		#dc582f
-#*.vivid-highlight:	color4		#ffb52a
-#*.dark-background:	background	#051608
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 # Not using i3bar anymore > see polybar
@@ -242,11 +236,11 @@ bar {
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
 
-#			 bckg 	 bckg-txt text	  indic
-  client.focused          $color1 $color1  $color1  $color4
-  client.focused_inactive $color1 $color0  $color1  $color4
-  client.unfocused        $color1 $color0  $color1  $color4
-  client.urgent           $color1 $color4  $color4  $color4
+#			              bckg 	 bckg-txt text	  indic
+  client.focused          $color6 $color6  $color6  $color2
+  client.focused_inactive $color6 $color0  $color6  $color2
+  client.unfocused        $color6 $color0  $color6  $color2
+  client.urgent           $color6 $color5  $color5  $color2
   client.placeholder      #000000 #0c0c0c  #ffffff  #000000 
   client.background       $color0
 

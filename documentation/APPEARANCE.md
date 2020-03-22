@@ -96,6 +96,8 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 ```
 
+* Adding `redshift-gtk` will add a icon to the `tray_output`, if the icon is not necessary it enough to add just `redshift`
+
 ### Dunst
 The  default notification manager is `dunst` on i3 can be configured at `~/.config/dunst/dunstrc`.
 
