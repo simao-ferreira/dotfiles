@@ -1,12 +1,3 @@
-/**
- * dark-base:		color0		#257134
- * vivid-base:		color1		#3ed808
- * palid-base:		color2		#9aca79
- * vivid-alert:		color3		#dc582f
- * vivid-highlight:	color4		#ffb52a
- * dark-background:	background	#051608
- */
-
 * {
   dark:             #15421e;
   vivid:            #53b92f;
