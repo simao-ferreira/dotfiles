@@ -1,4 +1,4 @@
-@import "palette.rasi"
+@import "nordic-palette.rasi"
 @import "optional.rasi"
 
 * {

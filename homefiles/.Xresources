@@ -6,26 +6,26 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-*.foreground:   #bbd2ac
-*.background:   #141d15
-*.cursorColor:  #bbd2ac
+*.foreground:   #D8DEE9
+*.background:   #2E3440
+*.cursorColor:  #D8DEE9
 
-*.color0:       #15421e
-*.color1:       #53b92f
-*.color2:       #78824b
-*.color3:       #b58900
-*.color4:       #39bb94
-*.color5:       #95522a
-*.color6:       #508252
-*.color7:       #4a594d
-*.color8:       #1fa339
-*.color9:       #65e039
-*.color10:      #8d9958
-*.color11:      #e7b722
-*.color12:      #57dd9d
-*.color13:      #b36d43
-*.color14:      #8ec07c
-*.color15:      #bbd2ac
+*.color0: #3B4252
+*.color1: #BF616A
+*.color2: #A3BE8C
+*.color3: #EBCB8B
+*.color4: #81A1C1
+*.color5: #B48EAD
+*.color6: #88C0D0
+*.color7: #E5E9F0
+*.color8: #4C566A
+*.color9: #BF616A
+*.color10: #A3BE8C
+*.color11: #EBCB8B
+*.color12: #81A1C1
+*.color13: #B48EAD
+*.color14: #8FBCBB
+*.color15: #ECEFF4
 
 !! URxvt configs !!
 ! Set depth to make transparency work.

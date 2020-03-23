@@ -3,9 +3,9 @@
 ##		##
 
 [global]
-	font = IosevkaNerdFontMono 12    
+	font = IosevkaNerdFontMono 13  
 	frame_width = 3
-    	frame_color = "#1fa339"
+    	frame_color = "#81a1c1"
 	corner_radius = 5
 	
 	geometry = "0x2-0+0"
@@ -40,17 +40,34 @@
 	context = ctrl+mod1+c
 
 [urgency_low]
-	background = "#141d15"
-	foreground = "#bbd2ac"
+	background = "#2E3440"
+	foreground = "#81a1c1"
 	timeout = 10
 
 [urgency_normal]
-	background = "#141d15"
-	foreground = "#53b92f"
+	background = "#2E3440"
+	foreground = "#81a1c1"
 	timeout = 15
 
 [urgency_critical]
-	background = "#141d15"
-	foreground = "#b58900"
-	frame_color = "#b58900"
+	background = "#2E3440"
+	foreground = "#ebcb8b"
+	frame_color = "#ebcb8b"
 	timeout = 25
+
+## AMAZONIA PALETTE
+# [urgency_low]
+	background = "#141d15"
+	foreground = "#bbd2ac"
+	timeout = 10
+# 
+# [urgency_normal]
+# 	background = "#141d15"
+# 	foreground = "#53b92f"
+# 	timeout = 15
+# 
+# [urgency_critical]
+# 	background = "#141d15"
+# 	foreground = "#b58900"
+# 	frame_color = "#b58900"
+# 	timeout = 25

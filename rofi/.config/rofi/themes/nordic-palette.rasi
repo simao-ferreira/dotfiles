@@ -1,0 +1,6 @@
+* {
+  dark:             #81a1c1;
+  vivid:            #a3be8c;
+  pale:             #2e3440;
+  background:       #4c566a;
+}

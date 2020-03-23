@@ -21,9 +21,13 @@ sudo pacman -S zsh --needed --noconfirm
 echo "Installing gedit"
 sudo pacman -S gedit gedit-plugins aspell-en aspell-de aspell-pt --needed --noconfirm
 
+# Text editor
+echo "Installing code tools"
+sudo pacman -S code intellij-idea-community-edition --needed --noconfirm
+
 # Night light
 echo "Installing night light"
-sudo pacman -S redshift geoclue2  caffeine-ng --needed --noconfirm
+sudo pacman -S redshift  caffeine-ng --needed --noconfirm
 
 # Fonts
 sudo pacman -S ttf-font-awesome adobe-source-code-pro-fonts --needed --noconfirm
@@ -32,7 +36,6 @@ sudo pacman -S ttf-font-awesome adobe-source-code-pro-fonts --needed --noconfirm
 echo "AUR installations and updates"
 if [ -x "$(command -v yay)" ]; then
     yay -S ttf-nerd-fonts-symbols nerd-fonts-complete --noconfirm
-    yay -S zim --noconfirm
 else
     echo "No AUR helper was found! Installation failed!"
     exit 1
