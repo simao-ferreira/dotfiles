@@ -10,6 +10,8 @@ To install Manjaro download it from [Manjaro](https://manjaro.org/download/) pag
 ### TLDR
 To create a live USB on the terminal use `sudo fdisk -l` to get the USB drive name, usually something like *sdb*, replace [downloaded-version] and [device] and use `sudo dd if=manjaro-[downloaded-version].iso of=/dev/[device] bs=4M`.
 
+Just make sure your flash is not formated as `exFat` or `ntfs`, sometimes is not recognized. 
+
 Manjaro has two installers, `architect`, a terminal based installer to more experienced users and a GUI `calamares` based installer, intuitive and easy to use.
 From setup is possible to install non-free graphic drivers, like Nvidia, diminishing troubles when setting up the inicial environment.
 
@@ -18,7 +20,7 @@ Manjaro supported desktop environments are:
 `XFCE`, `KDE`and `GNOME`.
 
 Community supported versions are also available like:
-`Budgie`, `Mate`, `i3` or `Open Box`.
+`Budgie`, `Mate`, `i3`, `bspwm`, `Open Box`.
 
 There are several others, but these are the most common ones.
 
