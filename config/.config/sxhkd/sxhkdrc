@@ -3,11 +3,11 @@
 ###########
 
 # terminal
-alt + Return
+super + Return
 	urxvt
 
 # browser
-alt + c
+super + c
 	firefox
 
 # launcher
@@ -28,7 +28,7 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-alt + {_,shift + }w
+super + {_,shift + }w
 	bspc node -{c,k}
 
 # mode: tiled or focus
@@ -36,7 +36,7 @@ super + m
 	bspc desktop -l next
 
 # swap for biggest node
-alt + g
+super + g
 	bspc node -s biggest
 
 # set the window state
@@ -56,25 +56,25 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the next node in the desktop
-alt + {_,shift + }c
+super + {_,shift + }c
 	bspc node -f {next,prev}.local
 
 # focus the next desktop in the monitor
-alt + bracket{left,right}
+super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-alt + {grave,Tab}
+super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus on the next node in the focus history
-alt + {o,i}
+super + {o,i}
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
 # send to the given desktop
-alt + {_,shift + }{1-9,0}
+super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #############
@@ -82,15 +82,15 @@ alt + {_,shift + }{1-9,0}
 #############
 
 # preselect the direction
-alt + ctrl + {h,j,k,l}
+super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
-alt + ctrl + {1-9}
+super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-alt + ctrl + space
+super + ctrl + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop

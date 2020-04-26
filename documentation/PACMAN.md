@@ -37,6 +37,7 @@ Is possible to add `AUR` through the options of `pamac`.
 [AUR](https://wiki.archlinux.org/index.php/Arch_User_Repository), or Arch user repository is a community management tool for repositories. Some of the official repositories start as AUR repos, but it allows Arch to provide more extensive number os repositories. 
 The downside is the content is user produced, that carries some risks.
 
+# yay
 To install through command line it's possible to use `yay`. [yay](https://github.com/Jguer/yay) is a helper for `pacman` and `AUR`.
 
 ### Maintenance
