@@ -4,6 +4,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+export XDG_CONFIG_HOME=/home/archy/.config
 
 # If you come from bash you might have to change your $PATH. export 
 # PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -20,4 +21,3 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # alias zshconfig="mate ~/.zshrc"
-export XDG_CONFIG_HOME=/home/archy/.config

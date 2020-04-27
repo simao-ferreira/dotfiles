@@ -266,6 +266,38 @@ And according to the answer install the necessary drivers
 # pacman -S bspwm sxhkd
 ```
 
+### Bluetooth
+Install `bluez` package that provides bluetooth protocol stack.
+```
+sudo pacman -S bluez bluez-utils
+```
+
+After start and enable the service
+```
+# systemctl enable bluetooth.service
+# systemctl start bluetooth.service
+```
+
+May be necessary to configure `/etc/bluetooth/main.conf`
+```
+[General]
+DiscoverableTimeout = 0
+Discoverable=true
+[Policy]
+AutoEnable=true
+```
+If it does not launch at start run
+```
+systemctl restart bluetooth.service
+bluetoothctl
+```
+[TODO:](WIP/TODO.md) Fix bluetooth at start & update doc
+
+### Audio
+```
+sudo pacman -S pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol
+```
+
 ### Exit
 Reboot, remove USB and get back to `Arch`
 ```
@@ -273,3 +305,5 @@ Reboot, remove USB and get back to `Arch`
 # umount -R /mnt
 # reboot
 ```
+
+*[TODO](WIP/TODO.md) Update arch installation file, extract parts, polish current file.

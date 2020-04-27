@@ -3,7 +3,16 @@
 Battery life is always finicky. According to recent standards to extend the battery life, it's advised to minimize charge cycles, this when plugged in to AC becomes important.
 
 ### TLP
-By default `tlp` is installed and usually that is enough to manage battery daily life to a good standart.
+TLP is the tool to get advanced power management in linux, with a significant level of simplicity.
+```
+sudo pacman -S tlp acpi_call tp_smapi
+```
+
+Enable  and start the service
+```
+#systemctl enable tlp.service
+#systemctl start tlp.service
+```
 
 More settings can be found at `/etc/default/tlp`, modify according to [tlp](https://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html) documentation.
 
