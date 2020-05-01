@@ -112,18 +112,6 @@ To close dunst notifications press `Ctrl+Alt+Space`
 
 Details to configure dunst can be found at [Arch wiki](https://wiki.archlinux.org/index.php/Dunst)
 
-### Caffeine
-The screen saver in Mi3 is a locking mechanism configured via i3lock, that blocks the workspace. 
-It's configured defaults will block even when using the device with Netflix, Youtube or Spotify.
-It is possible to add a script and stop the i3lock from blocking the system when sound is playing or by placing the mouse at a specified spot. 
-Other option is to install a application like the `caffeine-ng` package, that enable the user to specify and change the locking. Caffeine works without altering the i3lock configurations.
-To enable it add to `/.i3/config` the following line
-`exec -no-startup-id caffeine`. 
-
-This also adds an icon to the bar, where is possible to switch it on/off when needed. Default is off.
-
-The existence of the tray icon is specific to the [caffeine-ng](https://github.com/caffeine-ng/caffeine-ng) package, that is a split from the original one, mainly because of this.
-
 ### Login manager
 The login manager is LightDM, the configuration for the greeter (login screen manager) is set at `/etc/lightdm/slick-greeter.conf`
 It's possible to check for other installed greeters at `/usr/share/xgreeters` all `.desktop` files are the greeters installed.

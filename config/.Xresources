@@ -21,8 +21,7 @@
 
 !! URxvt configs !!
 URxvt*depth: 32
-URxvt.font:                       xft:Iosevka Nerd Font Mono:size=10
-URxvt.letterSpace: -3
+URxvt.font:                       xft:Iosevka Nerd Font Mono:size=13
 URxvt.depth:                      32
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false

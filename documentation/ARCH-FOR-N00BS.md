@@ -281,11 +281,8 @@ And according to the answer install the necessary drivers
 * [Bluetooth](BLUETOOTH.md#Installation)
 
 ### Audio
-```
-sudo pacman -S pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol
-```
 
-Usually sound is mutted.
+* [Audio](AUDIO.md#Installation)
 
 ### Exit
 Reboot, remove USB and get back to `Arch`

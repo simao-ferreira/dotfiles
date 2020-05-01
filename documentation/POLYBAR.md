@@ -3,9 +3,12 @@
 [Polybar](https://polybar.github.io/) is a highly customable bar for desktop, with built in functionality for systray icons, playback display and controls, CPU an memory loaders, battery and a lot of other functionalities.
 It's possible to run personal scripts to manage or improve status or controls, even adding some non existent. 
 
-Polybar is already packed and prepared for almost every linux distro.
+Polybar is available through `AUR`
+```
+# yay -S polybar
+```
 
-For Mi3 is no different, it's possible to install `polybar` from the `pamac` GUI, there are two options available according to  homepage, it's possible to install the `polybar` package, containing the stable version, or the `polybar-git` through `AUR` for the latest version.
+For Mi3 is no different, it's possible to install `polybar` from the `pamac` GUI, there are two options available according to  homepage, it's possible to install the `polybar` package, containing the stable version, or the `polybar-git` for the latest version.
 
 Configuration file can be found at `/usr/share/doc/polybar/config` or `/usr/local/share/doc/polybar/config`, copy it to `.config/poybar` and edit it as wanted.
 
@@ -17,7 +20,7 @@ Some helpful and interesting examples of what is possible can be found at [polib
 ## Starting polybar
 
 Polybar configuration settings can be divided to easier understanding.
-First component to run polybar is a launcher script, to be added on the `.i3/config` file.
+First component to run polybar is a launcher script, to be added on the configuration file (`.i3/config` or `bspwm`) file.
 
 According to documentation it should be fairly straight forward and simple. Example:
 
@@ -44,6 +47,8 @@ bar {
 
 }
 ```
+
+For `bspwm` just make sure to run it at the beginning. 
 
 Another alternative is, instead of removing totally the i3bar, just make it invisible always, that will allow you to call on it if is necessary through `Ctrl+mod+m`. To do that don't remove the lines above, but instead add `mode invisible` to it.
 

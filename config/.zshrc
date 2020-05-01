@@ -11,7 +11,7 @@ export EDITOR=/usr/bin/nano
 export ZSH="$HOME/applications/oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_COMPDUMP="$HOME/.config"
+ZSH_COMPDUMP="$HOME/.cache/zsh"
 CASE_SENSITIVE="false" HIST_STAMPS="dd.mm.yyyy"
 HISTFILE="$HOME/.cache/zsh/histfile"
 

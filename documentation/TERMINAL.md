@@ -80,7 +80,7 @@ Running `zsh` will run zsh first time configuration, if doesn't run `zsh-newuser
 Note: Make sure your terminal's size is at least 72×15 otherwise `zsh-newuser-install` will not run.
 
 
-### Oh my zsh
+### Oh-my-zsh
 
 Optionally there is [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) to manage the zsh configuration, to add it run:
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`

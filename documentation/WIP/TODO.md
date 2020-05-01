@@ -8,9 +8,12 @@ To research/install/discuss in no order of priority:
 - https://wiki.archlinux.org/index.php/List_of_applications#Screen_lockers
 
 - https://wiki.archlinux.org/index.php/Dmenu
+
 - https://wiki.archlinux.org/index.php/Rofi
 
 - http://dotshare.it/
+
+- Bumblebee drivers
 
 - https://wiki.archlinux.org/index.php/GRUB#Background_image_and_bitmap_fonts
 
@@ -61,13 +64,9 @@ https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv
 
 - manage and share bookmarks between various browsers > take a look at buku
 
-- battery warning, looks like is not possible with polybar, bash script should do it
-
 - general color palette, include [terminal, polybar, i3bar, dunst, rofi, firfox?] > Make this automatic > update documentation
 
 - grub quiet directly to linux, keep dual boot, prettify
-
-- games: how to run them with primusrun and manage config.
 
 - Music player: mocp
 

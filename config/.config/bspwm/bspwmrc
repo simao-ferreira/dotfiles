@@ -1,8 +1,12 @@
 #! /bin/sh
 
 ## auto-start ##
+
+feh --bg-fill ~/.wallpapers/t480.png
+xrdb ~/.Xresources
+~/.config/polybar/launch.sh
+
 sxhkd &
-feh --bg-fill ~/.wallpapers/t480.png &
 picom &
 
 ## Monitors ##

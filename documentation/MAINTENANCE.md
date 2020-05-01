@@ -7,3 +7,6 @@ Sometimes system wide applications are visible on `rofi` list, even when uninsta
 To remove them, find those instances in `/usr/share/applications/`, `/usr/local/share/applications/` or `~/.local/share/applications/`.
 
 Documentation on [Desktop entries](https://wiki.archlinux.org/index.php/Desktop_entries)
+
+### OS Maintenance
+[Cleaning](https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)) your installation of orphan packages.
