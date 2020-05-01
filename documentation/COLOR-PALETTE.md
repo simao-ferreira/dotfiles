@@ -66,3 +66,8 @@ Others still have to be change manually, these are: `dunst` and `rofi`(and rasi 
 
 ## Gcolor2
 `gcolor2` comes with Mi3, it's a basic program to detect colors, you can use it to get the hex code for a color on-screen.
+
+## Setup colors
+
+* [color-palette](https://github.com/simao-ferreira/color-palette)
+

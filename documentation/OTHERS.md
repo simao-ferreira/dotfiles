@@ -8,18 +8,6 @@
 ```
 # Others
 
-## Removed
-
-Hexchat
-
-Deluge
-
-Htop, Gotop
-
-Screenfetch
-
-## Optional
-
 ### Conky
 [conky](https://github.com/brndnmtthws/conky) is installed and working is already a module of conky, can be configured. 
 Opposite to normal behaviour, conky on Mi3 is configured `/usr/share/conky/` and then auto started on`/.i3/config`, the script used to run it is found on `/usr/bin/`.
@@ -54,6 +42,3 @@ Example:
 | | |   <  __/ | |_| | | | \__ \_ 
 |_|_|_|\_\___|  \__|_| |_|_|___(_)
 ```
-## Gnome
-Mostly useful on Gnome desktop
-* [Gnome bars](GNOME.md)

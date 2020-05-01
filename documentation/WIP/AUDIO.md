@@ -18,11 +18,6 @@ PulseAudio install script includes these files:
 `/etc/xdg/autostart/pulseaudio-kde.desktop`
 These will conflict with the `/.i3/config`, commenting it there resolves the issue.
 
-## Headphones
-
-## VLC
-Comes by default.
-
 ## Spotify**
 When installing the `spotify` app is normal that the keys do not match. For whatever reason, change DNS to something different (1.1.1.1) and try again.
 

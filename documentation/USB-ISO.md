@@ -1,4 +1,4 @@
-# Create a USB drive installation  
+# USB-ISO 
 
 To create a live USB using the terminal check the drive name.
 
@@ -40,5 +40,3 @@ Just make sure your flash is not formatted as `exFat` or `ntfs`, it was not poss
 
 
 If in `UEFI` the drive does not load after the `dd` process, just try repeating the `dd` process above some more times, for some reason does not work every time.
-
-

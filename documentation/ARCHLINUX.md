@@ -21,3 +21,4 @@ There is a extreme freedom of use with `Arch` however, with it comes a high leve
 
 `Arch` is not recommended for beginners and the learning curve is steep.
 
+* [Installation](ARCH-FOR-N00BS.md)

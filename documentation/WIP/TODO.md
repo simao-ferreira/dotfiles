@@ -1,5 +1,34 @@
 # Todo 
 To research/install/discuss in no order of priority:
+
+- https://github.com/alacritty/alacritty
+
+- https://wiki.archlinux.org/index.php/HiDPI, xrandr, arandr
+
+- https://wiki.archlinux.org/index.php/List_of_applications#Screen_lockers
+
+- https://wiki.archlinux.org/index.php/Dmenu
+- https://wiki.archlinux.org/index.php/Rofi
+
+- http://dotshare.it/
+
+- https://wiki.archlinux.org/index.php/GRUB#Background_image_and_bitmap_fonts
+
+- vscodium > plugins > themes > configs
+
+- https://wiki.archlinux.org/index.php/Zathura
+
+- https://github.com/jesprr/dotfiles/tree/master/.config
+https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout
+
+- Update mirrors
+
+- Update privacy and security, profiling and dots for firefox 
+
+- Manage kernels (uname -r)
+
+- https://averagelinuxuser.com/the-lts-kernel-in-arch-linux/
+
 - Update arch installation file, extract parts, polish current file.
 
 - Clean manjaro i3 folder to make it usable

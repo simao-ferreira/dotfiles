@@ -16,4 +16,5 @@ For:
 * [i3](I3.md)
 * [Archlinux](ARCHLINUX.md)
 * [Bspwm](BSPWM.md)
-* [Arch-Installation](ARCHFORN00BS.md)
+* [Arch-Installation](ARCH-FOR-N00BS.md)
+* [USB-ISO](USB-ISO.md)

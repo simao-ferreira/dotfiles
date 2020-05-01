@@ -1,23 +1,22 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-export XDG_CONFIG_HOME=/home/archy/.config
 
-# If you come from bash you might have to change your $PATH. export 
-# PATH=$HOME/bin:/usr/local/bin:$PATH
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
 
 export LANG=en_US.UTF-8 
 export EDITOR=/usr/bin/nano
-export ZSH="/home/archy/applications/oh-my-zsh"
+export ZSH="$HOME/applications/oh-my-zsh"
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_COMPDUMP="$HOME/.config"
 CASE_SENSITIVE="false" HIST_STAMPS="dd.mm.yyyy"
+HISTFILE="$HOME/.cache/zsh/histfile"
+
 plugins=(git docker docker-compose) 
-
 source $ZSH/oh-my-zsh.sh
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # alias zshconfig="mate ~/.zshrc"

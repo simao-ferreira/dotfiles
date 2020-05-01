@@ -240,6 +240,16 @@ And uncomment the `wheel` line below.
 %wheel ALL=(ALL) ALL
 ```
 
+## Dual boot time settings
+Dual boot always has some troubles with the time settings, by default WinOS and Linux have different settings regarding time, on WinOS the time by default is Local Time, this can be changed, on the BIOS/UEFI or even in the WinOS registry.
+However in easier to make Linux use Local time instead of Universal Time.
+
+for this run `timedatectl`, to query and change system clock setting:
+`timedatectl set-local-rtc 1`
+
+And to make Linux synchronized:
+`timedatectl set-ntp true`
+
 ### X Server
 X or [Xorg](https://wiki.archlinux.org/index.php/Xorg) is display server necessary for running GUI in linux.
 
@@ -267,36 +277,15 @@ And according to the answer install the necessary drivers
 ```
 
 ### Bluetooth
-Install `bluez` package that provides bluetooth protocol stack.
-```
-sudo pacman -S bluez bluez-utils
-```
 
-After start and enable the service
-```
-# systemctl enable bluetooth.service
-# systemctl start bluetooth.service
-```
-
-May be necessary to configure `/etc/bluetooth/main.conf`
-```
-[General]
-DiscoverableTimeout = 0
-Discoverable=true
-[Policy]
-AutoEnable=true
-```
-If it does not launch at start run
-```
-systemctl restart bluetooth.service
-bluetoothctl
-```
-[TODO:](WIP/TODO.md) Fix bluetooth at start & update doc
+* [Bluetooth](BLUETOOTH.md#Installation)
 
 ### Audio
 ```
 sudo pacman -S pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol
 ```
+
+Usually sound is mutted.
 
 ### Exit
 Reboot, remove USB and get back to `Arch`
