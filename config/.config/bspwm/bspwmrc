@@ -1,17 +1,18 @@
 #! /bin/sh
 
-## auto-start ##
-
+# pending > this does not need to be managed through bspwm
+# both should be common to any wm
+# maybe they should be moved to xinit
 feh --bg-fill ~/.wallpapers/t480.png
-xrdb ~/.Xresources
-~/.config/polybar/launch.sh
+$HOME/.config/polybar/launch.sh
 
+## auto-start ##
 sxhkd &
 picom &
 
 ## Monitors ##
-bspc monitor eDP1 -d I II III IV V 
-bspc monitor DP1 -d VI VII VIII IX X
+bspc monitor eDP-1 -d I II III IV V 
+bspc monitor DP-1 -d VI VII VIII IX X
 
 
 

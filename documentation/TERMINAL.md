@@ -66,6 +66,12 @@ Remove excess spacing between letters
 URxvt.letterSpace:	-3
 ```
 
+#### Fonts
+To test font look on urxvt terminal
+```
+printf '\e]710;%s\007' "xft:Terminus:pixelsize=12"
+```
+
 # Shell
 
 By default Manjaro i3 uses `bash` shell.

@@ -30,6 +30,8 @@ bluetoothctl
 
 To enable bluetooth headphones it is necessary to install also `pulseaudio-bluetooth` package.
 
+Sometimes, for wireless audio devices it is necessary to connect twice for them to properly work.
+
 
 ## Logitech bluetooth mouse
 The logitech mice mostly work out of the box via direct bluetooth connection (or USB dongle according to the forum), but some details like `DPI` control are not available to configure via hardware, most configs must be done via software. 

@@ -1,6 +1,17 @@
 # Todo 
 To research/install/discuss in no order of priority:
 
+- Consider if tray is needed for this version of my setup (only discord has some use right now) also try will be visible only on one of the monitors of the polybar, a random one.
+
+- Consider the polybar duplicity and how to manage it
+
+- extract (extract) documentation to a more adequate location
+
+- https://github.com/mxmilkb/dotfiles/blob/master/X11/.xsettingsd
+https://wiki.archlinux.org/index.php/Xsettingsd
+https://github.com/derat/xsettingsd
+https://github.com/mxmilkb/dotfiles/blob/master/bin/bin/xrandr-rose-vgaprime-hdmiright.sh
+
 - https://github.com/alacritty/alacritty
 
 - https://wiki.archlinux.org/index.php/HiDPI, xrandr, arandr
