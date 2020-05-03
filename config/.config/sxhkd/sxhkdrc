@@ -11,8 +11,16 @@ super + c
 	firefox
 
 # launcher
-alt + @space
+super + d
 	dmenu_run
+
+# rofi
+super + alt + @space
+	 rofi -theme nordic-wind.rasi -modi drun -show drun -sidebar-mode
+
+# rofi menu
+alt + @space
+	rofi -theme nordic-ice.rasi -modi drun -show drun -show-icons -location 7 -yoffset -35 -xoffset 5 -width 20 -lines 20
 
 # reload sxhkd config
 super + Escape
