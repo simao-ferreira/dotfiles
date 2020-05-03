@@ -1,12 +1,9 @@
 #! /bin/sh
 
-# pending > this does not need to be managed through bspwm
-# both should be common to any wm
-# maybe they should be moved to xinit
+## auto-start ##
 feh --bg-fill ~/.wallpapers/t480.png
 $HOME/.config/polybar/launch.sh
 
-## auto-start ##
 sxhkd &
 picom &
 
@@ -14,18 +11,15 @@ picom &
 bspc monitor eDP-1 -d I II III IV V 
 bspc monitor DP-1 -d VI VII VIII IX X
 
+## WM Config ##
+bspc config border_width         3
+bspc config window_gap          10
+bspc config bottom_padding      30
 
+bspc config split_ratio          0.50
 
-#// WM Config
-bspc config border_width         2
-bspc config window_gap          12
-
-bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+## Special windows ##
+bspc rule -a Zathura state=tiled

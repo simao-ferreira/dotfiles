@@ -1,0 +1,16 @@
+arcticicestudio.nord-visual-studio-code
+bierner.github-markdown-preview
+bierner.markdown-checkbox
+bierner.markdown-emoji
+bierner.markdown-preview-github-styles
+bierner.markdown-yaml-preamble
+esbenp.prettier-vscode
+k--kato.intellij-idea-keybindings
+ms-azuretools.vscode-docker
+nickdemayo.vscode-json-editor
+redhat.java
+redhat.vscode-yaml
+streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-german
+streetsidesoftware.code-spell-checker-portuguese
+vscjava.vscode-java-debug

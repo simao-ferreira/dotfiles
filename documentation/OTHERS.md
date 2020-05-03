@@ -89,3 +89,11 @@ exec -no-startup-id caffeine
 This also adds an icon to the bar, where is possible to switch it on/off when needed. Default is off.
 
 The existence of the tray icon is specific to the [caffeine-ng](https://github.com/caffeine-ng/caffeine-ng) package, that is a split from the original one, mainly because of this.
+
+
+### Zathura
+[zathura](https://pwmt.org/projects/zathura/) is a document viewer with vi style keybindings
+it supports directly and with dependencies comicbooks, pdf, epub and xps.
+```
+#  pacman -S zathura zathura-cb zathura-pdf-mupdf
+```

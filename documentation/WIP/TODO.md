@@ -92,3 +92,6 @@ https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv
 
 - i3-gaps, i3bar, i3status, dmenu-manjaro, bmenu, ranger, moc, morc_menu, i3-exit, i3-msg, pcmanfm, viewnior, epdfview, manjaro-printer, vlc, xarchiver, xfburn, manjaro-chroot, gparted, isousb, gimp, inkscape, newsboat, vim
 
+- https://www.peerlator.com/blog/MyDotfilesPart5/
+
+- https://realpython.com/python-development-visual-studio-code/

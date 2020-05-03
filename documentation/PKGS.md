@@ -18,7 +18,9 @@
 | [tizonia](AUDIO.md#tizonia) | Terminal audio stream player 
 | [tlp](BATTERY.md#tlp) | Battery Manager
 | [urxvt](TERMINAL.md#urxvt) | Terminal emulator
+| [vscodium](WIP/PROGRAMMING.md#vscodium) | Code and text editor
 | [yay](PACMAN.md#AUR) | Command line AUR helper
+| [zathura](OTHERS.md#zathura) | PDF, EPUB, etc viewer
 | [zsh](TERMINAL.md#zsh) | Interactive extended Bourne shell
 
 
