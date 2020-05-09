@@ -3,7 +3,7 @@
 ## Installation
 Install `bluez` package that provides bluetooth protocol stack.
 ```
-sudo pacman -S bluez bluez-utils
+sudo pacman -S bluez bluez-utils bluez-hdi2hci
 ```
 
 After start and enable the service
@@ -67,7 +67,5 @@ To change file destination running `logid -c <destination>`.
 ## Tips
 
 For this configuration to work at start is also necessary to have bluetooth service initiated.
-
-See [Bluetooth](WIP/ARCH-FOR-N00BS.md#Bluetooth) for setting bluetooth
 
 Sometimes it is also necessary to drag the mouse or click a button for it to notice the connection.

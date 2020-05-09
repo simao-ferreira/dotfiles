@@ -6,26 +6,36 @@
 super + Return
 	urxvt
 
-# browser
-super + c
-	firefox
-
 # launcher
 super + d
 	dmenu_run
 
 # rofi
 super + alt + @space
-	 rofi -theme nordic-wind.rasi -modi drun -show drun -sidebar-mode
+	 rofi -theme nordic-ice-focus.rasi -modi drun -show drun -sidebar-mode
 
 # rofi menu
 alt + @space
-	rofi -theme nordic-ice.rasi -modi drun -show drun -show-icons -location 7 -yoffset -35 -xoffset 5 -width 20 -lines 20
+	rofi -theme nordic-ice-simple.rasi -modi drun -show drun -show-icons -location 7 -yoffset -35 -xoffset 5 -width 20 -lines 20
 
 # reload sxhkd config
 super + Escape
 	pkill -USR1 -x sxhkd
 
+########
+# apps #
+########
+
+# browser
+super + c
+	firefox -p default-release
+
+super + alt + c
+	firefox -p drm
+
+# browser
+super + alt + m
+	pavucontrol
 
 #########
 # bspwm #

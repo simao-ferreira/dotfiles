@@ -8,8 +8,8 @@ sxhkd &
 picom &
 
 ## Monitors ##
-bspc monitor eDP-1 -d I II III IV V 
-bspc monitor DP-1 -d VI VII VIII IX X
+bspc monitor eDP-1 -d I
+bspc monitor DP-1 -d II III IV V
 
 ## WM Config ##
 bspc config border_width         3
@@ -23,3 +23,5 @@ bspc config gapless_monocle      true
 
 ## Special windows ##
 bspc rule -a Zathura state=tiled
+bspc rule -a pavucontrol state=floating
+

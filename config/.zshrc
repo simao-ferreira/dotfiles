@@ -11,7 +11,7 @@ export EDITOR=/usr/bin/nano
 export ZSH="$HOME/applications/oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_COMPDUMP="$HOME/.cache/zsh"
+ZSH_COMPDUMP="$HOME/.cache/zsh/zsh_coredump"
 CASE_SENSITIVE="false" HIST_STAMPS="dd.mm.yyyy"
 HISTFILE="$HOME/.cache/zsh/histfile"
 
@@ -20,3 +20,6 @@ source $ZSH/oh-my-zsh.sh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # alias zshconfig="mate ~/.zshrc"
+
+alias btc="bluetoothctl connect"
+alias btd="bluetoothctl disconnect"
