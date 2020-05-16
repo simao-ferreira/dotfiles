@@ -146,33 +146,3 @@ The color palette of `.Xresources` will not change directly so neither rofi or i
 
 Other option is to manually use pywal to generate color palette and manually get it's hex colors for changing the configurations. On `.cache/wal` are already defined some specific files, for `.Xresources` or `rofi`.
 
-## Monitors
-To manage external monitors Mi3 uses `xrandr` and it's graphical wrapper `ARandR`, there are several ways to add them into an i3 setup, it possible to run a script containing the `xrandr` command, or it possible to add it in a manageable way to the i3 config file by adding a shortcut keys to run the script or create a mode. 
-
-There are some modes already in Mi3 config, like the `resize` or `gaps` mode. Define a shortcut to display the mode and bind a command to some specific keys, this way it possible to set more than one configuration.
-
-```
-# Set the shortcuts and what they do
-set $mode_display Ext Screen (d) DP1 ON, (r) DP1 Vertical , (x) DP1 Mirror
-mode "$mode_display" {
-    bindsym d exec --no-startup-id xrandr --output eDP1 --primary --mode 2560x1440 --pos 219x1872 --rotate normal --output DP1 --mode 2560x1440 --scale 1.3x1.3 --pos 0x0 --rotate normal, mode "default"
-    bindsym r exec --no-startup-id xrandr --output eDP1 --primary --mode 2560x1440 --pos 0x3328 --rotate normal --output DP1 --mode 2560x1440 --scale 1.3x1.3 --pos 0x0 --rotate left, mode "default"
-    bindsym x exec --no-startup-id xrandr --output eDP1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP1 --mode 2560x1440 --scale 1x1 --rotate normal, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-# Declare here the shortcut to bring the display selection menu
-bindsym $mod+x mode "$mode_display"
-```
-
-To get the `xrandr` configurations use `xrand -q` to get the connected displays and resolutions, if both monitors have the same resolution but different sizes, `--scale <number>x<number>` flag  must be configured, this means it's position has to be asserted accordingly, using the `--pos <number>x<number>` flag, as in the example. To ease this tweaking it's possible to set position and rotation using `ARandR` and then export these configurations.
-
-## Layout
-Saving workspace [layout](https://i3wm.org/docs/layout-saving.html) can be done through the use of `i3-save-tree`, this can be used to print to stdout a JSON containing a data structure for the selected layout. 
-This JSON has a dump of the workspace content, without workspace properties and with all relevant windows data commented. It is necessary to uncomment window data that has relevance and ass a workspace layout wrap.
-
-Add `exec --no-startup-id "i3-msg 'workspace 8; append_layout ~/.i3/ws8.json'"` to i3 config for lock the workspace layout, however the apps need to be initiated at startup as well if necessary to be working from the beginning.
-
-* The error `Can't locate AnyEvent/I3.pm` can be solved by installing `perl-anyevent-i3` from manjaro repos.

@@ -8,7 +8,7 @@ Polybar is available through `AUR`
 # yay -S polybar
 ```
 
-For Mi3 is no different, it's possible to install `polybar` from the `pamac` GUI, there are two options available according to  homepage, it's possible to install the `polybar` package, containing the stable version, or the `polybar-git` for the latest version.
+There are two options available according to homepage, it's possible to install the `polybar` package, containing the stable version, or the `polybar-git` for the latest version.
 
 Configuration file can be found at `/usr/share/doc/polybar/config` or `/usr/local/share/doc/polybar/config`, copy it to `.config/poybar` and edit it as wanted.
 
@@ -38,6 +38,10 @@ polybar bar &
 ```
 
 After it's creation it's necessary to grant it executable rights `chmod +x ~/.config/polybar/<name>.sh`.
+
+
+### I3
+
 On `.i3/config` add `exec_always --no-startup-id $HOME/.config/polybar/<name>.sh` to run the script at start, and remove 
 
 ```
@@ -48,19 +52,16 @@ bar {
 }
 ```
 
-For `bspwm` just make sure to run it at the beginning. 
+Another alternative is, instead of removing totally the i3bar, just make it invisible always, that will allow you to call on it if is necessary through some keybinding like `Ctrl+mod+m`. To do that don't remove the lines above, but instead add `mode invisible` to it.
 
-Another alternative is, instead of removing totally the i3bar, just make it invisible always, that will allow you to call on it if is necessary through `Ctrl+mod+m`. To do that don't remove the lines above, but instead add `mode invisible` to it.
-
-Other important note, to be able to use system tray icons already in use through i3bar add to the `.i3/config` bar settings `tray_output none`, this will disable the tray on i3bar and let it be available on polybar. 
+To be able to use system tray icons on polybar it is necessary to disable them on i3bar.
+Add to the `.i3/config` bar settings `tray_output none`, this will disable the tray on i3bar. 
 
 ## Configurations
 
 The initial config file provided by polybar contains all that is necessary to work with the bar, but there is always something else to be added, from the tray to your quit screen to some script to show the weather in the other side of the world.
 
-This can be added by adding modules. These modules are the called by the bars. The bars and modules use settings and colors to manage their look.
-
-Most often than not it's easier to separate this configs by different files, addressing the similarity of concerns.
+This can be added by adding modules, those modules populate the bars. The bars and modules use settings and colors to manage their look. All polybar configuration of polybar can be in one file, apart from the run script, or in several, depending on the users preference.
 
 Some examples:
 
@@ -138,9 +139,3 @@ It is also possible to run scripts through `type=custom/scripts`, those scripts 
 The documentation on this extensive.
 
 To add symbols define font with symbol capacity, then `"%{T<number>}<symbol>%{T-}"` and change number to match font number reference and symbol is the desired icon.
-
-
-
-
-
-

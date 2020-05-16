@@ -8,8 +8,8 @@ sxhkd &
 picom &
 
 ## Monitors ##
-bspc monitor eDP-1 -d I
-bspc monitor DP-1 -d II III IV V
+bspc monitor eDP-1 -d I II III
+bspc monitor DP-1 -d IV V VI VII VIII
 
 ## WM Config ##
 bspc config border_width         3

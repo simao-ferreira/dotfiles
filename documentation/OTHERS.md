@@ -8,6 +8,22 @@
 ```
 # Others
 
+### Caffeine
+The screen saver in Manjaro is a locking mechanism configured via i3lock, that blocks the workspace, the configured defaults will block even when using the device with Netflix, Youtube or Spotify.
+
+It is possible to add a script and stop the i3lock from blocking the system when sound is playing or by placing the mouse at a specified spot. 
+
+Other option is to install a application like the `caffeine-ng` package, that enable the user to specify and change the locking. Caffeine works without altering the i3lock configurations.
+To enable it add to the config file
+in i3
+```
+exec -no-startup-id caffeine
+```
+
+This also adds an icon to the bar, where is possible to switch it on/off when needed. Default is off.
+
+The existence of the tray icon is specific to the [caffeine-ng](https://github.com/caffeine-ng/caffeine-ng) package, that is a split from the original one, mainly because of this.
+
 ### Conky
 [conky](https://github.com/brndnmtthws/conky) is installed and working is already a module of conky, can be configured. 
 Opposite to normal behaviour, conky on Mi3 is configured `/usr/share/conky/` and then auto started on`/.i3/config`, the script used to run it is found on `/usr/bin/`.
@@ -17,18 +33,6 @@ On Mi3 there are two conky setups, one for cheat sheets and another to settings.
 ### Feh-Blur
 Feh-blur allows you to focus your attention on the application in use by applying blur to the desktop background.
 * Not interesting since using i3 with gaps, it's more adequate to open-box layouts.
-
-### Oblogout
-Oblogout is a configurable logout script with graphical UI, that allows to cancel, restart, shutdown and lock.
-* Rofi script is used instead.
-
-### Palemoon
-[pale moon](https://github.com/MoonchildProductions/UXP) is the Mi3 default browser. `pale moon` is a fork of `firefox` with emphasis in customization, there is however significant changes between `pale moon` and `firefox`, like running in single-process or not using gecko as engine (uses the goanna fork).
-* Removed, firefox or chromium are default tools
-
-### Screenfetch
-[Screenfetch](https://github.com/KittyKatt/screenFetch) is a bash terminal informational tool, much to the like of `neofetch`, capable of displaying as much of information as alternatives, however, does not have a config file placed on `home`, what make it harder to manage in a dotfile style.
-* Removed, neofetch used instead.
 
 ### Figlet
 [Figlet](https://github.com/cmatsuoka/figlet) is a program to create characters in various types of configurations, run `figlet <text>` or `figlet -f <font> <text>`.
@@ -42,6 +46,19 @@ Example:
 | | |   <  __/ | |_| | | | \__ \_ 
 |_|_|_|\_\___|  \__|_| |_|_|___(_)
 ```
+
+### Neofetch
+[Neofetch](https://github.com/dylanaraps/neofetch) configuration file is placed in `.config/neofetch`, in it it's possible to change position of display information, also witch info is displayed. It is also possible to change the image displayed.
+
+Manjaro has `screenfetch`, not as configurable.
+
+### Oblogout
+Oblogout is a configurable logout script with graphical UI, that allows to cancel, restart, shutdown and lock.
+* Rofi script is used instead.
+
+### Palemoon
+[pale moon](https://github.com/MoonchildProductions/UXP) is the Mi3 default browser. `pale moon` is a fork of `firefox` with emphasis in customization, there is however significant changes between `pale moon` and `firefox`, like running in single-process or not using gecko as engine (uses the goanna fork).
+* Removed, firefox or chromium are default tools
 
 ### Reflector
 
@@ -74,22 +91,9 @@ Available on `AUR` via nerd-fonts repository
 # yay -Ss nerd-fonts-complete
 ```
 
-### Caffeine
-The screen saver in Manjaro is a locking mechanism configured via i3lock, that blocks the workspace, the configured defaults will block even when using the device with Netflix, Youtube or Spotify.
-
-It is possible to add a script and stop the i3lock from blocking the system when sound is playing or by placing the mouse at a specified spot. 
-
-Other option is to install a application like the `caffeine-ng` package, that enable the user to specify and change the locking. Caffeine works without altering the i3lock configurations.
-To enable it add to the config file
-in i3
-```
-exec -no-startup-id caffeine
-```
-
-This also adds an icon to the bar, where is possible to switch it on/off when needed. Default is off.
-
-The existence of the tray icon is specific to the [caffeine-ng](https://github.com/caffeine-ng/caffeine-ng) package, that is a split from the original one, mainly because of this.
-
+### Screenfetch
+[Screenfetch](https://github.com/KittyKatt/screenFetch) is a bash terminal informational tool, much to the like of `neofetch`, capable of displaying as much of information as alternatives, however, does not have a config file placed on `home`, what make it harder to manage in a dotfile style.
+* Removed, neofetch used instead.
 
 ### Zathura
 [zathura](https://pwmt.org/projects/zathura/) is a document viewer with vi style keybindings

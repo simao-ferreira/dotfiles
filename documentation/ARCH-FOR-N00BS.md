@@ -208,12 +208,10 @@ Install `grub` into `/boot`
 # grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub --recheck
 ```
 
-Generate the config file
+To generate or the config file
 ```
 # grub-mkconfig -o /boot/grub/grub.cfg
 ```
-
-[TODO:](WIP/TODO.md) Sometimes windows is not recognized, it's necessary to use os-prober and update grub (need to research this again) 
 
 ### Network
 Enable NetworkManager service, this will enable wireless at start.
@@ -283,6 +281,14 @@ And according to the answer install the necessary drivers
 ### Audio
 
 * [Audio](AUDIO.md#Installation)
+
+### Firewall
+
+```
+# pacman -S nftables firewalld
+```
+[Firewalld] (https://wiki.archlinux.org/index.php/Firewalld) is a daemon and frontend for `nftables`
+
 
 ### Exit
 Reboot, remove USB and get back to `Arch`

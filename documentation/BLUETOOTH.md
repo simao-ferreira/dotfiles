@@ -69,3 +69,10 @@ To change file destination running `logid -c <destination>`.
 For this configuration to work at start is also necessary to have bluetooth service initiated.
 
 Sometimes it is also necessary to drag the mouse or click a button for it to notice the connection.
+
+## Debug
+
+To debug buetooth problems
+```
+# /usr/lib/bluetooth/bluetoothd -n -d
+```

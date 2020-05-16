@@ -18,3 +18,4 @@ For:
 * [Bspwm](BSPWM.md)
 * [Arch-Installation](ARCH-FOR-N00BS.md)
 * [USB-ISO](USB-ISO.md)
+* [Packages](PKGS.md)
