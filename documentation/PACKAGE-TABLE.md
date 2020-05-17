@@ -3,17 +3,17 @@
 | [arandr](EXTERNAL-MONITOR.md) | GUI for xrandr, the monitor configuration utility
 | [AUR](PACMAN.md#AUR) | Community driven repository
 | [caffeine](PACKAGES.md#caffeine) | Prevents screen-saver and "sleep" 
-| [cava](AUDIO.md#cava) | Sound visualizer
+| [cava](AUDIO.md#cava) | visual sound equalizer
 | [conky](PACKAGES.md#conky) | Lightweight system monitor, used on desktop
-| [feh](PACKAGES.md#wallpaper) | Image viewer, wallpaper setter
+| [feh](PACKAGES.md#feh) | Image viewer, wallpaper setter
 | [fwupd](FIRMWARE.md) | Firmware Manager
 | [gcolor2](COLOR-PALETTE.md#gcolor2) | Color picker GUI
 | [gedit](PACKAGES.md#gedit) | Gnome UI Text editor
 | [geoclue2](PACKAGES.md#redshift) | Location framework
 | [git-secret](GIT-SECRET.md) | Git tool to encrypt files
 | [gtk](GNOME.md) | GTK detail configuration
-| [i3scrot]PACKAGES.md#i3scrot) | Screen capture utility
-| [logiops](BLUETOOTH.md) | Bluetooth mouse configuration
+| [i3scrot](PACKAGES.md#i3scrot) | Screen capture utility
+| [logiops](BLUETOOTH.md#logitech-bluetooth-mouse) | Bluetooth mouse configuration
 | [maim](PACKAGES.md#maim) | Screen capture utility
 | [neofetch](PACKAGES.md#neofetch) | Command line system information tool
 | [oh-my-zsh](TERMINAL.md#oh-my-zsh) | Framework for zsh

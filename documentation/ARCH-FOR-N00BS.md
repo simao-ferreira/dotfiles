@@ -114,7 +114,7 @@ Run `pacstrap` to install packaged into the new installation
 # pacstrap /mnt base base-devel linux linux-firmware 
 ```
 
-It is possible to also install other utility tools like wireless
+It is possible to also install other utility tools like wireless
 ```
 # pacstrap /mnt iw wpa_supplicant wireless_tools networkmanager dialog
 ```
@@ -252,7 +252,7 @@ And to make Linux synchronized:
 X or [Xorg](https://wiki.archlinux.org/index.php/Xorg) is display server necessary for running GUI in linux.
 
 ```
-# sudo pacman -S xorg-server xorg-init
+# sudo pacman -S xorg-server xorg-init xorg-xrandr
 ```
 Next find the necessary driver
 ```
@@ -264,8 +264,6 @@ And according to the answer install the necessary drivers
 ```
 
 ### Install WM 
-[TODO:](WIP/TODO.md) bspwm or i3
-
 
 ```
 # pacman -S i3-wm i3lock i3status 
@@ -287,7 +285,7 @@ And according to the answer install the necessary drivers
 ```
 # pacman -S nftables firewalld
 ```
-[Firewalld] (https://wiki.archlinux.org/index.php/Firewalld) is a daemon and frontend for `nftables`
+[Firewalld](https://wiki.archlinux.org/index.php/Firewalld) is a daemon and frontend for `nftables`
 
 
 ### Exit
@@ -297,5 +295,3 @@ Reboot, remove USB and get back to `Arch`
 # umount -R /mnt
 # reboot
 ```
-
-*[TODO](WIP/TODO.md) Update arch installation file, extract parts, polish current file.

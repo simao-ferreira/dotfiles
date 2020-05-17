@@ -2,7 +2,7 @@
 
 Configs for gnome
 
-## HiDpi Gtk
+## HiDPI gtk
 When using a HiDpi setup, might be necessary to scale to an external monitor, that can be made via `xranr`, however that has an impact over the font rendering and size apps, one way to do this is to add a gtk scale setting to `.profile` and then adjust via `xrandr`.
 
 `export GDK_SCALE=2` increases applications size, in this case doubles, it only integer numbers.

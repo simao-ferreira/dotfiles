@@ -8,7 +8,7 @@ _|                          |___/
 ```
 
 ## Caffeine
-The screen saver in Manjaro is a locking mechanism configured via i3lock, that blocks the workspace, the configured defaults will block even when using the device with Netflix, Youtube or Spotify.
+With the presence of a screen lock mechanism, configured via i3lock or other, the configured defaults will block even when using the device with Netflix, Youtube or Spotify.
 
 It is possible to add a script and stop the i3lock from blocking the system when sound is playing or by placing the mouse at a specified spot. 
 
@@ -18,10 +18,11 @@ The existence of the tray icon is specific to the [caffeine-ng](https://github.c
 
 
 ## Conky
-[conky](https://github.com/brndnmtthws/conky) is installed and working is already a module of conky, can be configured. 
-Opposite to normal behaviour, conky on Mi3 is configured `/usr/share/conky/` and then auto started on`/.i3/config`, the script used to run it is found on `/usr/bin/`.
+[conky](https://github.com/brndnmtthws/conky) is a light weight, configurable system monitor.
+
+Opposite to normal behavior, conky on Manjaro i3 is configured `/usr/share/conky/` and then auto started on`/.i3/config`, the script used to run it is found on `/usr/bin/`.
 On Mi3 there are two conky setups, one for cheat sheets and another to settings. By modifying the `/usr/bin/` file relative to the launcher is possible to ignore one, or both.
-* Not in use, gotop is used for terminal and polybar scripts for desktop info
+* Not in use, ytop is used for terminal and polybar scripts for desktop info
 
 ## Feh
 [Feh](https://feh.finalrewind.org/) is image viewer, light and powerful is also used for launching wallpapers. 

@@ -1,5 +1,5 @@
 ## git-secret
-[git-secret](https://git-secret.io/)stores your files in your git repository encrypted. To that end it uses `git` and `gpg`.
+[git-secret](https://git-secret.io/) provides a way to store your files in your git repository encrypted. To that end it uses `git` and `gpg`.
 
 In the chosen repository run `git secret init` to start `git-secret`. To add the first user to the keyring run `git secret tell your@gpg.email`.
 
