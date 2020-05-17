@@ -1,0 +1,3 @@
+# Bspwm
+
+# Sxhkd

@@ -1,0 +1,6 @@
+{
+    "workbench.colorTheme": "Nord",
+    "files.autoSave": "onWindowChange",
+    "editor.fontFamily": "'Iosevka Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true
+}

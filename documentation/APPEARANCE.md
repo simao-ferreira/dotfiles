@@ -1,23 +1,6 @@
 # Appearance
 When using clean Mi3 the visual setup is rather minimal, background and bars are very basic. But there are various options to manage and improve the setup. Mi3 setup is extremely configurable.
 
-### Wallpaper
-There is an installation of Viewnior a image viewer and Nitrogen to setup a wallpaper.
-[Viewnior](https://siyanpanayotov.com/project/viewnior) is a simple minimalist image viewer that provides a clean interface with extra space. 
-
-[Nitrogen](https://wiki.archlinux.org/index.php/nitrogen) is light and simple desktop background browser and setter for X Window.
-
-Nitrogen has some flaws, like not being able to recognize some file types. Configurations can be found at `.config/nitrogen/bg-saved.cfg`.
-A good replacement for Viewnior and more versatile for the i3 config wallpaper settings setup, is [feh](https://feh.finalrewind.org/).
-Can be installed through pamac or`sudo pacman -S feh`.
-
-For changing the wallpaper add to `/.i3/config`:
-`exec_always --no-startup-id feh --bg-scale ~/.wallpapers/forest-nightscape.jpg`.
-It can occur that this does not work after configuration. This is because nitrogen takes precedence when `.i3/config` runs. 
-To test if the configuration is working press `mod+Shift+r`. 
-
-If after reboot the new wallpaper is not set, usually there is a line under `i3/config` starting Nitrogen, the wallpaper loader by default. By commenting this line, the new setup instruction will work when rebooting.
-
 ### Menu bar
 The standard status bar is i3bar, it uses the i3status as default source for data, this can be changed.
 Configuration resides in `.config/i3status/config`
@@ -73,31 +56,6 @@ From there edit the `.Xresources` accordingly, `10x20` is a good setting for som
 
 Some apps like `gedit`, `firefox` or `chromium` have a specific configurations, usually found under preferences or settings.
 
-### Redshift
-[redshift](http://jonls.dk/redshift/) provides color temperature configurations, also known as night light.
- 
-Night light does not come with Mi3 as with other distro's, `redshift` is one of the options, as is `flux`. 
-For redshift it's necessary to configure geo location, this can be mocked, providing a static value or coordinate. 
-Another options, more comprehensive, is to install and use [geoclue](https://gitlab.freedesktop.org/geoclue/geoclue/wikis/home), available under pamac or through pacman as `geoclue2`.
- 
-The `geoclue2` configuration can be edited at `/etc/geoclue/geoclue.conf`, adding:
-
-```
-[redshift]
-allowed=true
-system=false
-users=
-```
-
-It is also necessary to start both applications at launch, for that edit the `/.i3/config` settings for both Redshift and geoclue:
-
-```
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-exec --no-startup-id redshift-gtk
-```
-
-* Adding `redshift-gtk` will add a icon to the `tray_output`, if the icon is not necessary it enough to add just `redshift`
-
 ### Dunst
 The  default notification manager is `dunst` on i3 can be configured at `~/.config/dunst/dunstrc`.
 
@@ -111,18 +69,6 @@ To test configurations be sure to restart dunst, most times Mi3 has shortcut for
 To close dunst notifications press `Ctrl+Alt+Space`
 
 Details to configure dunst can be found at [Arch wiki](https://wiki.archlinux.org/index.php/Dunst)
-
-### Caffeine
-The screen saver in Mi3 is a locking mechanism configured via i3lock, that blocks the workspace. 
-It's configured defaults will block even when using the device with Netflix, Youtube or Spotify.
-It is possible to add a script and stop the i3lock from blocking the system when sound is playing or by placing the mouse at a specified spot. 
-Other option is to install a application like the `caffeine-ng` package, that enable the user to specify and change the locking. Caffeine works without altering the i3lock configurations.
-To enable it add to `/.i3/config` the following line
-`exec -no-startup-id caffeine`. 
-
-This also adds an icon to the bar, where is possible to switch it on/off when needed. Default is off.
-
-The existence of the tray icon is specific to the [caffeine-ng](https://github.com/caffeine-ng/caffeine-ng) package, that is a split from the original one, mainly because of this.
 
 ### Login manager
 The login manager is LightDM, the configuration for the greeter (login screen manager) is set at `/etc/lightdm/slick-greeter.conf`
@@ -158,33 +104,3 @@ The color palette of `.Xresources` will not change directly so neither rofi or i
 
 Other option is to manually use pywal to generate color palette and manually get it's hex colors for changing the configurations. On `.cache/wal` are already defined some specific files, for `.Xresources` or `rofi`.
 
-## Monitors
-To manage external monitors Mi3 uses `xrandr` and it's graphical wrapper `ARandR`, there are several ways to add them into an i3 setup, it possible to run a script containing the `xrandr` command, or it possible to add it in a manageable way to the i3 config file by adding a shortcut keys to run the script or create a mode. 
-
-There are some modes already in Mi3 config, like the `resize` or `gaps` mode. Define a shortcut to display the mode and bind a command to some specific keys, this way it possible to set more than one configuration.
-
-```
-# Set the shortcuts and what they do
-set $mode_display Ext Screen (d) DP1 ON, (r) DP1 Vertical , (x) DP1 Mirror
-mode "$mode_display" {
-    bindsym d exec --no-startup-id xrandr --output eDP1 --primary --mode 2560x1440 --pos 219x1872 --rotate normal --output DP1 --mode 2560x1440 --scale 1.3x1.3 --pos 0x0 --rotate normal, mode "default"
-    bindsym r exec --no-startup-id xrandr --output eDP1 --primary --mode 2560x1440 --pos 0x3328 --rotate normal --output DP1 --mode 2560x1440 --scale 1.3x1.3 --pos 0x0 --rotate left, mode "default"
-    bindsym x exec --no-startup-id xrandr --output eDP1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP1 --mode 2560x1440 --scale 1x1 --rotate normal, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-# Declare here the shortcut to bring the display selection menu
-bindsym $mod+x mode "$mode_display"
-```
-
-To get the `xrandr` configurations use `xrand -q` to get the connected displays and resolutions, if both monitors have the same resolution but different sizes, `--scale <number>x<number>` flag  must be configured, this means it's position has to be asserted accordingly, using the `--pos <number>x<number>` flag, as in the example. To ease this tweaking it's possible to set position and rotation using `ARandR` and then export these configurations.
-
-## Layout
-Saving workspace [layout](https://i3wm.org/docs/layout-saving.html) can be done through the use of `i3-save-tree`, this can be used to print to stdout a JSON containing a data structure for the selected layout. 
-This JSON has a dump of the workspace content, without workspace properties and with all relevant windows data commented. It is necessary to uncomment window data that has relevance and ass a workspace layout wrap.
-
-Add `exec --no-startup-id "i3-msg 'workspace 8; append_layout ~/.i3/ws8.json'"` to i3 config for lock the workspace layout, however the apps need to be initiated at startup as well if necessary to be working from the beginning.
-
-* The error `Can't locate AnyEvent/I3.pm` can be solved by installing `perl-anyevent-i3` from manjaro repos.
