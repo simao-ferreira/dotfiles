@@ -1,23 +1,6 @@
 # Appearance
 When using clean Mi3 the visual setup is rather minimal, background and bars are very basic. But there are various options to manage and improve the setup. Mi3 setup is extremely configurable.
 
-### Wallpaper
-There is an installation of Viewnior a image viewer and Nitrogen to setup a wallpaper.
-[Viewnior](https://siyanpanayotov.com/project/viewnior) is a simple minimalist image viewer that provides a clean interface with extra space. 
-
-[Nitrogen](https://wiki.archlinux.org/index.php/nitrogen) is light and simple desktop background browser and setter for X Window.
-
-Nitrogen has some flaws, like not being able to recognize some file types. Configurations can be found at `.config/nitrogen/bg-saved.cfg`.
-A good replacement for Viewnior and more versatile for the i3 config wallpaper settings setup, is [feh](https://feh.finalrewind.org/).
-Can be installed through pamac or`sudo pacman -S feh`.
-
-For changing the wallpaper add to `/.i3/config`:
-`exec_always --no-startup-id feh --bg-scale ~/.wallpapers/forest-nightscape.jpg`.
-It can occur that this does not work after configuration. This is because nitrogen takes precedence when `.i3/config` runs. 
-To test if the configuration is working press `mod+Shift+r`. 
-
-If after reboot the new wallpaper is not set, usually there is a line under `i3/config` starting Nitrogen, the wallpaper loader by default. By commenting this line, the new setup instruction will work when rebooting.
-
 ### Menu bar
 The standard status bar is i3bar, it uses the i3status as default source for data, this can be changed.
 Configuration resides in `.config/i3status/config`
@@ -72,31 +55,6 @@ Important when using HiDpi screens, to increase font size first check `/usr/shar
 From there edit the `.Xresources` accordingly, `10x20` is a good setting for some HiDpi setup.
 
 Some apps like `gedit`, `firefox` or `chromium` have a specific configurations, usually found under preferences or settings.
-
-### Redshift
-[redshift](http://jonls.dk/redshift/) provides color temperature configurations, also known as night light.
- 
-Night light does not come with Mi3 as with other distro's, `redshift` is one of the options, as is `flux`. 
-For redshift it's necessary to configure geo location, this can be mocked, providing a static value or coordinate. 
-Another options, more comprehensive, is to install and use [geoclue](https://gitlab.freedesktop.org/geoclue/geoclue/wikis/home), available under pamac or through pacman as `geoclue2`.
- 
-The `geoclue2` configuration can be edited at `/etc/geoclue/geoclue.conf`, adding:
-
-```
-[redshift]
-allowed=true
-system=false
-users=
-```
-
-It is also necessary to start both applications at launch, for that edit the `/.i3/config` settings for both Redshift and geoclue:
-
-```
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-exec --no-startup-id redshift-gtk
-```
-
-* Adding `redshift-gtk` will add a icon to the `tray_output`, if the icon is not necessary it enough to add just `redshift`
 
 ### Dunst
 The  default notification manager is `dunst` on i3 can be configured at `~/.config/dunst/dunstrc`.

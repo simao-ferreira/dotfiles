@@ -27,3 +27,6 @@ Manjaro has package manager, [pacman](PACMAN.md#pacman) instead of `apt-get`.
 Manjaro and Arch also allow user-based packages, by enabling `AUR` packages in the settings, these are managed by the community, it usually easy to verify the dependencies, age and repository on the details.
 
 Typically neither the Manjaro or Arch community are very `n00b` user friendly, mostly the user is expected to have a fairly basic knowledge of linux and to be able to research on their documentation and wiki, which is very comprehensive and extensively detailed, plus the forum. The community is not however exclusive or unfriendly, but some knowledge and research are expected before asking on the forums.
+
+## Basic settings
+Manjaro has a terminal menu to manage settings, `bmenu` in the terminal. This will open a TUI with options, to install new kernels, it's important to install more than one just in case it's needed for recovery. `bmenu` manages other system settings like manage drivers, if gaming is an option and graphic is NVIDIA, installations of bumblebee drivers is recommended. This can be installed by default in the initial OS installation. Check which graphics are correct for the setup, if NVIDIA optimus then use non-free graphics.

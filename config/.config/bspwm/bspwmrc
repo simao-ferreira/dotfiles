@@ -6,6 +6,7 @@ $HOME/.config/polybar/launch.sh
 
 sxhkd &
 picom &
+killall redshift; sleep 5; redshift &
 
 ## Monitors ##
 bspc monitor eDP-1 -d I II III
@@ -23,5 +24,5 @@ bspc config gapless_monocle      true
 
 ## Special windows ##
 bspc rule -a Zathura state=tiled
-bspc rule -a pavucontrol state=floating
+bspc rule -a pavucontrol state=floating  # not working
 

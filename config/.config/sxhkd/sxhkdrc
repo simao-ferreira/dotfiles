@@ -37,6 +37,10 @@ super + alt + c
 super + alt + m
 	pavucontrol
 
+# print screen
+super + p
+	maim --select -u > ~/Downloads/$(date +%Y%m%d%s).png
+
 #########
 # bspwm #
 #########
