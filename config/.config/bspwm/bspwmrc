@@ -25,4 +25,5 @@ bspc config gapless_monocle      true
 ## Special windows ##
 bspc rule -a Zathura state=tiled
 bspc rule -a pavucontrol state=floating  # not working
+bspc rule -a pomotroid state=tiled
 

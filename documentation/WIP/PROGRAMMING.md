@@ -23,9 +23,17 @@ And install them from file
 # cat extensions-list.txt | xargs -n 1 code --install-extension
 ```
 
-
 Alternatives:
 * sublime
 * atom
 * notepad++
+
+## Python
+
+ * [Wiki](https://wiki.python.org/moin/BeginnersGuide/Download)
+
+ * Pipenv: Sacred Marriage of Pipfile, Pip, & Virtualenv.
+ 
+ * vscode vs pycharm
+
 

@@ -3,7 +3,9 @@ To research/install/discuss in no order of priority:
 
 - Update documentation for compton and picom
 
-- Install second graphic drivers, Bumblebee drivers because computer runs hot, battery is drained fast. Maybe test performance/battery first.
+- Update documentation for dmenu, rofi and rasi : https://wiki.archlinux.org/index.php/Dmenu, https://wiki.archlinux.org/index.php/Rofi
+
+- Update documentation for ranger
 
 - Bin, recycling folder.
 
@@ -16,10 +18,6 @@ https://github.com/derat/xsettingsd
 https://github.com/mxmilkb/dotfiles/blob/master/bin/bin/xrandr-rose-vgaprime-hdmiright.sh
 
 - https://github.com/alacritty/alacritty
-
-- https://wiki.archlinux.org/index.php/Dmenu
-
-- https://wiki.archlinux.org/index.php/Rofi
 
 - http://dotshare.it/
 
@@ -42,9 +40,7 @@ https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv
 
 - Describe the installation process for bspwm and i3 (maybe extract them from actual documentation)
 
- create a rofi control center
-
-- new rofi non-full screen menu
+- create a rofi control center
 
 - searx
 

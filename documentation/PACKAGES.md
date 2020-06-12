@@ -99,6 +99,12 @@ Oblogout is a configurable logout script with graphical UI, that allows to cance
 [pale moon](https://github.com/MoonchildProductions/UXP) is the Mi3 default browser. `pale moon` is a fork of `firefox` with emphasis in customization, there is however significant changes between `pale moon` and `firefox`, like running in single-process or not using gecko as engine (uses the goanna fork).
 * Removed, firefox or chromium are default tools
 
+## Pomotroid
+[pomotroid](https://github.com/Splode/pomotroid) FOSS Pomodoro timer
+```
+# yay -S pomotroid-bin
+```
+
 ## Redshift
 [redshift](http://jonls.dk/redshift/) provides color temperature configurations, also known as night light.
   
@@ -142,6 +148,19 @@ For listing available countries
 ## Screenfetch
 [Screenfetch](https://github.com/KittyKatt/screenFetch) is a bash terminal informational tool, much to the like of `neofetch`, capable of displaying as much of information as alternatives, however, does not have a config file placed on `home`, what make it harder to manage in a dotfile style.
 * Removed, neofetch used instead.
+
+## Xclip
+[xclip](https://github.com/astrand/xclip) is a command line clipboard interface.
+
+As an example to copy the SSH key to the clipboard 
+```
+# xclip -sel clip < ~/.ssh/id_rsa.pub
+```
+
+To install
+```
+# pacman -S xclip
+```
 
 ## Zathura
 [zathura](https://pwmt.org/projects/zathura/) is a document viewer with vi style keybindings

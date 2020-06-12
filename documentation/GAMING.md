@@ -46,8 +46,33 @@ Bumblebee drivers should kick in when necessary, if not, it's possible to run `p
 
 Install the nvidia necessary packages
 ```
-# pacman -S nvidia nvidia-utils lib32-nvidia-utils
+# pacman -S nvidia nvidia-prime nvidia-utils lib32-nvidia-utils
 ```
+
+Use prime-run to run a program on nvidia
+```
+$ prime-run glxinfo | grep "OpenGL renderer"
+```
+
+If does not work, it is necessary to config `/etc/X11/xorg.conf`
+```
+Section "Device"
+  Identifier "iGPU"
+  Driver "modesetting"
+EndSection
+
+Section "Screen"
+  Identifier "iGPU"
+  Device "iGPU"
+EndSection
+
+Section "Device"
+  Identifier "dGPU"
+  Driver "nvidia"
+EndSection
+```
+
+To run steam games on the game steam settings edit launch options and add `prime-run %command%`.
 
 ## Discord
 Discord is a proprietary messaging/streaming application. Uses `Electron`.

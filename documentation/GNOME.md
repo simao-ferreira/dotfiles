@@ -1,6 +1,24 @@
 # GNOME
 
-Configs for gnome
+## GTK
+To change the theme, either install it through `pacman` or download a package and place it under `.themes`, if does not exist create it. 
+
+The configuration files are found on `.config/gtk-3.0` and `.config/gtk-2.0`.
+
+Another option to manage it using the lxappearence package. 
+```
+# pacman -S arc-solid-gtk-theme
+# pacman -S lxappearance
+```
+
+The installation of an icon or cursor pack theme can be done through a repo, or through `pacman` or `AUR`, to apply it change the `settings.ini` or use the  `lxappearance`.
+```
+# yay -S numix-cursor-theme
+# yay -S numix-circle-icon-theme-git
+```
+
+
+More configurations can be made, either by adding or modifying the config or using the GUI of `lxappearance`, also called `Customize look and feel`. From this aplpication is also possible to load new icon packs, mouse cursors, changing fonts, font size and other configurations. 
 
 ## HiDPI gtk
 When using a HiDpi setup, might be necessary to scale to an external monitor, that can be made via `xranr`, however that has an impact over the font rendering and size apps, one way to do this is to add a gtk scale setting to `.profile` and then adjust via `xrandr`.
@@ -10,9 +28,6 @@ When using a HiDpi setup, might be necessary to scale to an external monitor, th
 `export GDK_DPI_SCALE` diminish font size on application that use gnome, like `gedit`.
 
 To make the bar more fitting it's necessary to change css configurations. 
-
-## Gtk themes
-Themes modified or download got on `.themes` package. From there they should appear in the tweaking tool.
 
 ## Gnome bar
 When using a hidpi config, or anyother, the ususal gnome bar is to big.

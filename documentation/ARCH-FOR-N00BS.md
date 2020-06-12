@@ -260,8 +260,9 @@ Next find the necessary driver
 ```
 And according to the answer install the necessary drivers
 ```
-# pacman -S nvidia
+# pacman -S nvidia nvidia-prime
 ```
+* [Nvidia](GAMING.md#nvidia)
 
 ### Install WM 
 
@@ -286,6 +287,20 @@ And according to the answer install the necessary drivers
 # pacman -S nftables firewalld
 ```
 [Firewalld](https://wiki.archlinux.org/index.php/Firewalld) is a daemon and frontend for `nftables`
+
+### SSH
+
+```
+# pacman -S openssh
+```
+
+To generate a new SSH key
+```
+# ssh-keygen -t rsa -b 4096 -C "you@email.com"
+...
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/id_rsa
+```
 
 
 ### Exit

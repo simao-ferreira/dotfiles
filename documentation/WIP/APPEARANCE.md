@@ -1,12 +1,4 @@
 # Appearance
-When using clean Mi3 the visual setup is rather minimal, background and bars are very basic. But there are various options to manage and improve the setup. Mi3 setup is extremely configurable.
-
-### Menu bar
-The standard status bar is i3bar, it uses the i3status as default source for data, this can be changed.
-Configuration resides in `.config/i3status/config`
-There are other popular options like `polybar`.
-
-* [Polybar](POLYBAR.md)
 
 ### Compton
 [Compton](https://wiki.archlinux.org/index.php/Compton) is a window manager compositor for Xorg.
@@ -44,8 +36,6 @@ Modify the wallpaper setup as:
 `Chromium` and other apps might not function properly after changes to `compton`. A common solution is to change the configuration file from `backend = "xrender` to `"backend = "glx"`.
 
 ### Icon packs, cursors and fonts
-More configurations can be made, either by adding or modifying the config or using the GUI of `lxappearance`, also called `Customize look and feel`. This package is installed by default, from it with it is possible to load new icon packs, mouse cursors, among other configurations. Also changing fonts and font size.
-
 Fonts are loaded in different ways under Mi3, there are several config files or applications with different fonts setup.
 When changing the `.i3/config` file the font input changes bar fonts, but not apps and terminal. For terminal Mi3 comes with URxvt as default, for it changed can be made `.Xresources`. URxvt is more configurable than usual, and when installing it from scratch it's look is extremely different from the configurations usually seen online.
 
@@ -70,14 +60,6 @@ To close dunst notifications press `Ctrl+Alt+Space`
 
 Details to configure dunst can be found at [Arch wiki](https://wiki.archlinux.org/index.php/Dunst)
 
-### Login manager
-The login manager is LightDM, the configuration for the greeter (login screen manager) is set at `/etc/lightdm/slick-greeter.conf`
-It's possible to check for other installed greeters at `/usr/share/xgreeters` all `.desktop` files are the greeters installed.
-To configure the login background `sudo lightdm-settings` and there you can change backgrounds.
-
-For this to work is advisable to move the backgrounds to `/usr/share/backgrounds` or `/usr/share/pixmaps` depending on the greeter installed. To work with `lightDM` images and pictures can't be located under `/home`. 
-One helpful tool during this configuration is `dm-tool switch-to-greeter`, that allows to check the greeter changes from within the session. Login password it's necessary.
-  
 ### Pywal
 One interesting option to manage color schemes is `pywal`. It can be installed via `sudo pacman -S python-pywall` or 
 
