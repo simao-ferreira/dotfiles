@@ -40,7 +40,7 @@ set render-loading-fg		"#eceff4"
 set highlight-color		    "#88c0d0"
 set highlight-active-color	"#5e81ac"
 
-# remove when pictures are involved
+# remove when colored pictures are involved
 set recolor			        "true"
 set recolor-lightcolor		"#2e3440"
 set recolor-darkcolor		"#d8dee9"
