@@ -1,5 +1,6 @@
 | Package        | Description                                                                             |
 | :------------: |:--------------------------------------------------------------------------------------- |
+| [alacritty](TERMINAL.md#alacritty) | GPU accelerated terminal emulator
 | [arandr](EXTERNAL-MONITOR.md) | GUI for xrandr, the monitor configuration utility
 | [AUR](PACMAN.md#AUR) | Community driven repository
 | [caffeine](PACKAGES.md#caffeine) | Prevents screen-saver and "sleep" 

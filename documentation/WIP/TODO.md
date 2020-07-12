@@ -1,6 +1,8 @@
 # Todo 
 To research/install/discuss in no order of priority:
 
+- Brightness adjustment
+
 - Update documentation for compton and picom
 
 - Update documentation for dmenu, rofi and rasi : https://wiki.archlinux.org/index.php/Dmenu, https://wiki.archlinux.org/index.php/Rofi
@@ -16,8 +18,6 @@ https://github.com/mxmilkb/dotfiles/blob/master/X11/.xsettingsd
 https://wiki.archlinux.org/index.php/Xsettingsd
 https://github.com/derat/xsettingsd
 https://github.com/mxmilkb/dotfiles/blob/master/bin/bin/xrandr-rose-vgaprime-hdmiright.sh
-
-- https://github.com/alacritty/alacritty
 
 - http://dotshare.it/
 
@@ -58,6 +58,7 @@ https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv
 
 - macos like keyboard press and hold - https://support.apple.com/en-us/HT201586:
 	* Best solution seems to be compose: https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Configuring_compose_key
+	* Alacritty allows some configuration as well
 
 - i3-gaps, i3bar, i3status, dmenu-manjaro, bmenu, ranger, moc, morc_menu, i3-exit, i3-msg, pcmanfm, viewnior, epdfview, manjaro-printer, vlc, xarchiver, xfburn, manjaro-chroot, gparted, isousb, gimp, inkscape, newsboat, vim
 

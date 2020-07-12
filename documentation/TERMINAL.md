@@ -107,3 +107,44 @@ HISTFILE="$HOME/.cache/zsh/histfile"
 ## Powerlevel10k
 
 [p10k](https://github.com/romkatv/powerlevel10k) is a `zsh` theme extremely configurable
+
+## Alacritty
+
+[Alacritty](https://github.com/alacritty/alacritty) is a GPU-accelerated terminal emulator.
+
+Alacritty is extremely fast, it's configuration simple. Configurations go under `.config/alacritty/alacritty.yml`.
+
+Some relevant configurations
+```
+colors:
+  primary:
+    background: '0x2E3440'
+    foreground: '0xD8DEE9'
+  cursor:
+    text: '0x2E3440'
+    cursor: '0xD8DEE9'
+  normal:
+    black: '0x3B4252'
+    red: '0xBF616A'
+    green: '0xA3BE8C'
+    yellow: '0xEBCB8B'
+    blue: '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan: '0x88C0D0'
+    white: '0xE5E9F0'
+  bright:
+    black: '0x4C566A'
+    red: '0xBF616A'
+    green: '0xA3BE8C'
+    yellow: '0xEBCB8B'
+    blue: '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan: '0x8FBCBB'
+    white: '0xECEFF4'
+
+font:
+  normal:
+    family: 'Iosevka Nerd Font'
+    style: Regular
+  size: 10.0
+```
