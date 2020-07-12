@@ -26,8 +26,22 @@ PulseAudio install script includes these files:
 `/etc/xdg/autostart/pulseaudio-kde.desktop`
 These will conflict with the `/.i3/config`, commenting it there resolves the issue.
 
+## Cava
+[Cava](https://github.com/karlstav/cava) is a terminal based visualizer for audio, is not accurate, it does not represent a proper sound spectrum. Is is only purpose is to look aesthetic when playing music.
+
+## Pavucontrol
+[pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) is a sound server GUI for pulse audio. Uses GTK.
+
+## Spicetify
+[Spicetify-cli](https://github.com/khanhas/spicetify-cli) is a command line utility to use on top of the Spotify application, it's main use is to modify the typical UI from the app and clean some heavy or not useful components.
+
+It allows also for inclusion of custom apps, in the same spotify window.
+
 ## Spotify
 When installing the `spotify` app is normal that the keys do not match. For whatever reason, change DNS to something different (1.1.1.1) and try again.
+
+## Spotify-tui
+[Spotify-tui](https://github.com/Rigellute/spotify-tui) is a console client for spotify, however it needs spotify or spotifyd installed as it's just a wrapper for the web API which does not handle streaming.
 
 ## Tizonia
 [Tizonia](http://tizonia.org/) is a command-line player for linux, with support for several online streaming tools like Google Play Music, Spotify or Youtube.
@@ -42,17 +56,3 @@ To move to the next track press `n`. for volume `+` or `-`.
 For more settings `tizonia --help keyboard`
 
 Documentation at `http://docs.tizonia.org/usage/keyboard.html`
-
-## Spicetify
-[Spicetify-cli](https://github.com/khanhas/spicetify-cli) is a command line utility to use on top of the Spotify application, it's main use is to modify the typical UI from the app and clean some heavy or not useful components.
-
-It allows also for inclusion of custom apps, in the same spotify window.
-
-## Spotify-tui
-[Spotify-tui](https://github.com/Rigellute/spotify-tui) is a console client for spotify, however it needs spotify or spotifyd installed as it's just a wrapper for the web API which does not handle streaming.
-
-## Cava
-[Cava](https://github.com/karlstav/cava) is a terminal based visualizer for audio, is not accurate, it does not represent a proper sound spectrum. Is is only purpose is to look aesthetic when playing music.
-
-## Pavucontrol
-[pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) is a sound server GUI for pulse audio. Uses GTK.

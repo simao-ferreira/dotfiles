@@ -86,7 +86,7 @@ Running `zsh` will run zsh first time configuration, if doesn't run `zsh-newuser
 Note: Make sure your terminal's size is at least 72×15 otherwise `zsh-newuser-install` will not run.
 
 
-### Oh-my-zsh
+## Oh-my-zsh
 
 Optionally there is [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) to manage the zsh configuration, to add it run:
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
@@ -104,6 +104,47 @@ CASE_SENSITIVE="false" HIST_STAMPS="dd.mm.yyyy"
 HISTFILE="$HOME/.cache/zsh/histfile"
 ```
 
-#### Powerlevel10k
+## Powerlevel10k
 
 [p10k](https://github.com/romkatv/powerlevel10k) is a `zsh` theme extremely configurable
+
+## Alacritty
+
+[Alacritty](https://github.com/alacritty/alacritty) is a GPU-accelerated terminal emulator.
+
+Alacritty is extremely fast, it's configuration simple. Configurations go under `.config/alacritty/alacritty.yml`.
+
+Some relevant configurations
+```
+colors:
+  primary:
+    background: '0x2E3440'
+    foreground: '0xD8DEE9'
+  cursor:
+    text: '0x2E3440'
+    cursor: '0xD8DEE9'
+  normal:
+    black: '0x3B4252'
+    red: '0xBF616A'
+    green: '0xA3BE8C'
+    yellow: '0xEBCB8B'
+    blue: '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan: '0x88C0D0'
+    white: '0xE5E9F0'
+  bright:
+    black: '0x4C566A'
+    red: '0xBF616A'
+    green: '0xA3BE8C'
+    yellow: '0xEBCB8B'
+    blue: '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan: '0x8FBCBB'
+    white: '0xECEFF4'
+
+font:
+  normal:
+    family: 'Iosevka Nerd Font'
+    style: Regular
+  size: 10.0
+```

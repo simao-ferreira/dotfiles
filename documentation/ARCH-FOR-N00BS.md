@@ -5,14 +5,13 @@
 /_/ |_/_/  \__/_//_/  /_/_//_/___/\__/\_,_/_/_/  /_/ \___/_/    /_//_/\___/\___/_.__/___/
 ```
 The following process was gathered via experimentation and was done for a personal setup, with US keyboard layout, EN-US language and a UEFI system with [dualboot](https://wiki.archlinux.org/index.php/Dual_boot_with_Windows#UEFI_systems) windows.
-This process is proceeded by a complete windows installations is done and working.
+These notes expect a existent windows installation.
 
 - This installation setup follows the Arch installation [guide](https://wiki.archlinux.org/index.php/Installation_guide) as the time of writing.
 
 - [Download](https://www.archlinux.org/download/) Arch and check the integrity of the checksum.
 
 - [USB ISO creation](USB-ISO.md) for launching the installation process.
-
 
 
 ### UEFI
@@ -30,7 +29,7 @@ While the original guide states different ways, if not already running, when int
 ```
 And connect to your wireless device.
 
-To verify if working, the following commands should return correctly:
+To verify if working, the following commands should ping successfully:
 ```
 # ping archlinux.org
 # ping 8.8.8.8
@@ -45,8 +44,6 @@ Ensure system clock is set correctly for your timezone
 ```
 
 ### Partition
-When setting a dual boot installation, you can use windows partition tool to create the needed linux partitions, in addition to windows existent ones.
-
 Windows will generate at least four partitions essential for a dual boot working setup
 
 | Partition  | Location | Size       | File system |
@@ -58,9 +55,10 @@ Windows will generate at least four partitions essential for a dual boot working
 
 **These partitions are essential**
 
-To create the new linux partitions it's possible to use during the installation `fdisk` or `gparted`.
+When setting a dual boot installation, you can use windows partition tool to create the needed linux partitions, in addition to windows existent ones.
+To create them in linux, during the installation use `fdisk` or `gparted`.
 
-The necessary partitions are `root(/)` and `efi(/boot/efi)`.
+The necessary partitions are `root(/)` and `efi(/boot/efi)`, it's not necessary to create the `efi` partition since we have already one created by windows.
 Optional are `swap` and `/home`. Swap can be done through a swapfile and not a partition.
 
 This is the final look for this dual boot with windows. The first four partitions where already created via windows and are essential.
@@ -114,7 +112,7 @@ Run `pacstrap` to install packaged into the new installation
 # pacstrap /mnt base base-devel linux linux-firmware 
 ```
 
-It is possible to also install other utility tools like wireless
+It is possible to also install other utility tools like wireless
 ```
 # pacstrap /mnt iw wpa_supplicant wireless_tools networkmanager dialog
 ```
@@ -252,7 +250,7 @@ And to make Linux synchronized:
 X or [Xorg](https://wiki.archlinux.org/index.php/Xorg) is display server necessary for running GUI in linux.
 
 ```
-# sudo pacman -S xorg-server xorg-init
+# sudo pacman -S xorg-server xorg-init xorg-xrandr
 ```
 Next find the necessary driver
 ```
@@ -260,12 +258,11 @@ Next find the necessary driver
 ```
 And according to the answer install the necessary drivers
 ```
-# pacman -S nvidia
+# pacman -S nvidia nvidia-prime
 ```
+* [Nvidia](GAMING.md#nvidia)
 
 ### Install WM 
-[TODO:](WIP/TODO.md) bspwm or i3
-
 
 ```
 # pacman -S i3-wm i3lock i3status 
@@ -287,7 +284,21 @@ And according to the answer install the necessary drivers
 ```
 # pacman -S nftables firewalld
 ```
-[Firewalld] (https://wiki.archlinux.org/index.php/Firewalld) is a daemon and frontend for `nftables`
+[Firewalld](https://wiki.archlinux.org/index.php/Firewalld) is a daemon and frontend for `nftables`
+
+### SSH
+
+```
+# pacman -S openssh
+```
+
+To generate a new SSH key
+```
+# ssh-keygen -t rsa -b 4096 -C "you@email.com"
+...
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/id_rsa
+```
 
 
 ### Exit
@@ -297,5 +308,3 @@ Reboot, remove USB and get back to `Arch`
 # umount -R /mnt
 # reboot
 ```
-
-*[TODO](WIP/TODO.md) Update arch installation file, extract parts, polish current file.

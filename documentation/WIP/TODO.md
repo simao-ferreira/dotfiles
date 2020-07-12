@@ -1,9 +1,13 @@
 # Todo 
 To research/install/discuss in no order of priority:
 
+- Brightness adjustment
+
 - Update documentation for compton and picom
 
-- Install second graphic drivers, Bumblebee drivers because computer runs hot, battery is drained fast. Maybe test performance/battery first.
+- Update documentation for dmenu, rofi and rasi : https://wiki.archlinux.org/index.php/Dmenu, https://wiki.archlinux.org/index.php/Rofi
+
+- Update documentation for ranger
 
 - Bin, recycling folder.
 
@@ -14,12 +18,6 @@ https://github.com/mxmilkb/dotfiles/blob/master/X11/.xsettingsd
 https://wiki.archlinux.org/index.php/Xsettingsd
 https://github.com/derat/xsettingsd
 https://github.com/mxmilkb/dotfiles/blob/master/bin/bin/xrandr-rose-vgaprime-hdmiright.sh
-
-- https://github.com/alacritty/alacritty
-
-- https://wiki.archlinux.org/index.php/Dmenu
-
-- https://wiki.archlinux.org/index.php/Rofi
 
 - http://dotshare.it/
 
@@ -42,9 +40,7 @@ https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv
 
 - Describe the installation process for bspwm and i3 (maybe extract them from actual documentation)
 
- create a rofi control center
-
-- new rofi non-full screen menu
+- create a rofi control center
 
 - searx
 
@@ -62,6 +58,7 @@ https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv
 
 - macos like keyboard press and hold - https://support.apple.com/en-us/HT201586:
 	* Best solution seems to be compose: https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Configuring_compose_key
+	* Alacritty allows some configuration as well
 
 - i3-gaps, i3bar, i3status, dmenu-manjaro, bmenu, ranger, moc, morc_menu, i3-exit, i3-msg, pcmanfm, viewnior, epdfview, manjaro-printer, vlc, xarchiver, xfburn, manjaro-chroot, gparted, isousb, gimp, inkscape, newsboat, vim
 

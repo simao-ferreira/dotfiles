@@ -15,7 +15,7 @@ ZSH_COMPDUMP="$HOME/.cache/zsh/zsh_coredump"
 CASE_SENSITIVE="false" HIST_STAMPS="dd.mm.yyyy"
 HISTFILE="$HOME/.cache/zsh/histfile"
 
-plugins=(git docker docker-compose) 
+plugins=(git docker docker-compose python) 
 source $ZSH/oh-my-zsh.sh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

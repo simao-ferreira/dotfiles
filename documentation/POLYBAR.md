@@ -39,24 +39,6 @@ polybar bar &
 
 After it's creation it's necessary to grant it executable rights `chmod +x ~/.config/polybar/<name>.sh`.
 
-
-### I3
-
-On `.i3/config` add `exec_always --no-startup-id $HOME/.config/polybar/<name>.sh` to run the script at start, and remove 
-
-```
-bar {
-
-    i3bar_command i3bar
-
-}
-```
-
-Another alternative is, instead of removing totally the i3bar, just make it invisible always, that will allow you to call on it if is necessary through some keybinding like `Ctrl+mod+m`. To do that don't remove the lines above, but instead add `mode invisible` to it.
-
-To be able to use system tray icons on polybar it is necessary to disable them on i3bar.
-Add to the `.i3/config` bar settings `tray_output none`, this will disable the tray on i3bar. 
-
 ## Configurations
 
 The initial config file provided by polybar contains all that is necessary to work with the bar, but there is always something else to be added, from the tray to your quit screen to some script to show the weather in the other side of the world.
@@ -139,3 +121,20 @@ It is also possible to run scripts through `type=custom/scripts`, those scripts 
 The documentation on this extensive.
 
 To add symbols define font with symbol capacity, then `"%{T<number>}<symbol>%{T-}"` and change number to match font number reference and symbol is the desired icon.
+
+## I3
+
+On `.i3/config` add `exec_always --no-startup-id $HOME/.config/polybar/<name>.sh` to run the script at start, and remove 
+
+```
+bar {
+
+    i3bar_command i3bar
+
+}
+```
+
+Another alternative is, instead of removing totally the i3bar, just make it invisible always, that will allow you to call on it if is necessary through some keybinding like `Ctrl+mod+m`. To do that don't remove the lines above, but instead add `mode invisible` to it.
+
+To be able to use system tray icons on polybar it is necessary to disable them on i3bar.
+Add to the `.i3/config` bar settings `tray_output none`, this will disable the tray on i3bar. 
