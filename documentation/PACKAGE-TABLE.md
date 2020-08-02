@@ -38,6 +38,7 @@
 | [xclip](PACKAGES.md#xclip) | Command line clipboard interface
 | [xrandr](EXTERNAL-MONITOR.md) | Monitor configuration utility
 | [yay](PACMAN.md#AUR) | Command line AUR helper
+| [wmname](PACKAGES.md#wmname) | Window manager naming setter
 | [zathura](PACKAGES.md#zathura) | PDF, EPUB, etc viewer
 | [zsh](TERMINAL.md#zsh) | Interactive extended Bourne shell
 

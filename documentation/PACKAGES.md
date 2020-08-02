@@ -162,6 +162,18 @@ To install
 # pacman -S xclip
 ```
 
+## wmname
+[wmname](https://tools.suckless.org/x/wmname/) from suckless sets window managers name property.
+This is extremely useful for fixing blank/freezing applications that use JDK to work.
+```
+# pacman -S wmname
+```
+try
+```
+# wmname
+# wmname LG3D
+```
+
 ## Zathura
 [zathura](https://pwmt.org/projects/zathura/) is a document viewer with vi style keybindings
 it supports directly and with dependencies comicbooks, pdf, epub and xps.
