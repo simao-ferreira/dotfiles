@@ -1,8 +1,9 @@
 #! /bin/sh
 
 ## auto-start ##
-feh --bg-fill ~/.wallpapers/t480.png
+feh --bg-fill ~/.wallpapers/t480.png --no-fehbg
 $HOME/.config/polybar/launch.sh
+wmname LG3D
 
 sxhkd &
 picom &

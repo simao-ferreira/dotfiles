@@ -23,9 +23,15 @@ colors:
     magenta: '0xB48EAD'
     cyan: '0x8FBCBB'
     white: '0xECEFF4'
-
 font:
   normal:
-    family: 'Iosevka Nerd Font'
+    family: Iosevka Term
     style: Regular
-  size: 10.0
+  bold:
+    family: Iosevka Term
+    style: Oblique
+  italic:
+    family: Iosevka Term
+    style: Bold
+  size: 11.0
+background_opacity: 0.95  # value range is 0 ~ 1
