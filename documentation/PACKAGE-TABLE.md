@@ -4,6 +4,7 @@
 | [arandr](EXTERNAL-MONITOR.md) | GUI for xrandr, the monitor configuration utility
 | [AUR](PACMAN.md#AUR) | Community driven repository
 | [caffeine](PACKAGES.md#caffeine) | Prevents screen-saver and "sleep" 
+| [caliber](PACKAGES.md#caliber) | Ebook manager
 | [cava](AUDIO.md#cava) | visual sound equalizer
 | [conky](PACKAGES.md#conky) | Lightweight system monitor, used on desktop
 | [feh](PACKAGES.md#feh) | Image viewer, wallpaper setter
@@ -25,6 +26,7 @@
 | [pavucontrol](AUDIO.md#pavucontrol) | Pulse audio gtk GUI
 | [polybar](POLYBAR.md) | Status bar, powerful and configurable
 | [pomotroid](PACKAGES.md#pomotroid) | Pomodoro timer
+| [ranger](PACKAGES.md#ranger) | Console file manager
 | [redshift](PACKAGES.md#redshift) | Screen color temperature utility
 | [reflector](PACKAGES.md#reflector) | Script for ranking and updating mirrors
 | [spicetify-cli](AUDIO.md#spicetify) | Spotify wrapper
@@ -51,6 +53,6 @@
 | [i3bar](APPEARANCE.md#menu-bar) | Status bar
 | [lightdm](APPEARANCE.md#login-manager) | Display Manager, used to manage login
 | [pywal](APPEARANCE.md#pywal) | Color scheme generator
-| [ranger](I3.md#file-manager) | File Manager
+
 | [rofi](I3.md#Menu) | Window switcher, also used as package launcher
 

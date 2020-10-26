@@ -47,8 +47,14 @@ Synchronize package database and full system upgrade
 
 Synchronize package database 
 ```
-# pacman -Syy`
+# pacman -Syy
 ```
+
+Find relevant optional dependencies
+```
+# pacman -Qi <package>
+```
+
 
 Flags: `--needed` only installs if the package is not installed or updated, `--noconfirm` does not need password, useful for scripts.
 

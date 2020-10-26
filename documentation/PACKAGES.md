@@ -16,6 +16,11 @@ Other option is to install a application like the `caffeine-ng` package, that en
 
 The existence of the tray icon is specific to the [caffeine-ng](https://github.com/caffeine-ng/caffeine-ng) package, that is a split from the original one, mainly because of this.
 
+## Calibre
+[calibre](https://calibre-ebook.com/) is a ebook manager, features include editing of metadata, library management, drm-removal, type conversion, store, etc.
+```
+# pacman -S calibre
+```
 
 ## Conky
 [conky](https://github.com/brndnmtthws/conky) is a light weight, configurable system monitor.
@@ -83,7 +88,7 @@ Available on `AUR` via nerd-fonts repository
 [maim](https://github.com/naelstrof/maim) is a screenshot tool, created to improve upon the limitations of `scrot`. It's improvements are mainly on selecting an area of the screen to print.
 It also needs to receive a directory to save the print screen.
 
-Example:
+Example
 ```
 # maim --select -u > ~/Pictures/$(date +%Y%m%d%s).png
 ```
@@ -104,6 +109,24 @@ Oblogout is a configurable logout script with graphical UI, that allows to cance
 ```
 # yay -S pomotroid-bin
 ```
+
+## Ranger
+[ranger](https://ranger.github.io/) is a console file manager written in python with a minimalist approach.
+
+By default it displays three columns, the middle one is the *working* panel, to move between them you can use arrows or other defined keys. The most right column allows previews for files and images. It includes capabilities *vim-like* with keybindings and bookmarks. It includes rifle, a file launcher. 
+
+It is also possible to use external scripts or dependencies, some examples are
+* atool: for previews of archives
+* elinks: for previews of html pages
+* ffmpegthumbnailer: for video previews
+* highlight: for syntax highlighting of code
+* libcaca: for ASCII-art image previews
+* mediainfo: for viewing information about media files
+* poppler: for pdf previews
+* ueberzug: for previews of images
+* w3m: for previews of images and html pages
+
+Ranger uses the default color scheme defined at `.Xresources`, but a specific theme can be set, adding `set colorscheme <scheme>`, original setup contains `deafult`, `jungle`, `snow` and `solarized` themes.
 
 ## Redshift
 [redshift](http://jonls.dk/redshift/) provides color temperature configurations, also known as night light.
