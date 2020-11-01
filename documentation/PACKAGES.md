@@ -27,10 +27,9 @@ The existence of the tray icon is specific to the [caffeine-ng](https://github.c
 
 Opposite to normal behavior, conky on Manjaro i3 is configured `/usr/share/conky/` and then auto started on`/.i3/config`, the script used to run it is found on `/usr/bin/`.
 On Mi3 there are two conky setups, one for cheat sheets and another to settings. By modifying the `/usr/bin/` file relative to the launcher is possible to ignore one, or both.
-* Not in use, ytop is used for terminal and polybar scripts for desktop info
 
 ## Feh
-[Feh](https://feh.finalrewind.org/) is image viewer, light and powerful is also used for launching wallpapers. 
+[Feh](https://feh.finalrewind.org/) is image viewer, light and powerful is also used for launching wallpapers.
 ```
 # pacman -S feh
 ```
@@ -41,7 +40,7 @@ For changing the wallpaper add to configuration a command, with the wanted wallp
 ```
 
 Alternatives
-[Viewnior](https://siyanpanayotov.com/project/viewnior) is a simple minimalist image viewer that provides a clean interface. 
+[Viewnior](https://siyanpanayotov.com/project/viewnior) is a simple minimalist image viewer that provides a clean interface.
 
 [Nitrogen](https://wiki.archlinux.org/index.php/nitrogen) is light and simple desktop background browser and setter for X Window.
 
@@ -77,7 +76,7 @@ Sometimes it add an underline under some text, just enter color scheme again and
 
 Not exclusive for i3.
 
-## Iosevka & Awesome Fonts
+## Iosevka
 
 Available on `AUR` via nerd-fonts repository
 ```
@@ -98,11 +97,9 @@ Example
 
 ## Oblogout
 Oblogout is a configurable logout script with graphical UI, that allows to cancel, restart, shutdown and lock.
-* Rofi script is used instead.
 
 ## Palemoon
 [pale moon](https://github.com/MoonchildProductions/UXP) is the Mi3 default browser. `pale moon` is a fork of `firefox` with emphasis in customization, there is however significant changes between `pale moon` and `firefox`, like running in single-process or not using gecko as engine (uses the goanna fork).
-* Removed, firefox or chromium are default tools
 
 ## Pomotroid
 [pomotroid](https://github.com/Splode/pomotroid) FOSS Pomodoro timer
@@ -113,7 +110,7 @@ Oblogout is a configurable logout script with graphical UI, that allows to cance
 ## Ranger
 [ranger](https://ranger.github.io/) is a console file manager written in python with a minimalist approach.
 
-By default it displays three columns, the middle one is the *working* panel, to move between them you can use arrows or other defined keys. The most right column allows previews for files and images. It includes capabilities *vim-like* with keybindings and bookmarks. It includes rifle, a file launcher. 
+By default it displays three columns, the middle one is the *working* panel, to move between them you can use arrows or other defined keys. The most right column allows previews for files and images. It includes capabilities *vim-like* with keybindings and bookmarks. It includes rifle, a file launcher.
 
 It is also possible to use external scripts or dependencies, some examples are
 * atool: for previews of archives
@@ -150,10 +147,10 @@ users=
 
 This will update `/etc/pacman.d/mirrorlist`, is a good idea to have a copy before running the commands.
 
-There is also possible to create a hook and run it as a service on a schedule. 
+There is also possible to create a hook and run it as a service on a schedule.
 
 
-Select 50 HTTP or HTTPS mirrors synced recently, sorted by speed 
+Select 50 HTTP or HTTPS mirrors synced recently, sorted by speed
 ```
 # reflector --latest 50 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```

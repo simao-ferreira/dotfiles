@@ -1,14 +1,17 @@
-| Package        | Description                                                                             |
-| :------------: |:--------------------------------------------------------------------------------------- |
-| [alacritty](TERMINAL.md#alacritty) | GPU accelerated terminal emulator
-| [arandr](EXTERNAL-MONITOR.md) | GUI for xrandr, the monitor configuration utility
-| [AUR](PACMAN.md#AUR) | Community driven repository
-| [caffeine](PACKAGES.md#caffeine) | Prevents screen-saver and "sleep" 
-| [caliber](PACKAGES.md#caliber) | Ebook manager
-| [cava](AUDIO.md#cava) | visual sound equalizer
+| Package        | Description                                                                             |   |
+| :------------: |:--------------------------------------------------------------------------------------- | - |
+| [alacritty](https://github.com/alacritty/alacritty)       | GPU accelerated terminal emulator                 | [:page_facing_up:](TERMINAL.md#alacritty)
+| [alsa](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture)       | Sound driver                 | [:page_facing_up:](AUDIO.md#alsa)
+| [arandr](https://christian.amsuess.com/tools/arandr/)     | GUI for xrandr, monitor configuration utility     | [:page_facing_up:](EXTERNAL-MONITOR.md)
+| [arch linux](https://www.archlinux.org/)                  | Linux rolling distro                              | [:page_facing_up:](ARCHLINUX.md)
+| [AUR](https://aur.archlinux.org/)                         | Community driven repository                       | [:page_facing_up:](PACMAN.md#AUR)
+| [caffeine](https://github.com/caffeine-ng/caffeine-ng)    | Prevents screen-saver and sleep                   | [:page_facing_up:](PACKAGES.md#caffeine)
+| [calibre](https://calibre-ebook.com/)                     | Ebook manager                                     | [:page_facing_up:](PACKAGES.md#calibre)
+| [cava](https://github.com/karlstav/cava)                  | Console based audio visualizer                    | [:page_facing_up:](AUDIO.md#cava)
 | [conky](PACKAGES.md#conky) | Lightweight system monitor, used on desktop
+| [docker](https://docs.docker.com/)                  | Container platform                               | [:page_facing_up:](WIP/PROGRAMMING.md#docker)
 | [feh](PACKAGES.md#feh) | Image viewer, wallpaper setter
-| [fwupd](FIRMWARE.md) | Firmware Manager
+| [fwupd](https://wiki.archlinux.org/index.php/Fwupd) | Firmware manager                               | [:page_facing_up:](FIRMWARE.md) | 
 | [gcolor2](COLOR-PALETTE.md#gcolor2) | Color picker GUI
 | [gedit](PACKAGES.md#gedit) | Gnome UI Text editor
 | [geoclue2](PACKAGES.md#redshift) | Location framework
@@ -18,14 +21,18 @@
 | [logiops](BLUETOOTH.md#logitech-bluetooth-mouse) | Bluetooth mouse configuration
 | [lxappearance](GNOME.md#gtk) | Gtk theme switcher
 | [maim](PACKAGES.md#maim) | Screen capture utility
-| [neofetch](PACKAGES.md#neofetch) | Command line system information tool
+| [neofetch](https://github.com/dylanaraps/neofetch)            | Command line system information tool          | [:page_facing_up:](PACKAGES.md#neofetch)
+| [nerd fonts](https://github.com/ryanoasis/nerd-fonts)         | Fonts                                         | [:page_facing_up:](PACKAGES.md#iosevka)
+| [nordtheme](https://www.nordtheme.com/)                       | Color scheme                                  | [:computer:](https://github.com/simao-ferreira/resources/blob/master/xresources-color-themes/nord)
 | [oh-my-zsh](TERMINAL.md#oh-my-zsh) | Framework for zsh
-| [pacman](PACMAN.md#pacman) | Package Manager
+| [pacman](PACMAN.md#pacman) | Package Manager 
 | [pale moon](PACKAGES.md#palemoon) | Browser
 | [pamac](PACMAN.md#pamac) | Package Manager GUI wrapper
 | [pavucontrol](AUDIO.md#pavucontrol) | Pulse audio gtk GUI
 | [polybar](POLYBAR.md) | Status bar, powerful and configurable
 | [pomotroid](PACKAGES.md#pomotroid) | Pomodoro timer
+| [powerlevel10k](https://github.com/romkatv/powerlevel10k)  | Theme for zsh                                    | [:page_facing_up:](TERMINAL.md#powerlevel10k)
+| [pulseaudio](https://wiki.archlinux.org/index.php/PulseAudio)       | Sound server                 | [:page_facing_up:](AUDIO.md#pulseaudio)
 | [ranger](PACKAGES.md#ranger) | Console file manager
 | [redshift](PACKAGES.md#redshift) | Screen color temperature utility
 | [reflector](PACKAGES.md#reflector) | Script for ranking and updating mirrors
@@ -55,4 +62,3 @@
 | [pywal](APPEARANCE.md#pywal) | Color scheme generator
 
 | [rofi](I3.md#Menu) | Window switcher, also used as package launcher
-

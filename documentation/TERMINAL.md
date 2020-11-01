@@ -1,7 +1,48 @@
 # Terminal emulator
 
-The Manjaro i3 configuration installs uterm, uxterm and urxvt by default.
+The Manjaro i3 has uterm, uxterm and urxvt by default.
 Arch does not have a terminal emulator by default.
+
+## Alacritty
+
+[Alacritty](https://github.com/alacritty/alacritty) is a GPU-accelerated terminal emulator.
+
+Alacritty is extremely fast, it's configuration simple. Configurations go under `.config/alacritty/alacritty.yml`.
+
+Example of relevant configurations
+```
+colors:
+  primary:
+    background: '0x2E3440'
+    foreground: '0xD8DEE9'
+  cursor:
+    text: '0x2E3440'
+    cursor: '0xD8DEE9'
+  normal:
+    black: '0x3B4252'
+    red: '0xBF616A'
+    green: '0xA3BE8C'
+    yellow: '0xEBCB8B'
+    blue: '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan: '0x88C0D0'
+    white: '0xE5E9F0'
+  bright:
+    black: '0x4C566A'
+    red: '0xBF616A'
+    green: '0xA3BE8C'
+    yellow: '0xEBCB8B'
+    blue: '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan: '0x8FBCBB'
+    white: '0xECEFF4'
+
+font:
+  normal:
+    family: 'Iosevka Nerd Font'
+    style: Regular
+  size: 10.0
+```
 
 ## Urxvt
 
@@ -34,7 +75,7 @@ Relevant settings like colors
 
 ```
 
-font
+Font
 ```
 URxvt.font:                        10x20,xft:TerminessTTFNerdFontMono
 ```
@@ -77,14 +118,12 @@ printf '\e]710;%s\007' "xft:Terminus:pixelsize=12"
 By default Manjaro i3 uses `bash` shell.
 During installation Arch uses `zsh`, after the user needs to install `zsh` if it wants to keep using it.
 
-
 ## Zsh
 To install `zsh` run `sudo pacman -S zsh` and `sudo pacman -S zsh-completions`.
 
 Running `zsh` will run zsh first time configuration, if doesn't run `zsh-newuser-install`, from this it's possible to configure history and completion. The new configuration file is found as `.zshrc`.
 
-Note: Make sure your terminal's size is at least 72×15 otherwise `zsh-newuser-install` will not run.
-
+Note: Make sure your terminal's size is at least 72×15 otherwise `zsh-newuser-install` might not run.
 
 ## Oh-my-zsh
 
@@ -92,7 +131,7 @@ Optionally there is [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) to ma
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 Adding to to `oh-my-zsh` there are several plugins like git and `agnoster` theme. For themes it can be necessary to install `powerline fonts`. This is possible through `AUR` installing `nerd-fonts-complete`. Change the `ZSH_THEME="agnoster"` or other to get "eye-candy" visuals.
 
-Important setting to specify
+Some important settings to specify
 ```
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -106,45 +145,4 @@ HISTFILE="$HOME/.cache/zsh/histfile"
 
 ## Powerlevel10k
 
-[p10k](https://github.com/romkatv/powerlevel10k) is a `zsh` theme extremely configurable
-
-## Alacritty
-
-[Alacritty](https://github.com/alacritty/alacritty) is a GPU-accelerated terminal emulator.
-
-Alacritty is extremely fast, it's configuration simple. Configurations go under `.config/alacritty/alacritty.yml`.
-
-Some relevant configurations
-```
-colors:
-  primary:
-    background: '0x2E3440'
-    foreground: '0xD8DEE9'
-  cursor:
-    text: '0x2E3440'
-    cursor: '0xD8DEE9'
-  normal:
-    black: '0x3B4252'
-    red: '0xBF616A'
-    green: '0xA3BE8C'
-    yellow: '0xEBCB8B'
-    blue: '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan: '0x88C0D0'
-    white: '0xE5E9F0'
-  bright:
-    black: '0x4C566A'
-    red: '0xBF616A'
-    green: '0xA3BE8C'
-    yellow: '0xEBCB8B'
-    blue: '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan: '0x8FBCBB'
-    white: '0xECEFF4'
-
-font:
-  normal:
-    family: 'Iosevka Nerd Font'
-    style: Regular
-  size: 10.0
-```
+[P10k](https://github.com/romkatv/powerlevel10k) is a extremely configurable `zsh` theme.

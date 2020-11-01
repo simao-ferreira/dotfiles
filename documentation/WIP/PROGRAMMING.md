@@ -40,12 +40,44 @@ Alternatives:
 * atom
 * notepad++
 
+# WIP
+
+## Docker
+[Docker](https://docs.docker.com/get-started/) is a package to build and run applications in containers. Containers are processes running encapsulated in order to be isolated from the host SO and other containers.
+Each container has it's minimal file system provided from an image. An image has everything necessary to run an application.
+
+```
+# pacman -S docker
+```
+
+```
+# systemctl start docker 
+# systemctl enable docker
+```
+
+```
+# usermod -a -G docker $USER
+```
+logout and login 
+
 ## Python
 
  * [Wiki](https://wiki.python.org/moin/BeginnersGuide/Download)
 
- * Pipenv: Sacred Marriage of Pipfile, Pip, & Virtualenv.
- 
- * vscode vs pycharm
+## Jekyll
+[Jekill](https://jekyllrb.com/) is a static site generator, written in Ruby, it has a significant use on github.
+[Quickstart](https://jekyllrb.com/docs/)
 
+tl,dr
+```
+# gem install jekyll bundler
+# jekyll new myblog
+# cd myblog
+# bundle exec jekyll serve
+```
 
+Browse to http://localhost:4000
+
+```
+# bundle exec jekyll serve --livereload
+```

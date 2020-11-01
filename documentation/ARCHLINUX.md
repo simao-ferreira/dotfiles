@@ -13,11 +13,10 @@ d88P     888888     "Y8888P888  888
 
 [archlinux](https://wiki.archlinux.org/index.php/Arch_Linux) is a general purpose rolling linux distribution, one of it's distinguished features is the constant bleeding edge, there are no typical releases, it does not have a new big version to install from time to time, all packages are updated frequently, removing the necessity for reinstalling all OS for a new update.
 
-There are also no default programs installed, no desktop environment, display manager, no login manager, nothing really. 
-
-Arch default package manager is [pacman](PACMAN.md#pacman) and to add extra software it is possible to use the *Arch User Repository* or [AUR](PACMAN.md#AUR) through one of his wrappers like [yay](PACMAN.md#AUR)
+Arch default package manager is [pacman](PACMAN.md#pacman) and to add extra software there is also *Arch User Repository* or [AUR](PACMAN.md#AUR) through one of his wrappers like [yay](PACMAN.md#AUR)
 
 There is a extreme freedom of use with `Arch` however, with it comes a high level of awareness and knowledge. The existent documentation is extensive.
+After an installation there are no default programs installed, no desktop environment, display manager, no login manager, nothing really.
 
 `Arch` is not recommended for beginners and the learning curve is steep.
 

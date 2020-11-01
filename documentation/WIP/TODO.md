@@ -1,15 +1,25 @@
 # Todo 
 To research/install/discuss in no order of priority:
 
+- Test and document dwm
+
+- Update and remove MI3 old configurations
+
 - Brightness adjustment
 
 - Update documentation for compton and picom
 
 - Update documentation for dmenu, rofi and rasi : https://wiki.archlinux.org/index.php/Dmenu, https://wiki.archlinux.org/index.php/Rofi
 
-- Update documentation for ranger
+- New rasi for menus?
 
 - Bin, recycling folder.
+
+- Pipenv: Sacred Marriage of Pipfile, Pip, & Virtualenv.
+ 
+- vscode vs pycharm
+
+- Manage zsh without oh-my-zsh
 
 - Screensaver https://wiki.archlinux.org/index.php/List_of_applications#Screen_lockers
 

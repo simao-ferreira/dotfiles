@@ -54,7 +54,7 @@ Use prime-run to run a program on nvidia
 $ prime-run glxinfo | grep "OpenGL renderer"
 ```
 
-If does not work, it is necessary to config `/etc/X11/xorg.conf`
+If does not work, it might be necessary to config `/etc/X11/xorg.conf`
 ```
 Section "Device"
   Identifier "iGPU"
