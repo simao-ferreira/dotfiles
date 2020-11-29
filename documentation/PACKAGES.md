@@ -28,6 +28,24 @@ The existence of the tray icon is specific to the [caffeine-ng](https://github.c
 Opposite to normal behavior, conky on Manjaro i3 is configured `/usr/share/conky/` and then auto started on`/.i3/config`, the script used to run it is found on `/usr/bin/`.
 On Mi3 there are two conky setups, one for cheat sheets and another to settings. By modifying the `/usr/bin/` file relative to the launcher is possible to ignore one, or both.
 
+
+## Compton
+[Compton](https://github.com/chjj/compton/) is a compositor for X.
+
+Replaced by fork [picom](PACKAGES.md#picom)
+
+## Dunst
+[Dunst](https://github.com/dunst-project/dunst) is a highly configurable and lightweight notification manager.
+
+```
+# pacman -S dunst
+```
+
+Configuration is on `~/.config/dunst/dunstrc`. Launch dunst at WM launch.
+
+Use `notify-send <message>` to test the usage.
+
+
 ## Feh
 [Feh](https://feh.finalrewind.org/) is image viewer, light and powerful is also used for launching wallpapers.
 ```
@@ -100,6 +118,39 @@ Oblogout is a configurable logout script with graphical UI, that allows to cance
 
 ## Palemoon
 [pale moon](https://github.com/MoonchildProductions/UXP) is the Mi3 default browser. `pale moon` is a fork of `firefox` with emphasis in customization, there is however significant changes between `pale moon` and `firefox`, like running in single-process or not using gecko as engine (uses the goanna fork).
+
+## Picom
+[Picom](https://github.com/yshui/picom) is a lightweight window manager compositor for Xorg.
+
+```
+# pacman -S picom
+```
+
+Configuration can be specified at `~/.config/picom/picom.conf`. Launch picom at WM launch
+
+Picom is a fork of Compton, which is not maintained anymore. It provides transparency and shadows to windows.
+
+Transparency settings
+```
+opacity-rule = [
+  "75:class_g = 'URxvt' && focused",
+  "60:class_g = 'URxvt' && !focused"
+];
+```
+
+Shadow settings
+```
+shadow-exclude = [
+	"name = 'Notification'",
+	"class_g ?= 'i3-frame'",
+	"class_g ?= 'polybar'"
+];
+```
+
+Apps can be configured with different settings. 
+
+`Chromium` and other apps might not function properly after changes to `compton`. A common solution is to change the configuration file from `backend = "xrender` to `"backend = "glx"`.
+
 
 ## Pomotroid
 [pomotroid](https://github.com/Splode/pomotroid) FOSS Pomodoro timer
@@ -182,7 +233,7 @@ To install
 # pacman -S xclip
 ```
 
-## wmname
+## Wmname
 [wmname](https://tools.suckless.org/x/wmname/) from suckless sets window managers name property.
 This is extremely useful for fixing blank/freezing applications that use JDK to work.
 ```

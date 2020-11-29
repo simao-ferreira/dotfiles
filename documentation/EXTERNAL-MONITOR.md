@@ -32,7 +32,7 @@ Mostly works out of the box with bspwm
 
 
 ## I3
-To manage external monitors Manjaro i3 uses `xrandr`, there are several ways to add them into an i3 setup, in this case the following configuration represents modes in the i3 config, accessible via shortcuts.
+To manage external monitors Manjaro i3 uses `xrandr`, there are several ways to add monitors them into an i3 setup, in this case the following configuration represents modes in the i3 config, accessible via shortcuts.
 
 The config already has some modes like the `resize` or `gaps` mode, following their process, select a shortcut to display the mode and bind a command to some specific keys, this way it possible to set more than one configuration.
 

@@ -7,8 +7,6 @@ To research/install/discuss in no order of priority:
 
 - Brightness adjustment
 
-- Update documentation for compton and picom
-
 - Update documentation for dmenu, rofi and rasi : https://wiki.archlinux.org/index.php/Dmenu, https://wiki.archlinux.org/index.php/Rofi
 
 - New rasi for menus?

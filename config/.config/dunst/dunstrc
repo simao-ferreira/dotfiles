@@ -1,0 +1,65 @@
+[global]
+	font = Iosevka Term 13  
+	frame_width = 3
+	corner_radius = 5
+
+	markup = yes
+	plain_text = no
+	format = "<b>%s</b>\n%b"
+	sort = yes
+	word_wrap = yes
+	indicate_hidden = yes
+	alignment = left
+	bounce_freq = 0
+	show_age_threshold = 60
+	stack_duplicates = yes
+	hide_duplicate_count = yes
+
+	#geometry = "300x50-15+49"
+	geometry = "0x2-0+0"
+	monitor = 1
+	shrink = no
+	transparency = 25
+	idle_threshold = 120
+	follow = none
+	sticky_history = yes
+	history_length = 20
+	show_indicators = yes
+	
+	line_height = 0
+	separator_height = 1
+	padding = 8
+	horizontal_padding = 10
+	separator_color = auto
+	ignore_newline = no
+
+	startup_notification = true
+	dmenu = /usr/bin/dmenu -p dunst:
+	browser = /usr/bin/firefox -new-tab
+	icon_position = off
+	max_icon_size = 80
+
+
+[shortcuts]
+	close = ctrl+space
+	close_all = ctrl+shift+space
+	history = ctrl+shift+h
+	context = ctrl+shift+period
+
+[urgency_low]
+	frame_color = "#a3be8c"
+	background = "#2E3440"
+	foreground = "#a3be8c"
+	timeout = 10
+
+[urgency_normal]
+	frame_color = "#ebcb8b"
+	background = "#2E3440"
+	foreground = "#ebcb8b"
+	timeout = 15
+
+[urgency_critical]
+	frame_color = "#bf616a"
+	background = "#2E3440"
+	foreground = "#bf616a"
+	timeout = 25

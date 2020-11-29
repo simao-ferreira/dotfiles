@@ -7,12 +7,13 @@ wmname LG3D
 
 sxhkd &
 picom &
+dunst &
 killall redshift; sleep 5; redshift &
 
 ## Monitors ##
 bspc monitor eDP-1 -d I II III
 bspc monitor DP-1 -d IV V VI VII VIII
-bspc monitor DP-1-8 -d IV V VI VII VIII
+bspc monitor DP-1-8 -d IV V VI VII VIII IX
 
 ## WM Config ##
 bspc config border_width         3

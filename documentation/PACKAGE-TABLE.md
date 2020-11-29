@@ -9,7 +9,9 @@
 | [calibre](https://calibre-ebook.com/)                     | Ebook manager                                     | [:page_facing_up:](PACKAGES.md#calibre)
 | [cava](https://github.com/karlstav/cava)                  | Console based audio visualizer                    | [:page_facing_up:](AUDIO.md#cava)
 | [conky](PACKAGES.md#conky) | Lightweight system monitor, used on desktop
-| [docker](https://docs.docker.com/)                  | Container platform                               | [:page_facing_up:](WIP/PROGRAMMING.md#docker)
+| [docker](https://docs.docker.com/)                        | Container platform                                | [:page_facing_up:](WIP/PROGRAMMING.md#docker)
+| [compton](https://github.com/chjj/compton/)               | Compositor for Xorg                               | [:page_facing_up:](PACKAGES.md#compton)
+| [dunst](https://dunst-project.org/)                       | Notification manager                              | [:page_facing_up:](PACKAGES.md#dunst)
 | [feh](PACKAGES.md#feh) | Image viewer, wallpaper setter
 | [fwupd](https://wiki.archlinux.org/index.php/Fwupd) | Firmware manager                               | [:page_facing_up:](FIRMWARE.md) | 
 | [gcolor2](COLOR-PALETTE.md#gcolor2) | Color picker GUI
@@ -29,6 +31,7 @@
 | [pale moon](PACKAGES.md#palemoon) | Browser
 | [pamac](PACMAN.md#pamac) | Package Manager GUI wrapper
 | [pavucontrol](AUDIO.md#pavucontrol) | Pulse audio gtk GUI
+| [picom](https://github.com/yshui/picom/blob/next/README_orig.md)   | Compositor for Xorg                      | [:page_facing_up:](PACKAGES.md#picom)
 | [polybar](POLYBAR.md) | Status bar, powerful and configurable
 | [pomotroid](PACKAGES.md#pomotroid) | Pomodoro timer
 | [powerlevel10k](https://github.com/romkatv/powerlevel10k)  | Theme for zsh                                    | [:page_facing_up:](TERMINAL.md#powerlevel10k)
@@ -47,18 +50,13 @@
 | [xclip](PACKAGES.md#xclip) | Command line clipboard interface
 | [xrandr](EXTERNAL-MONITOR.md) | Monitor configuration utility
 | [yay](PACMAN.md#AUR) | Command line AUR helper
+| [wine](https://www.winehq.org/)       | Windows applications layer                 | [:page_facing_up:](WINE.md)
 | [wmname](PACKAGES.md#wmname) | Window manager naming setter
 | [zathura](PACKAGES.md#zathura) | PDF, EPUB, etc viewer
 | [zsh](TERMINAL.md#zsh) | Interactive extended Bourne shell
 
-
 | Package        | Not processed yet                                                                       |
 | :------------: |:--------------------------------------------------------------------------------------- |
-| [compton](APPEARANCE.md#compton) | Compositor, used to manage for example transparency and shadow
-| [dunst](APPEARANCE.md#dunst) | Notification manager
 | [dmenu](I3.md#Menu) | Desktop Menu, also used as package launcher
-| [i3bar](APPEARANCE.md#menu-bar) | Status bar
-| [lightdm](APPEARANCE.md#login-manager) | Display Manager, used to manage login
 | [pywal](APPEARANCE.md#pywal) | Color scheme generator
-
 | [rofi](I3.md#Menu) | Window switcher, also used as package launcher

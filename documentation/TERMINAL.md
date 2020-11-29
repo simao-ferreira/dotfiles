@@ -121,26 +121,32 @@ During installation Arch uses `zsh`, after the user needs to install `zsh` if it
 ## Zsh
 To install `zsh` run `sudo pacman -S zsh` and `sudo pacman -S zsh-completions`.
 
-Running `zsh` will run zsh first time configuration, if doesn't run `zsh-newuser-install`, from this it's possible to configure history and completion. The new configuration file is found as `.zshrc`.
+Running `zsh` will run zsh first time configuration, if not, run `zsh-newuser-install`, from this it's possible to set history and completion configs. The resulting configuration file is `.zshrc`.
 
 Note: Make sure your terminal's size is at least 72×15 otherwise `zsh-newuser-install` might not run.
 
 ## Oh-my-zsh
 
-Optionally there is [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) to manage the zsh configuration, to add it run:
-`sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-Adding to to `oh-my-zsh` there are several plugins like git and `agnoster` theme. For themes it can be necessary to install `powerline fonts`. This is possible through `AUR` installing `nerd-fonts-complete`. Change the `ZSH_THEME="agnoster"` or other to get "eye-candy" visuals.
+[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) exists to manage the zsh configuration
+
+```
+ # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+There are several plugins to add like git, pyhton or themes. Themes might need other packages, like `powerline fonts` available via `AUR` installing `nerd-fonts-complete`. 
+
+Change the `` or other to get "eye-candy" visuals.
 
 Some important settings to specify
 ```
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-# Completion system dump
-ZSH_COMPDUMP="$HOME/.config"
-CASE_SENSITIVE="false" HIST_STAMPS="dd.mm.yyyy"
-# Command history file location
-HISTFILE="$HOME/.cache/zsh/histfile"
+# export XDG_CONFIG_HOME="$HOME/.config"
+# export XDG_CACHE_HOME="$HOME/.cache"
+# export XDG_DATA_HOME="$HOME/.local/share"
+
+# ZSH_COMPDUMP="$HOME/.config"
+# CASE_SENSITIVE="false" HIST_STAMPS="dd.mm.yyyy"
+# HISTFILE="$HOME/.cache/zsh/histfile"
+# ZSH_THEME="agnoster"
 ```
 
 ## Powerlevel10k
