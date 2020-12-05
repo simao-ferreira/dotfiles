@@ -1,0 +1,50 @@
+configuration {
+    font: 							"Iosevka Nerd Font 12";
+    show-icons: 					false;
+    click-to-exit: 					true;
+    disable-history:                true;
+	hide-scrollbar: 				true;
+	sidebar-mode: 					false;
+    fullscreen: 					false;
+    display-window: 				"";
+    display-run: 					"";
+    display-drun: 					"";
+}
+
+@import "nordic-palette.rasi"
+
+* {
+    background-color:             	@background;
+}
+
+window {
+	border:							2px;
+	border-color:					@pale;
+    border-radius:                  12px;
+}
+
+mainbox {
+    background-color:               @pale;
+    children:                       [  inputbar, listview ];
+}
+
+inputbar {
+    children: 						[ prompt, entry ];
+    background-color:               @pale;
+    text-color:                     @background;
+    padding:                        1.5%;
+}
+
+prompt {
+	background-color: 				@pale;
+	text-color: 					@background;
+	padding: 						0.25% 1% 0% 0%;
+}
+
+entry {
+    background-color:               @pale;
+    text-color:                     @background;
+    placeholder-color:              @background;
+    placeholder:                    "Search";
+    padding:                        0.25% 0% 0% 0%;
+}

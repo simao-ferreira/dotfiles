@@ -1,0 +1,37 @@
+configuration {
+    show-icons:                     true;
+	icon-theme: 					"Papirus";
+}
+
+window {
+	width:							30%;
+}
+
+listview {
+    padding:                        10px;
+    columns:                        4;
+    lines:                          4;
+}
+
+element {
+    background-color:               @background;
+    text-color:                     @pale;
+    orientation:                    vertical;
+    padding:                        2% 0% 2% 0%;
+}
+element-icon {
+    size:                           64px;
+    border:                         0px;
+}
+element-text {
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0.5% 0.5% -0.5% 0.5%;
+}
+element selected {
+    background-color:               @pale;
+    text-color:                     @background;
+	border:							0% 0% 0% 0%;
+    border-radius:                  12px;
+}

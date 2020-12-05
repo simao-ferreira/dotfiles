@@ -1,15 +1,23 @@
 # Todo 
 To research/install/discuss in no order of priority:
 
+- Screenlocker https://wiki.archlinux.org/index.php/List_of_applications#Screen_lockers
+
+- spotify alternative?
+
+- break zsh config
+
+- new color scheme
+
+- Update adobe drm on wine
+
 - Test and document dwm
 
-- Update and remove MI3 old configurations
+- Test and update I3 and remove MI3 old configurations
 
 - Brightness adjustment
 
 - Update documentation for dmenu, rofi and rasi : https://wiki.archlinux.org/index.php/Dmenu, https://wiki.archlinux.org/index.php/Rofi
-
-- New rasi for menus?
 
 - Bin, recycling folder.
 
@@ -18,8 +26,6 @@ To research/install/discuss in no order of priority:
 - vscode vs pycharm
 
 - Manage zsh without oh-my-zsh
-
-- Screensaver https://wiki.archlinux.org/index.php/List_of_applications#Screen_lockers
 
 - Manage fonts, theme, etc, with xsettingsd:
 https://github.com/mxmilkb/dotfiles/blob/master/X11/.xsettingsd
@@ -41,8 +47,6 @@ https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv
 - Clean manjaro i3 folder to make it usable as i3 desktop
 
 - Make documentation more abstract
-
-- Fix bluetooth at start & update doc
 
 - Study and document important configurations for tlp
 

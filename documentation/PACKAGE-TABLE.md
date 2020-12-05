@@ -1,17 +1,17 @@
 | Package        | Description                                                                             |   |
 | :------------: |:--------------------------------------------------------------------------------------- | - |
-| [alacritty](https://github.com/alacritty/alacritty)       | GPU accelerated terminal emulator                 | [:page_facing_up:](TERMINAL.md#alacritty)
-| [alsa](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture)       | Sound driver                 | [:page_facing_up:](AUDIO.md#alsa)
-| [arandr](https://christian.amsuess.com/tools/arandr/)     | GUI for xrandr, monitor configuration utility     | [:page_facing_up:](EXTERNAL-MONITOR.md)
-| [arch linux](https://www.archlinux.org/)                  | Linux rolling distro                              | [:page_facing_up:](ARCHLINUX.md)
-| [AUR](https://aur.archlinux.org/)                         | Community driven repository                       | [:page_facing_up:](PACMAN.md#AUR)
-| [caffeine](https://github.com/caffeine-ng/caffeine-ng)    | Prevents screen-saver and sleep                   | [:page_facing_up:](PACKAGES.md#caffeine)
-| [calibre](https://calibre-ebook.com/)                     | Ebook manager                                     | [:page_facing_up:](PACKAGES.md#calibre)
-| [cava](https://github.com/karlstav/cava)                  | Console based audio visualizer                    | [:page_facing_up:](AUDIO.md#cava)
+| [alacritty](https://github.com/alacritty/alacritty) | GPU accelerated terminal emulator | [:page_facing_up:](TERMINAL.md#alacritty)
+| [alsa](https://wiki.archlinux.org/index.php/Advanced_Linux_Sound_Architecture) | Sound driver | [:page_facing_up:](AUDIO.md#alsa)
+| [arandr](https://christian.amsuess.com/tools/arandr/) | GUI for xrandr, monitor configuration utility | [:page_facing_up:](EXTERNAL-MONITOR.md)
+| [arch linux](https://www.archlinux.org/) | Linux rolling distro | [:page_facing_up:](ARCHLINUX.md)
+| [AUR](https://aur.archlinux.org/) | Community driven repository | [:page_facing_up:](PACMAN.md#AUR)
+| [caffeine](https://github.com/caffeine-ng/caffeine-ng) | Prevents screen-saver and sleep | [:page_facing_up:](PACKAGES.md#caffeine)
+| [calibre](https://calibre-ebook.com/) | Ebook manager | [:page_facing_up:](PACKAGES.md#calibre)
+| [cava](https://github.com/karlstav/cava) | Console based audio visualizer | [:page_facing_up:](AUDIO.md#cava)
 | [conky](PACKAGES.md#conky) | Lightweight system monitor, used on desktop
-| [docker](https://docs.docker.com/)                        | Container platform                                | [:page_facing_up:](WIP/PROGRAMMING.md#docker)
-| [compton](https://github.com/chjj/compton/)               | Compositor for Xorg                               | [:page_facing_up:](PACKAGES.md#compton)
-| [dunst](https://dunst-project.org/)                       | Notification manager                              | [:page_facing_up:](PACKAGES.md#dunst)
+| [docker](https://docs.docker.com/) | Container platform | [:page_facing_up:](WIP/PROGRAMMING.md#docker)
+| [compton](https://github.com/chjj/compton/) | Compositor for Xorg | [:page_facing_up:](PACKAGES.md#compton)
+| [dunst](https://dunst-project.org/) | Notification manager | [:page_facing_up:](PACKAGES.md#dunst)
 | [feh](PACKAGES.md#feh) | Image viewer, wallpaper setter
 | [fwupd](https://wiki.archlinux.org/index.php/Fwupd) | Firmware manager                               | [:page_facing_up:](FIRMWARE.md) | 
 | [gcolor2](COLOR-PALETTE.md#gcolor2) | Color picker GUI
@@ -39,6 +39,8 @@
 | [ranger](PACKAGES.md#ranger) | Console file manager
 | [redshift](PACKAGES.md#redshift) | Screen color temperature utility
 | [reflector](PACKAGES.md#reflector) | Script for ranking and updating mirrors
+| [rofi](https://github.com/davatorium/rofi)| application launcher and window switcher | [:page_facing_up:](I3.md#Menu) 
+
 | [spicetify-cli](AUDIO.md#spicetify) | Spotify wrapper
 | [spotify](AUDIO.md#spotify) | Spotify official player
 | [steam](GAMING.md) | Gaming library application with `wine` capabilities
@@ -59,4 +61,3 @@
 | :------------: |:--------------------------------------------------------------------------------------- |
 | [dmenu](I3.md#Menu) | Desktop Menu, also used as package launcher
 | [pywal](APPEARANCE.md#pywal) | Color scheme generator
-| [rofi](I3.md#Menu) | Window switcher, also used as package launcher

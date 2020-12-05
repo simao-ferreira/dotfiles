@@ -11,12 +11,16 @@ super + d
 	dmenu_run
 
 # rofi
-super + alt + @space
-	 rofi -theme nordic-ice-focus.rasi -modi drun -show drun -sidebar-mode
+super + @space
+	 rofi -theme text-menu.rasi -modi drun -show drun
 
-# rofi menu
+# rofi windows
+super + Tab
+	rofi -theme text-menu.rasi -modi window -show wind
+
+# rofi fancy
 alt + @space
-	rofi -theme nordic-ice-simple.rasi -modi drun -show drun -show-icons -location 7 -yoffset -35 -xoffset 5 -width 20 -lines 20
+	rofi -theme icon-menu.rasi -modi drun -show drun
 
 # reload sxhkd config
 super + Escape
