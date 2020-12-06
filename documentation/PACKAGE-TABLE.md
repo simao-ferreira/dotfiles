@@ -12,7 +12,7 @@
 | [docker](https://docs.docker.com/) | Container platform | [:page_facing_up:](WIP/PROGRAMMING.md#docker)
 | [compton](https://github.com/chjj/compton/) | Compositor for Xorg | [:page_facing_up:](PACKAGES.md#compton)
 | [dunst](https://dunst-project.org/) | Notification manager | [:page_facing_up:](PACKAGES.md#dunst)
-| [feh](PACKAGES.md#feh) | Image viewer, wallpaper setter
+| [feh](https://feh.finalrewind.org/) | Image viewer, wallpaper setter | [:page_facing_up:](PACKAGES.md#feh)
 | [fwupd](https://wiki.archlinux.org/index.php/Fwupd) | Firmware manager                               | [:page_facing_up:](FIRMWARE.md) | 
 | [gcolor2](COLOR-PALETTE.md#gcolor2) | Color picker GUI
 | [gedit](PACKAGES.md#gedit) | Gnome UI Text editor
@@ -60,4 +60,3 @@
 | Package        | Not processed yet                                                                       |
 | :------------: |:--------------------------------------------------------------------------------------- |
 | [dmenu](I3.md#Menu) | Desktop Menu, also used as package launcher
-| [pywal](APPEARANCE.md#pywal) | Color scheme generator
