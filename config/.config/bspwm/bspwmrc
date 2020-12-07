@@ -5,7 +5,7 @@ feh --bg-fill ~/.wallpapers/t480.png --no-fehbg
 wmname LG3D
 sxhkd &
 picom 2>~/.cache/.picom.err > ~/.cache/.picom.out &
-dunst
+dunst &
 $HOME/.config/polybar/launch.sh
 killall redshift; sleep 5; redshift &
 

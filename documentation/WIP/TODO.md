@@ -7,7 +7,7 @@ To research/install/discuss in no order of priority:
 
 - break zsh config
 
-- new color scheme
+- new color scheme (forest green)
 
 - Update adobe drm on wine
 
@@ -17,11 +17,15 @@ To research/install/discuss in no order of priority:
 
 - Brightness adjustment
 
+- Volume adjustment
+
 - Update documentation for dmenu, rofi and rasi : https://wiki.archlinux.org/index.php/Dmenu, https://wiki.archlinux.org/index.php/Rofi
 
 - Bin, recycling folder.
 
-- Pipenv: Sacred Marriage of Pipfile, Pip, & Virtualenv.
+- Pipenv: Pipfile, Pip, & Virtualenv.
+
+- Conda
  
 - vscode vs pycharm
 
