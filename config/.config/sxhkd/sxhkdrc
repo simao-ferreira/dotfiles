@@ -45,6 +45,10 @@ super + alt + m
 super + p
 	maim --select -o -u > ~/Downloads/$(date +%Y%m%d%s).png
 
+# lock screen
+ctrl + alt + q
+	i3lock --color=2e3440 -e
+
 #########
 # bspwm #
 #########
