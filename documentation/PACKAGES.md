@@ -41,9 +41,17 @@ Replaced by fork [picom](PACKAGES.md#picom)
 # pacman -S dunst
 ```
 
-Configuration is on `~/.config/dunst/dunstrc`. Launch dunst at WM launch.
+Configuration is on `~/.config/dunst/dunstrc`, here is the [documentation](https://dunst-project.org/documentation/). 
 
-Use `notify-send <message>` to test the usage.
+To test the usage
+```
+# notify-send <title> <message>
+# dunstify -a "application" -u critical "title" "notification message"
+# dunstify -a "changeVolume" -u low "summary"
+
+```
+
+Dunst must be launched at WM startup.
 
 
 ## Feh

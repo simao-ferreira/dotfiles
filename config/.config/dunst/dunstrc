@@ -1,44 +1,34 @@
 [global]
-	font = Iosevka Term 13  
-	frame_width = 3
-	corner_radius = 5
+## https://dunst-project.org/documentation/
 
-	markup = yes
-	plain_text = no
-	format = "<b>%s</b>\n%b"
+## Notification placement in a multi-monitor setup
+## All values except none override the monitor setting when he is default (0).
+	monitor = 0
+	follow = keyboard
+	geometry = "0x5-10+10"
+	shrink = yes
+	transparency = 5
+	separator_height = 2
+	padding = 10
+	horizontal_padding = 10
+	frame_width = 3
 	sort = yes
-	word_wrap = yes
-	indicate_hidden = yes
+	idle_threshold = 120
+	word_wrap = true
+	frame_color = "#151a23"
+	corner_radius = 1
+	separator_color = frame
+	font = Iosevka Term 15  
+	markup = full
+	format = "<b>%a</b>\n <u>%s</u>\n %b"
 	alignment = left
+	icon_position = left
+	icon_path = /usr/share/icons/Numix-Circle/16/panel
+	startup_notification = true
+	plain_text = no
+	indicate_hidden = yes
 	bounce_freq = 0
 	show_age_threshold = 60
-	stack_duplicates = yes
-	hide_duplicate_count = yes
-
-	#geometry = "300x50-15+49"
-	geometry = "0x2-0+0"
-	monitor = 1
-	shrink = no
-	transparency = 25
-	idle_threshold = 120
-	follow = none
-	sticky_history = yes
-	history_length = 20
-	show_indicators = yes
-	
-	line_height = 0
-	separator_height = 1
-	padding = 8
-	horizontal_padding = 10
-	separator_color = auto
-	ignore_newline = no
-
-	startup_notification = true
-	dmenu = /usr/bin/dmenu -p dunst:
-	browser = /usr/bin/firefox -new-tab
-	icon_position = off
-	max_icon_size = 80
-
 
 [shortcuts]
 	close = ctrl+space
@@ -47,19 +37,16 @@
 	context = ctrl+shift+period
 
 [urgency_low]
-	frame_color = "#a3be8c"
-	background = "#2E3440"
-	foreground = "#a3be8c"
+	background = "#2e3440"
+	foreground = "#81a1c1"
 	timeout = 10
 
 [urgency_normal]
-	frame_color = "#ebcb8b"
 	background = "#2E3440"
 	foreground = "#ebcb8b"
 	timeout = 15
 
 [urgency_critical]
-	frame_color = "#bf616a"
 	background = "#2E3440"
 	foreground = "#bf616a"
 	timeout = 25
