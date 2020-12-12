@@ -20,11 +20,13 @@
 | [git-secret](GIT-SECRET.md) | Git tool to encrypt files
 | [gtk](GNOME.md#gtk) | GTK detail configuration
 | [i3scrot](PACKAGES.md#i3scrot) | Screen capture utility
+| [i3lock](https://github.com/i3/i3lock) | Basic lock-screen utility | [:page_facing_up:](PACKAGES.md#i3lock)
 | [logiops](BLUETOOTH.md#logitech-bluetooth-mouse) | Bluetooth mouse configuration
 | [lxappearance](GNOME.md#gtk) | Gtk theme switcher
 | [maim](PACKAGES.md#maim) | Screen capture utility
 | [neofetch](https://github.com/dylanaraps/neofetch)            | Command line system information tool          | [:page_facing_up:](PACKAGES.md#neofetch)
 | [nerd fonts](https://github.com/ryanoasis/nerd-fonts)         | Fonts                                         | [:page_facing_up:](PACKAGES.md#iosevka)
+| [nitrogen](https://github.com/l3ib/nitrogen/) | Lightweight desktop background browser | [:page_facing_up:](PACKAGES.md#nitrogen)
 | [nordtheme](https://www.nordtheme.com/)                       | Color scheme                                  | [:computer:](https://github.com/simao-ferreira/resources/blob/master/xresources-color-themes/nord)
 | [oh-my-zsh](TERMINAL.md#oh-my-zsh) | Framework for zsh
 | [pacman](PACMAN.md#pacman) | Package Manager 
@@ -40,7 +42,6 @@
 | [redshift](PACKAGES.md#redshift) | Screen color temperature utility
 | [reflector](PACKAGES.md#reflector) | Script for ranking and updating mirrors
 | [rofi](https://github.com/davatorium/rofi)| application launcher and window switcher | [:page_facing_up:](I3.md#Menu) 
-
 | [spicetify-cli](AUDIO.md#spicetify) | Spotify wrapper
 | [spotify](AUDIO.md#spotify) | Spotify official player
 | [steam](GAMING.md) | Gaming library application with `wine` capabilities
@@ -48,6 +49,7 @@
 | [tizonia](AUDIO.md#tizonia) | Terminal audio stream player 
 | [tlp](BATTERY.md#tlp) | Battery Manager
 | [urxvt](TERMINAL.md#urxvt) | Terminal emulator
+| [viewnior](https://github.com/hellosiyan/Viewnior) | Image viewer | [:page_facing_up:](PACKAGES.md#viewnior)
 | [vscodium](WIP/PROGRAMMING.md#vscodium) | Code and text editor
 | [xclip](PACKAGES.md#xclip) | Command line clipboard interface
 | [xrandr](EXTERNAL-MONITOR.md) | Monitor configuration utility

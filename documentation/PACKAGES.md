@@ -66,11 +66,9 @@ For changing the wallpaper add to configuration a command, with the wanted wallp
 ```
 
 Alternatives
-[Viewnior](https://siyanpanayotov.com/project/viewnior) is a simple minimalist image viewer that provides a clean interface.
+[Viewnior](#viewnior)
 
-[Nitrogen](https://wiki.archlinux.org/index.php/nitrogen) is light and simple desktop background browser and setter for X Window.
-
-Nitrogen has some quirks, like not being able to recognize some file types. Configurations can be found at `.config/nitrogen/bg-saved.cfg`.
+[Nitrogen](#nitrogen)
 
 ## Feh-Blur
 Feh-blur allows you to focus your attention on the application in use by applying blur to the desktop background.
@@ -97,6 +95,26 @@ To edit colors install `gedit color scheme` plugin from pamac, this usually inst
 To configure the new color scheme, enter `gedit` select `color scheme editor` and configure the changes needed, save under a new name and ID, this will save the new configuration to `.local/shares/gedit/styles`.
 Sometimes it add an underline under some text, just enter color scheme again and remove it.
 
+
+## i3lock
+[i3scrot](https://github.com/i3/i3lock) is a basic screen locker. 
+
+After starting it, you will see a coloured screen or image and only returns to your desktop environment after your password is entered correctly.
+
+It can also be wrapped in a script, using other tools to manipulate images like `imagemagick`, and enlarge one image to two screens, or to create a blurred image of the current screen, amongst many other things.
+
+Lock with an image, multiple screens and ignore empty password
+```
+# i3lock -i $HOME/.wallpapers/cold-mountain.png -t -e
+```
+
+Lock with colour and ignore empty password
+```
+# i3lock --color=151a23 -e
+```
+
+Not exclusive for i3.
+
 ## i3scrot
 [i3scrot](https://github.com/pazuzu156/i3scrot) is shell script thats uses `scrot` to take a screenshot of your open displays.
 
@@ -120,6 +138,12 @@ Example
 
 ## Neofetch
 [Neofetch](https://github.com/dylanaraps/neofetch) configuration file is placed in `.config/neofetch`, in it it's possible to change position of display information, also witch info is displayed. It is also possible to change the image displayed.
+
+## Nitrogen
+[Nitrogen](https://wiki.archlinux.org/index.php/nitrogen) is light and simple desktop background browser and setter for X Window.
+
+Nitrogen has some quirks, like not being able to recognize some file types. Configurations can be found at `.config/nitrogen/bg-saved.cfg`.
+
 
 ## Oblogout
 Oblogout is a configurable logout script with graphical UI, that allows to cancel, restart, shutdown and lock.
@@ -240,6 +264,9 @@ To install
 ```
 # pacman -S xclip
 ```
+
+## Viewnior
+[Viewnior](https://siyanpanayotov.com/project/viewnior) is a simple minimalist image viewer that provides a clean interface.
 
 ## Wmname
 [wmname](https://tools.suckless.org/x/wmname/) from suckless sets window managers name property.
