@@ -265,6 +265,23 @@ To install
 # pacman -S xclip
 ```
 
+## Xss-lock
+[xss-lock](https://bitbucket.org/raymonad/xss-lock/src/master/) is system locker that allows you to activate screen lock by inactivity.
+
+It uses `DPMS` to run signal timeout and then launches an external locker like `i3lock`.
+With xset sets one or more timers, this can be used to send a message or run a script before locking.
+```
+xset s 180 120
+xss-lock -n dim-screen.sh -- i3lock -n`
+
+```
+
+To install
+```
+# pacman -S xss-lock
+```
+
+
 ## Viewnior
 [Viewnior](https://siyanpanayotov.com/project/viewnior) is a simple minimalist image viewer that provides a clean interface.
 

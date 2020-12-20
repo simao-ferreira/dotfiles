@@ -1,3 +1,8 @@
+# Table of contents
+
+Work in progress of contents regarding packages in use or tested during configuration of dotfiles
+
+
 | Package        | Description                                                                             |   |
 | :------------: |:--------------------------------------------------------------------------------------- | - |
 | [alacritty](https://github.com/alacritty/alacritty) | GPU accelerated terminal emulator | [:page_facing_up:](TERMINAL.md#alacritty)
@@ -53,6 +58,7 @@
 | [vscodium](WIP/PROGRAMMING.md#vscodium) | Code and text editor
 | [xclip](PACKAGES.md#xclip) | Command line clipboard interface
 | [xrandr](EXTERNAL-MONITOR.md) | Monitor configuration utility
+| [xss-lock](https://bitbucket.org/raymonad/xss-lock) | Screen locker | [:page_facing_up:](PACKAGES.md#xss-locker)
 | [yay](PACMAN.md#AUR) | Command line AUR helper
 | [wine](https://www.winehq.org/)       | Windows applications layer                 | [:page_facing_up:](WINE.md)
 | [wmname](PACKAGES.md#wmname) | Window manager naming setter
