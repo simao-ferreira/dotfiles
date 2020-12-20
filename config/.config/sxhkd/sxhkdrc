@@ -47,7 +47,7 @@ super + p
 
 # lock screen
 ctrl + alt + q
-	i3lock --color=2e3440 -e
+	$HOME/.bin/lock_screen.sh
 
 #########
 # bspwm #
@@ -105,7 +105,7 @@ super + {o,i}
 
 # send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+	bspc {desktop -f,node -d} '^{1-9,10}' --follow
 
 #############
 # preselect #

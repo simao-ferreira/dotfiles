@@ -1,14 +1,5 @@
 #! /bin/sh
 
-## auto-start ##
-feh --bg-fill ~/.wallpapers/t480.png --no-fehbg
-wmname LG3D
-sxhkd &
-picom 2>~/.cache/.picom.err > ~/.cache/.picom.out &
-dunst &
-$HOME/.config/polybar/launch.sh
-killall redshift; sleep 5; redshift &
-
 ## Monitors ##
 bspc monitor eDP-1 -d I II III
 bspc monitor DP-1 -d IV V VI VII VIII
@@ -32,3 +23,8 @@ bspc config gapless_monocle             true
 ## Special windows ##
 bspc rule -a Zathura state=tiled
 bspc rule -a pomotroid state=tiled
+
+## auto-start ##
+$HOME/.bin/launch_polybar.sh &
+killall redshift; sleep 5; redshift &
+$HOME/.bin/autolock.sh &
