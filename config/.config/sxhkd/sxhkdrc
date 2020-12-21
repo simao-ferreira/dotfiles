@@ -16,7 +16,7 @@ super + @space
 
 # rofi windows
 super + Tab
-	rofi -theme text-menu.rasi -modi window -show wind
+	rofi -theme text-menu.rasi -modi window -show window
 
 # rofi fancy
 alt + @space
