@@ -47,7 +47,7 @@ super + p
 
 # lock screen
 ctrl + alt + q
-	$HOME/.bin/lock_screen.sh
+	$HOME/.bin/i3lock_lockscreen.sh
 
 #########
 # bspwm #

@@ -8,7 +8,7 @@ _launch_session_lock(){
 }
 
 _trigger_screensaver(){
-    xss-lock -n "dunstify '$message'" -l $HOME/.bin/lock_screen.sh
+    xss-lock -n "dunstify '$message'" -l $HOME/.bin/i3lock_lockscreen.sh
 }
 
 _launch_session_lock && _trigger_screensaver
