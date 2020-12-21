@@ -4,7 +4,7 @@ window {
 
 listview {
     padding: 						5px;
-    lines:							8;
+    lines:							6;
     columns:						1;
 }
 

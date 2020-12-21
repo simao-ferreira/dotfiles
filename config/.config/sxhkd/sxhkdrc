@@ -10,17 +10,25 @@ super + Return
 super + d
 	dmenu_run
 
-# rofi
+# rofi application launcher
 super + @space
 	 rofi -theme text-menu.rasi -modi drun -show drun
 
-# rofi windows
+# rofi application launcher with icons
+alt + @space
+	rofi -theme icon-menu.rasi -modi drun -show drun
+
+# rofi application switcher
 super + Tab
 	rofi -theme text-menu.rasi -modi window -show window
 
-# rofi fancy
-alt + @space
-	rofi -theme icon-menu.rasi -modi drun -show drun
+# lock screen
+ctrl + alt + q
+	$HOME/.bin/i3lock_lockscreen.sh
+
+# rofi power off menu
+ctrl + alt + shift + q
+	$HOME/.bin/rofi_powermenu.sh
 
 # reload sxhkd config
 super + Escape
@@ -44,10 +52,6 @@ super + alt + m
 # print screen
 super + p
 	maim --select -o -u > ~/Downloads/$(date +%Y%m%d%s).png
-
-# lock screen
-ctrl + alt + q
-	$HOME/.bin/i3lock_lockscreen.sh
 
 #########
 # bspwm #
