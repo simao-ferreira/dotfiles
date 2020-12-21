@@ -13,6 +13,7 @@ export ZSH="$HOME/applications/oh-my-zsh"
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$HOME/.gem/ruby/2.7.0/bin:$PATH
+export PATH=$HOME/.bin:$PATH
 
 # Maybe move all this out of this file
 export GRADLE_USER_HOME=$HOME/applications/.gradle

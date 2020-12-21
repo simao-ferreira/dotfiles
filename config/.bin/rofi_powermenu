@@ -22,7 +22,7 @@ _menu(){
                 echo "WIP - Hibernation"
                 ;;                
             $LOCK)
-                $HOME/.bin/i3lock_lockscreen.sh
+                $HOME/.bin/i3lock_lockscreen
                 ;;
             $REBOOT) 
                 systemctl reboot

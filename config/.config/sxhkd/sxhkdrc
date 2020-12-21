@@ -24,11 +24,11 @@ super + Tab
 
 # lock screen
 ctrl + alt + q
-	$HOME/.bin/i3lock_lockscreen.sh
+	i3lock_lockscreen
 
 # rofi power off menu
 ctrl + alt + shift + q
-	$HOME/.bin/rofi_powermenu.sh
+	rofi_powermenu
 
 # reload sxhkd config
 super + Escape
