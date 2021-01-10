@@ -25,6 +25,7 @@ bspc rule -a Zathura state=tiled
 bspc rule -a pomotroid state=tiled
 
 ## auto-start ##
+wmname LG3D &
 polybar_launch &
 killall redshift; sleep 5; redshift &
 xss_autolock &

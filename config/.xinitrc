@@ -11,7 +11,6 @@ fi
 
 picom &
 feh --bg-fill $HOME/.wallpapers/t480.png --no-fehbg &
-wmname LG3D &
 dunst &
 
 sxhkd &
