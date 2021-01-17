@@ -17,7 +17,7 @@ _wait(){
 
 # Validates if i3lock is running, if it is turns off the display
 _turn_off_display(){
-    pgrep i3lock && xset dpms force off &
+    pgrep i3lock && xset dpms force off
 }
 
 
